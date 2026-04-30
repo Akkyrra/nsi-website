@@ -18,22 +18,13 @@ export default function HeroSection() {
             <p className="font-inter text-base text-navy/65 leading-relaxed mb-8 max-w-md">
               New Strategy Instituteは、企業の競争優位を持続させるための戦略的知見を提供します。資本市場の論理から企業文化の再構築まで、一貫した視点で事業変革を支援します。
             </p>
-            <div className="flex flex-col sm:flex-row items-start gap-5">
-              <a
-                href="#reports"
-                className="font-inter text-sm font-semibold text-navy tracking-widest uppercase hover:text-gold transition-colors inline-flex items-center gap-2 group"
-              >
-                VIEW ALL REPORTS
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </a>
-              <a
-                href="/about"
-                className="font-inter text-sm font-semibold text-white bg-navy px-5 py-2 rounded hover:bg-navy/85 transition-colors inline-flex items-center gap-2 group"
-              >
-                About NSI
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </a>
-            </div>
+            <a
+              href="/about"
+              className="font-inter text-sm font-semibold text-white bg-navy px-5 py-2 rounded hover:bg-navy/85 transition-colors inline-flex items-center gap-2 group"
+            >
+              About NSI
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
           </div>
 
           {/* Right — Featured Report Card */}

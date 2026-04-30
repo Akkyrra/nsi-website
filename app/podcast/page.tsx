@@ -11,31 +11,31 @@ export default function PodcastPage() {
 
           {/* Label */}
           <p className="font-inter text-xs font-semibold tracking-[0.3em] text-gold uppercase">
-            Podcast / NSI Dialogues
+            Podcast
           </p>
 
           {/* Gold top line */}
           <div className="w-16 h-px bg-gold" />
 
-          {/* Main heading */}
-          <h1 className="font-playfair text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-none tracking-tight">
-            Coming Soon.
+          {/* Main copy */}
+          <h1 className="font-playfair text-3xl lg:text-4xl font-bold text-white leading-snug">
+            NSIメンバーとゲストとのトーク、レポートのこぼれ話、
+            <br className="hidden sm:block" />
+            先端トレンドの解説などをお届けします！
           </h1>
 
           {/* Gold bottom line */}
           <div className="w-16 h-px bg-gold" />
 
           {/* Sub copy */}
-          <p className="font-inter text-base lg:text-lg text-white/55 leading-relaxed">
-            戦略の最前線を、対話で深める。
-            <br />
-            NSI Dialoguesは、まもなく始まります。
+          <p className="font-inter text-base text-white/50 leading-relaxed">
+            Coming Soon — まもなく配信開始予定
           </p>
 
           {/* Spotify button */}
           <a
             href="#"
-            className="mt-4 inline-flex items-center gap-3 border border-gold text-gold px-8 py-4 rounded hover:bg-gold/10 transition-colors group"
+            className="mt-2 inline-flex items-center gap-3 border border-gold text-gold px-8 py-4 rounded hover:bg-gold/10 transition-colors group"
           >
             {/* Spotify icon (SVG) */}
             <svg
