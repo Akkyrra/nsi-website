@@ -3,7 +3,7 @@ import Logo from "./Logo";
 const footerLinks = [
   { label: "About NSI", href: "#about" },
   { label: "Reports", href: "#reports" },
-  { label: "Podcast", href: "#podcast" },
+  { label: "Podcast", href: "/podcast" },
   { label: "Profile", href: "#profile" },
   { label: "Contact", href: "#contact" },
 ];
