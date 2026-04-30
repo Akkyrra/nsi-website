@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 const amano = {
   name: "天野 彬",
   nameEn: "Akira Amano",
-  title: "Chief Strategy Officer, DCXforce",
+  title: "Founding Director, New Strategy Institute / CSO, DCXforce",
   titleJa: "株式会社DCXforce 執行役員 Chief Strategy Officer",
   photo: "/天野プロフィール写真.JPG",
   bio: [
@@ -37,15 +37,15 @@ export default function ProfilePage() {
       <section className="bg-navy py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="font-inter text-xs font-semibold tracking-[0.2em] text-gold uppercase mb-4">
-            Members
+            Knowledge Contributors
           </p>
           <h1 className="font-playfair text-4xl lg:text-5xl font-bold text-white leading-tight">
-            NSI Members
+            NSI Knowledge Contributors
           </h1>
         </div>
       </section>
 
-      {/* Members grid */}
+      {/* Knowledge Contributors grid */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 

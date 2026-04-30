@@ -5,39 +5,43 @@ export default function PodcastPage() {
     <main className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Full-screen hero */}
+      {/* Full-screen centred layout */}
       <section className="bg-navy flex-1 flex items-center justify-center py-24 px-6">
-        <div className="flex flex-col items-center text-center gap-10 max-w-2xl w-full">
+        <div className="flex flex-col items-center text-center gap-8 max-w-2xl w-full">
 
           {/* Label */}
           <p className="font-inter text-xs font-semibold tracking-[0.3em] text-gold uppercase">
             Podcast
           </p>
 
-          {/* Gold top line */}
-          <div className="w-16 h-px bg-gold" />
+          {/* Gold line — top */}
+          <div className="w-12 h-px bg-gold/60" />
 
-          {/* Main copy */}
-          <h1 className="font-playfair text-3xl lg:text-4xl font-bold text-white leading-snug">
+          {/* ★ Hero: "Coming Soon." — main protagonist */}
+          <h1 className="font-playfair text-7xl lg:text-8xl xl:text-9xl font-bold text-white leading-none tracking-tight">
+            Coming Soon.
+          </h1>
+
+          {/* Gold line — bottom */}
+          <div className="w-12 h-px bg-gold/60" />
+
+          {/* Sub copy — supporting role */}
+          <p className="font-inter text-base lg:text-lg text-white/60 leading-relaxed mt-2">
             NSIメンバーとゲストとのトーク、レポートのこぼれ話、
             <br className="hidden sm:block" />
             先端トレンドの解説などをお届けします！
-          </h1>
+          </p>
 
-          {/* Gold bottom line */}
-          <div className="w-16 h-px bg-gold" />
-
-          {/* Sub copy */}
-          <p className="font-inter text-base text-white/50 leading-relaxed">
+          {/* Micro note — even more recessive */}
+          <p className="font-inter text-xs text-white/30 tracking-widest uppercase -mt-2">
             Coming Soon — まもなく配信開始予定
           </p>
 
           {/* Spotify button */}
           <a
             href="#"
-            className="mt-2 inline-flex items-center gap-3 border border-gold text-gold px-8 py-4 rounded hover:bg-gold/10 transition-colors group"
+            className="mt-4 inline-flex items-center gap-3 border border-gold text-gold px-8 py-4 rounded hover:bg-gold/10 transition-colors group"
           >
-            {/* Spotify icon (SVG) */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
