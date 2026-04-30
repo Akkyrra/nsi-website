@@ -7,7 +7,7 @@ const navLinks = [
   { label: "About NSI", href: "/about" },
   { label: "Reports", href: "#reports" },
   { label: "Podcast", href: "#podcast" },
-  { label: "Profile", href: "#profile" },
+  { label: "Profile", href: "/profile" },
 ];
 
 export default function Navbar() {
