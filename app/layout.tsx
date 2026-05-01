@@ -25,8 +25,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "New Strategy Institute",
+    alternateName: ["NSI", "New Strategy Institute by DCXforce"],
+    url: "https://nsi.dcxforce.co.jp",
+  };
+
   return (
     <html lang="ja" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-inter bg-white text-navy antialiased">{children}</body>
     </html>
   );
