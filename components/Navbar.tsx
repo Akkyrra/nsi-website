@@ -30,7 +30,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/contact"
             className="font-inter text-sm font-medium bg-navy text-white px-5 py-2 rounded hover:bg-navy/85 transition-colors"
           >
             Contact
@@ -63,7 +63,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/contact"
             className="font-inter text-sm font-medium bg-navy text-white px-5 py-2 rounded text-center hover:bg-navy/85"
             onClick={() => setMenuOpen(false)}
           >
