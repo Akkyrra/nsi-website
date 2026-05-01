@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -7,7 +6,7 @@ const amano = {
   nameEn: "Akira Amano",
   title: "Founding Director, New Strategy Institute / CSO, DCXforce",
   titleJa: "株式会社DCXforce 執行役員 Chief Strategy Officer",
-  photo: "/天野プロフィール写真.JPG",
+  photo: "/IMG_0043.JPG",
   bio: [
     "一橋大学社会学部卒業、東京大学大学院学際情報学府修士課程修了（M.A.）ののち、2012年に株式会社電通へ入社。SNSを中心としたデジタルマーケティング分野の研究開発・戦略コンサルティングを牽引。",
     "2026年4月より株式会社DCXforceへ参画、執行役員CSOに就任。",
@@ -37,19 +36,18 @@ export default function ProfilePage() {
       <section className="bg-navy py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <p className="font-inter text-xs font-semibold tracking-[0.2em] text-gold uppercase mb-4">
-            Knowledge Contributors
+            Member Profile
           </p>
           <h1 className="font-playfair text-4xl lg:text-5xl font-bold text-white leading-tight">
-            NSI Knowledge Contributors
+            NSI Member Profile
           </h1>
         </div>
       </section>
 
-      {/* Knowledge Contributors grid */}
+      {/* Member grid */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-          {/* Grid — 1 col now, will naturally expand to 2 col */}
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 items-start">
 
             {/* Member card — Akira Amano */}
@@ -57,16 +55,17 @@ export default function ProfilePage() {
 
               {/* Card header: photo + name */}
               <div className="grid grid-cols-1 sm:grid-cols-2 items-stretch">
-                {/* Photo */}
-                <div className="relative w-full aspect-[3/4] sm:aspect-auto sm:min-h-[360px]">
-                  <Image
+                {/* Photo — plain img tag */}
+                <div className="w-full overflow-hidden" style={{ minHeight: "360px" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={amano.photo}
                     alt={`${amano.name} プロフィール写真`}
-                    fill
-                    className="object-cover object-top"
-                    priority
+                    className="w-full h-full object-cover object-top"
+                    style={{ minHeight: "360px" }}
                   />
                 </div>
+
                 {/* Name block */}
                 <div className="bg-navy flex flex-col justify-center px-8 py-10 gap-4">
                   <p className="font-inter text-xs font-semibold tracking-[0.2em] text-gold uppercase">
@@ -135,7 +134,7 @@ export default function ProfilePage() {
 
             </article>
 
-            {/* Placeholder — coming soon */}
+            {/* Placeholder */}
             <div className="hidden xl:flex items-center justify-center border border-dashed border-navy/20 rounded-2xl min-h-[400px]">
               <p className="font-inter text-sm text-navy/30 tracking-widest">
                 メンバーは順次追加予定です
@@ -144,7 +143,6 @@ export default function ProfilePage() {
 
           </div>
 
-          {/* Mobile: "coming soon" note */}
           <p className="xl:hidden font-inter text-sm text-navy/30 tracking-wide text-center mt-12">
             メンバーは順次追加予定です
           </p>

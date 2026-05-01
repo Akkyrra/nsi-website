@@ -32,11 +32,6 @@ export default function PodcastPage() {
             先端トレンドの解説などをお届けします！
           </p>
 
-          {/* Micro note — even more recessive */}
-          <p className="font-inter text-xs text-white/30 tracking-widest uppercase -mt-2">
-            Coming Soon — まもなく配信開始予定
-          </p>
-
           {/* Spotify button */}
           <a
             href="#"
