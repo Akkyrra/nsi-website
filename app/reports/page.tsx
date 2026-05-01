@@ -30,8 +30,7 @@ export default function ReportsPage() {
     const data = new FormData(form);
 
     try {
-      // Formspree endpoint — replace with actual endpoint when ready
-      const res = await fetch("https://formspree.io/f/XXXXXXXX", {
+      const res = await fetch("https://formspree.io/f/maqvyknz", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
@@ -103,7 +102,7 @@ export default function ReportsPage() {
                   ありがとうございます
                 </h2>
                 <p className="font-inter text-sm text-navy/65 leading-relaxed">
-                  ご登録のメールアドレスにレポートのPDFリンクをお送りしました。
+                  ありがとうございます。PDFのダウンロードリンクをメールでお送りします。
                   <br />
                   届かない場合は迷惑メールフォルダをご確認ください。
                 </p>
@@ -148,7 +147,7 @@ export default function ReportsPage() {
                   </label>
                   <input
                     type="text"
-                    name="position"
+                    name="title"
                     required
                     placeholder="マーケティング部長"
                     className="font-inter text-sm text-navy placeholder:text-navy/30 border border-navy/20 rounded px-4 py-3 outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors"
@@ -183,7 +182,7 @@ export default function ReportsPage() {
                     会社規模 <span className="text-gold">*</span>
                   </label>
                   <select
-                    name="company_size"
+                    name="size"
                     required
                     defaultValue=""
                     className="font-inter text-sm text-navy border border-navy/20 rounded px-4 py-3 outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors bg-white appearance-none cursor-pointer"
