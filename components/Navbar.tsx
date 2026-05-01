@@ -5,7 +5,7 @@ import Logo from "./Logo";
 
 const navLinks = [
   { label: "About NSI", href: "/about" },
-  { label: "Reports", href: "#reports" },
+  { label: "Reports", href: "/reports" },
   { label: "Podcast", href: "/podcast" },
   { label: "Profile", href: "/profile" },
 ];
