@@ -2,47 +2,8 @@
 
 const reports = [
   {
-    category: "Corporate Finance",
-    title: "資本効率と企業文化の相関関係",
-    date: "2025年4月",
-  },
-  {
-    category: "Narrative Strategy",
-    title: "上場企業のナラティブ設計——IRから採用まで",
-    date: "2025年3月",
-  },
-  {
-    category: "M&A",
-    title: "統合後100日のカルチャー・インテグレーション",
-    date: "2025年2月",
-  },
-  {
-    category: "Market Analysis",
-    title: "日本型スタートアップの資本戦略の変容",
-    date: "2025年1月",
-  },
-];
-
-const podcasts = [
-  {
-    guest: "田中 誠一 / 経営戦略コンサルタント",
-    title: "価値創造の再定義——財務と物語の統合",
-    episode: "Ep.12",
-  },
-  {
-    guest: "山田 花子 / VC Partner",
-    title: "スタートアップが見落としがちな資本の本質",
-    episode: "Ep.11",
-  },
-  {
-    guest: "佐藤 龍一 / CFO",
-    title: "上場企業のIR戦略と長期投資家の獲得",
-    episode: "Ep.10",
-  },
-  {
-    guest: "鈴木 彩 / 組織デザイナー",
-    title: "カルチャーをデザインするとはどういうことか",
-    episode: "Ep.9",
+    category: "SNS MARKETING",
+    title: "#001 ファン資本の再設計――\nAI時代のSNSマーケティングを、運用から資本形成へ",
   },
 ];
 
@@ -61,15 +22,19 @@ export default function ThreeColumnSection() {
                 <span className="inline-block font-inter text-[10px] font-semibold tracking-wider uppercase text-gold bg-gold/10 px-2 py-0.5 rounded mb-2">
                   {report.category}
                 </span>
-                <p className="font-playfair text-base font-semibold text-navy leading-snug group-hover:text-gold transition-colors mb-1">
-                  {report.title}
+                <p className="font-playfair text-base font-semibold text-navy leading-snug group-hover:text-gold transition-colors">
+                  {report.title.split("\n").map((line, i) => (
+                    <span key={i}>
+                      {i > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
                 </p>
-                <p className="font-inter text-xs text-navy/45">{report.date}</p>
               </li>
             ))}
           </ul>
           <a
-            href="#reports"
+            href="/reports"
             className="mt-8 inline-flex items-center gap-1 font-inter text-xs font-semibold text-navy tracking-widest uppercase hover:text-gold transition-colors group"
           >
             ALL REPORTS <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -81,25 +46,14 @@ export default function ThreeColumnSection() {
           <h3 className="font-inter text-xs font-semibold tracking-[0.2em] text-gold uppercase mb-8 pb-4 border-b border-navy/10">
             Podcast
           </h3>
-          <ul className="flex flex-col gap-6">
-            {podcasts.map((pod) => (
-              <li key={pod.title} className="group cursor-pointer">
-                <span className="font-inter text-[10px] text-navy/45 uppercase tracking-wider">
-                  {pod.episode}
-                </span>
-                <p className="font-playfair text-base font-semibold text-navy leading-snug group-hover:text-gold transition-colors mb-1">
-                  {pod.title}
-                </p>
-                <p className="font-inter text-xs text-navy/55">{pod.guest}</p>
-              </li>
-            ))}
-          </ul>
-          <a
-            href="#podcast"
-            className="mt-8 inline-flex items-center gap-1 font-inter text-xs font-semibold text-navy tracking-widest uppercase hover:text-gold transition-colors group"
-          >
-            ALL EPISODES <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </a>
+          <div className="flex flex-col items-start gap-3 py-4">
+            <p className="font-playfair text-3xl font-bold text-navy">
+              Coming Soon.
+            </p>
+            <p className="font-inter text-xs text-navy/45 tracking-wide">
+              まもなく配信開始予定
+            </p>
+          </div>
         </div>
 
         {/* Newsletter */}
@@ -107,10 +61,19 @@ export default function ThreeColumnSection() {
           <h3 className="font-inter text-xs font-semibold tracking-[0.2em] text-gold uppercase mb-8 pb-4 border-b border-navy/10">
             NewsLetter
           </h3>
-          <div className="flex flex-col gap-6">
-            <p className="font-inter text-sm text-navy/65 leading-relaxed">
-              戦略・マーケティング・ファイナンスの最前線を届けます。
-            </p>
+          <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-2">
+              <h4 className="font-playfair text-xl font-bold text-navy leading-snug">
+                NSI Newsletter
+              </h4>
+              <p className="font-inter text-xs text-gold leading-relaxed">
+                On AI-driven social trends, hype narratives,
+                and marketing strategy.
+              </p>
+              <p className="font-inter text-xs text-navy/55 leading-relaxed">
+                AIが駆動するソーシャルトレンド、熱狂を生むナラティブ、そしてマーケティング戦略を読み解く。
+              </p>
+            </div>
             <form
               onSubmit={(e) => e.preventDefault()}
               className="flex flex-col gap-3"
