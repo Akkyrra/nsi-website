@@ -18,7 +18,14 @@ interface NewsItem {
 // 追加するときは先頭に追記（新しい順）
 const newsItems: NewsItem[] = [
   {
-    date: "2025.05.20",
+    date: "2025.06.23",
+    category: "MEDIA",
+    title: "NSIの開設、そして第一弾レポートの発表についてプレスリリースを配信しました",
+    href: "#",
+    external: false,
+  },
+  {
+    date: "2025.06.23",
     category: "REPORT",
     title: "#001 ファン資本の再設計 公開",
     href: "/reports",
@@ -55,9 +62,12 @@ export default function NewsPage() {
           <p className="font-inter text-xs font-semibold tracking-[0.2em] text-gold uppercase mb-8">
             News / New Strategy Institute
           </p>
-          <h1 className="font-playfair text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-            News
+          <h1 className="font-playfair text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6">
+            NSIからのお知らせ
           </h1>
+          <p className="font-inter text-base text-white/55 max-w-2xl leading-relaxed">
+            レポートの発表、メディアへの取材対応、各種寄稿や発刊など、NSIの発信活動についてお知らせいたします。
+          </p>
         </div>
       </section>
 
