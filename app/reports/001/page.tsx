@@ -1361,7 +1361,7 @@ export default function Report001Page() {
             </div>
           ) : (
             <>
-              <h3>PDF版レポートとFramework Kitをダウンロード</h3>
+              <h3>資料ダウンロードフォーム</h3>
               <div className="form-sub" style={{ display: "none" }}></div>
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
