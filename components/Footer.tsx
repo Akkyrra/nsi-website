@@ -1,11 +1,12 @@
 import Logo from "./Logo";
 
 const footerLinks = [
-  { label: "About NSI", href: "#about" },
-  { label: "Reports", href: "#reports" },
+  { label: "About NSI", href: "/about" },
+  { label: "Reports", href: "/reports" },
+  { label: "News", href: "/news" },
   { label: "Podcast", href: "/podcast" },
-  { label: "Profile", href: "#profile" },
-  { label: "Contact", href: "#contact" },
+  { label: "Profile", href: "/profile" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
