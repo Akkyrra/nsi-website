@@ -48,7 +48,7 @@ type Filter = typeof ALL | Category;
 export default function NewsPage() {
   const [active, setActive] = useState<Filter>(ALL);
 
-  const filters: Filter[] = [ALL, "MEDIA", "REPORT", "EVENT", "BOOK", "NEWSLETTER"];
+  const filters: Filter[] = [ALL, "MEDIA", "REPORT", "NEWSLETTER", "EVENT", "BOOK"];
 
   const filtered =
     active === ALL ? newsItems : newsItems.filter((n) => n.category === active);
