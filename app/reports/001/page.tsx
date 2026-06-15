@@ -1338,17 +1338,25 @@ export default function Report001Page() {
       {/* CTA / DOWNLOAD */}
       <section className="cta-section" id="download">
         <div className="cta-bg"></div>
-        <h2>ファン資本（Fandomin Capital）の<br />再設計へ。</h2>
-        <p>配布版Framework Kitのダウンロード、レポート著者とのコンタクトは下記から。</p>
-        <div className="cta-buttons">
-          <a href="#download-form" className="btn-primary">↓ Framework Kitをダウンロード</a>
-          <a href="mailto:info@dcxforce.co.jp" className="btn-secondary">✉ 著者にメール</a>
-        </div>
+        {formState !== "success" && (
+          <>
+            <h2>ファン資本（Fandomin Capital）の<br />再設計へ。</h2>
+            <p>配布版Framework Kitのダウンロード、レポート著者とのコンタクトは下記から。</p>
+            <div className="cta-buttons">
+              <a href="#download-form" className="btn-primary">↓ Framework Kitをダウンロード</a>
+              <a href="mailto:info@dcxforce.co.jp" className="btn-secondary">✉ 著者にメール</a>
+            </div>
+          </>
+        )}
         <div className="download-form reveal" id="download-form">
           {formState === "success" ? (
-            <div style={{ textAlign: "center", padding: "2rem" }}>
-              <p style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "1.1rem", color: "#faf8f3", lineHeight: "2" }}>
-                ありがとうございます。<br />PDFをメールでお送りします。
+            <div style={{ textAlign: "center", padding: "3rem 2rem" }}>
+              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.65rem", color: "var(--gold)", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
+                Thank you
+              </div>
+              <p style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", color: "#faf8f3", lineHeight: "1.9", fontWeight: 600 }}>
+                ご記入ありがとうございました。<br />
+                追って担当者からメールで<br />ご送付いたします。
               </p>
             </div>
           ) : (
