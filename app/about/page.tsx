@@ -101,13 +101,19 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-5">
           <a
             href="/reports"
-            className="font-inter text-sm font-semibold bg-gold text-navy px-8 py-4 rounded hover:bg-gold/85 transition-colors tracking-widest uppercase"
+            className="font-inter text-base font-semibold bg-gold text-navy px-10 py-5 rounded hover:bg-gold/85 transition-colors tracking-widest uppercase"
           >
             レポートを読む
           </a>
           <a
+            href="/#newsletter"
+            className="font-inter text-base font-semibold border-2 border-gold text-gold px-10 py-5 rounded hover:bg-gold/10 transition-colors tracking-widest uppercase whitespace-nowrap"
+          >
+            ニュースレターに登録する
+          </a>
+          <a
             href="/contact"
-            className="font-inter text-sm font-semibold border border-white text-white px-8 py-4 rounded hover:bg-white/10 transition-colors tracking-widest uppercase"
+            className="font-inter text-base font-semibold border-2 border-white text-white px-10 py-5 rounded hover:bg-white/10 transition-colors tracking-widest uppercase"
           >
             お問い合わせ
           </a>
