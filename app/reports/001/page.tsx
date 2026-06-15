@@ -1344,7 +1344,7 @@ export default function Report001Page() {
             <p>PDF版レポートとFramework Kitのダウンロード、レポート著者とのコンタクトは下記から。</p>
             <div className="cta-buttons">
               <a href="#download-form" className="btn-primary">↓ PDF版レポートとFramework Kitをダウンロード</a>
-              <a href="mailto:info@dcxforce.co.jp" className="btn-secondary">✉ 著者にメール</a>
+              <a href="mailto:a.amano@dcxforce.co.jp" className="btn-secondary">✉ 著者にメール</a>
             </div>
           </>
         )}
@@ -1361,8 +1361,8 @@ export default function Report001Page() {
             </div>
           ) : (
             <>
-              <h3>Framework Kit</h3>
-              <div className="form-sub">PDF版レポートとFandomin Capital Loop 図解（高解像度）＋Summary＋診断リスト</div>
+              <h3>PDF版レポートとFramework Kitをダウンロード</h3>
+              <div className="form-sub" style={{ display: "none" }}></div>
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
                   <input type="text" name="name" placeholder="お名前" required />
@@ -1387,7 +1387,7 @@ export default function Report001Page() {
                   disabled={formState === "submitting"}
                   style={{ opacity: formState === "submitting" ? 0.6 : 1 }}
                 >
-                  {formState === "submitting" ? "送信中..." : "ダウンロードリンクを受け取る →"}
+                  {formState === "submitting" ? "送信中..." : "Submit →"}
                 </button>
               </form>
             </>
