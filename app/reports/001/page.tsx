@@ -194,7 +194,7 @@ const reportCss = `
   .btn-secondary { border:1px solid rgba(201,168,76,0.4); color:var(--gold); padding:1rem 2.5rem; font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:border-color 0.2s, background 0.2s; display:inline-flex; align-items:center; gap:0.75rem; }
   .btn-secondary:hover { border-color:var(--gold); background:rgba(201,168,76,0.08); }
   .download-form { max-width:780px; margin:0 auto; position:relative; background:rgba(255,255,255,0.03); border:1px solid rgba(201,168,76,0.15); padding:3rem; }
-  .download-form h3 { font-family:'Shippori Mincho',serif; font-size:1.1rem; color:var(--white); margin-bottom:0.5rem; font-weight:600; }
+  .download-form h3 { font-family:'Shippori Mincho',serif; font-size:1.45rem; color:var(--white); margin-bottom:2rem; font-weight:600; letter-spacing:0.02em; }
   .download-form .form-sub { font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.1em; margin-bottom:2rem; }
   .form-group { margin-bottom:1rem; }
   .form-group input { width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(201,168,76,0.2); color:var(--white); padding:0.85rem 1rem; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; outline:none; transition:border-color 0.2s; }
