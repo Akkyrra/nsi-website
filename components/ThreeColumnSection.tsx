@@ -107,7 +107,7 @@ export default function ThreeColumnSection() {
                   Thank You
                 </p>
                 <p className="font-inter text-sm text-navy/70 leading-relaxed">
-                  ご登録ありがとうございます。<br />最新レポートをお届けします。
+                  ご登録ありがとうございます。<br />最新のニュースレターをお届けします。
                 </p>
               </div>
             ) : (

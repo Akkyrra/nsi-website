@@ -85,10 +85,10 @@ export default function ReportsPage() {
               Newsletter
             </p>
             <p className="font-playfair text-2xl lg:text-3xl font-bold text-white">
-              戦略の最前線を、メールで届ける。
+              NSI Newsletter
             </p>
             <p className="font-inter text-sm text-white/50 leading-relaxed">
-              戦略・マーケティング・ファイナンスの最新知見をお届けします。
+              AIが駆動するソーシャルトレンド、熱狂を生むナラティブ、そしてマーケティング戦略を読み解くためのニュースレター
             </p>
           </div>
           <a

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-type Category = "MEDIA" | "REPORT" | "EVENT" | "BOOK";
+type Category = "MEDIA" | "REPORT" | "EVENT" | "BOOK" | "NEWSLETTER";
 
 interface NewsItem {
   date: string;
@@ -35,10 +35,11 @@ const newsItems: NewsItem[] = [
 // ────────────────────────────────────────────────────────
 
 const categoryColors: Record<Category, string> = {
-  MEDIA:  "text-sky-600   bg-sky-50   border-sky-200",
-  REPORT: "text-gold      bg-amber-50 border-amber-200",
-  EVENT:  "text-emerald-600 bg-emerald-50 border-emerald-200",
-  BOOK:   "text-violet-600  bg-violet-50  border-violet-200",
+  MEDIA:      "text-sky-600     bg-sky-50    border-sky-200",
+  REPORT:     "text-gold        bg-amber-50  border-amber-200",
+  EVENT:      "text-emerald-600 bg-emerald-50 border-emerald-200",
+  BOOK:       "text-violet-600  bg-violet-50  border-violet-200",
+  NEWSLETTER: "text-navy        bg-navy/5    border-navy/20",
 };
 
 const ALL = "ALL" as const;
@@ -47,7 +48,7 @@ type Filter = typeof ALL | Category;
 export default function NewsPage() {
   const [active, setActive] = useState<Filter>(ALL);
 
-  const filters: Filter[] = [ALL, "MEDIA", "REPORT", "EVENT", "BOOK"];
+  const filters: Filter[] = [ALL, "MEDIA", "REPORT", "EVENT", "BOOK", "NEWSLETTER"];
 
   const filtered =
     active === ALL ? newsItems : newsItems.filter((n) => n.category === active);
