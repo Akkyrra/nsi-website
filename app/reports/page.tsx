@@ -64,11 +64,14 @@ export default function ReportsPage() {
               </div>
             </div>
 
-            {/* CTA — URL付与後にリンクを有効化 */}
+            {/* CTA */}
             <div>
-              <span className="inline-block font-inter text-sm font-semibold bg-navy text-gold/60 px-8 py-4 rounded tracking-widest uppercase cursor-default select-none">
-                近日公開
-              </span>
+              <a
+                href="/reports/001"
+                className="inline-block font-inter text-sm font-semibold bg-navy text-gold px-8 py-4 rounded tracking-widest uppercase hover:bg-navy/85 transition-colors"
+              >
+                レポートを読む →
+              </a>
             </div>
           </div>
         </div>
