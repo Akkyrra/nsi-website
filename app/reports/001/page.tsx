@@ -1341,9 +1341,9 @@ export default function Report001Page() {
         {formState !== "success" && (
           <>
             <h2>ファン資本（Fandomin Capital）の<br />再設計へ。</h2>
-            <p>配布版Framework Kitのダウンロード、レポート著者とのコンタクトは下記から。</p>
+            <p>PDF版レポートとFramework Kitのダウンロード、レポート著者とのコンタクトは下記から。</p>
             <div className="cta-buttons">
-              <a href="#download-form" className="btn-primary">↓ Framework Kitをダウンロード</a>
+              <a href="#download-form" className="btn-primary">↓ PDF版レポートとFramework Kitをダウンロード</a>
               <a href="mailto:info@dcxforce.co.jp" className="btn-secondary">✉ 著者にメール</a>
             </div>
           </>
@@ -1354,14 +1354,15 @@ export default function Report001Page() {
               <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.85rem", color: "#c9a84c", letterSpacing: "0.35em", textTransform: "uppercase", marginBottom: "2rem" }}>
                 Thank You
               </div>
-              <p style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "clamp(1.3rem, 2.2vw, 1.7rem)", color: "#faf8f3", lineHeight: "2", fontWeight: 600, whiteSpace: "nowrap" }}>
-                ご記入ありがとうございました。追って担当者からメールでご送付いたします。
+              <p style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "clamp(1.1rem, 1.8vw, 1.45rem)", color: "#faf8f3", lineHeight: "2", fontWeight: 600 }}>
+                ご記入ありがとうございました。<br />
+                追って担当者からメールでご送付いたします。
               </p>
             </div>
           ) : (
             <>
               <h3>Framework Kit</h3>
-              <div className="form-sub">Fandomin Capital Loop 図解（高解像度）＋Summary＋診断リスト</div>
+              <div className="form-sub">PDF版レポートとFandomin Capital Loop 図解（高解像度）＋Summary＋診断リスト</div>
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
                   <input type="text" name="name" placeholder="お名前" required />
