@@ -193,7 +193,7 @@ const reportCss = `
   .btn-primary:hover { background:var(--gold-light); transform:translateY(-2px); }
   .btn-secondary { border:1px solid rgba(201,168,76,0.4); color:var(--gold); padding:1rem 2.5rem; font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; transition:border-color 0.2s, background 0.2s; display:inline-flex; align-items:center; gap:0.75rem; }
   .btn-secondary:hover { border-color:var(--gold); background:rgba(201,168,76,0.08); }
-  .download-form { max-width:520px; margin:0 auto; position:relative; background:rgba(255,255,255,0.03); border:1px solid rgba(201,168,76,0.15); padding:3rem; }
+  .download-form { max-width:780px; margin:0 auto; position:relative; background:rgba(255,255,255,0.03); border:1px solid rgba(201,168,76,0.15); padding:3rem; }
   .download-form h3 { font-family:'Shippori Mincho',serif; font-size:1.1rem; color:var(--white); margin-bottom:0.5rem; font-weight:600; }
   .download-form .form-sub { font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.1em; margin-bottom:2rem; }
   .form-group { margin-bottom:1rem; }
@@ -1350,13 +1350,12 @@ export default function Report001Page() {
         )}
         <div className="download-form reveal" id="download-form">
           {formState === "success" ? (
-            <div style={{ textAlign: "center", padding: "3rem 2rem" }}>
-              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.65rem", color: "var(--gold)", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
-                Thank you
+            <div style={{ textAlign: "center", padding: "4rem 3rem", maxWidth: "760px", margin: "0 auto", width: "100%" }}>
+              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.85rem", color: "#c9a84c", letterSpacing: "0.35em", textTransform: "uppercase", marginBottom: "2rem" }}>
+                Thank You
               </div>
-              <p style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", color: "#faf8f3", lineHeight: "1.9", fontWeight: 600 }}>
-                ご記入ありがとうございました。<br />
-                追って担当者からメールで<br />ご送付いたします。
+              <p style={{ fontFamily: "'Shippori Mincho', serif", fontSize: "clamp(1.3rem, 2.2vw, 1.7rem)", color: "#faf8f3", lineHeight: "2", fontWeight: 600, whiteSpace: "nowrap" }}>
+                ご記入ありがとうございました。追って担当者からメールでご送付いたします。
               </p>
             </div>
           ) : (
