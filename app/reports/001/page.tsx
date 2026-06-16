@@ -218,9 +218,20 @@ const reportCss = `
   .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease; }
   .reveal.visible { opacity:1; transform:translateY(0); }
 
+  /* HAMBURGER */
+  .nav-hamburger { display:none; flex-direction:column; justify-content:space-between; width:22px; height:16px; background:none; border:none; cursor:pointer; padding:0; }
+  .nav-hamburger span { display:block; width:100%; height:1.5px; background:var(--gold); border-radius:2px; transition:all 0.25s ease; transform-origin:center; }
+  .nav-hamburger.is-open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  .nav-hamburger.is-open span:nth-child(2) { opacity:0; }
+  .nav-hamburger.is-open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
   /* RESPONSIVE */
   @media (max-width:900px) {
-    .nav-links { display:none; }
+    .nav-hamburger { display:flex; }
+    .nav-links { display:none; position:absolute; top:60px; left:0; right:0; flex-direction:column; gap:0; background:var(--navy); border-top:1px solid rgba(201,168,76,0.2); padding:0.5rem 0; z-index:999; }
+    .nav-links.open { display:flex; }
+    .nav-links li a { display:block; padding:1rem 2rem; font-size:0.75rem; letter-spacing:0.12em; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .nav-links li:last-child a { border-bottom:none; }
     .chapter-body, .chapter-body.wide { grid-template-columns:1fr; gap:2.5rem; }
     .chapter-header { grid-template-columns:1fr; gap:1rem; }
     .chapter-num { font-size:5rem; }
@@ -238,14 +249,17 @@ const htmlBefore = `
 <!-- NAV -->
 <nav>
   <div class="nav-logo">NSI — New Strategy Institute</div>
+  <button class="nav-hamburger" aria-label="メニューを開く" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open');this.classList.toggle('is-open');">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
-    <li><a href="#summary">Summary</a></li>
-    <li><a href="#ch1">§1</a></li>
-    <li><a href="#ch2">§2</a></li>
-    <li><a href="#ch3">§3</a></li>
-    <li><a href="#ch4">§4</a></li>
-    <li><a href="#ch5">§5</a></li>
-    <li><a href="#download">Download</a></li>
+    <li><a href="#summary" onclick="this.closest('.nav-links').classList.remove('open');">Summary</a></li>
+    <li><a href="#ch1" onclick="this.closest('.nav-links').classList.remove('open');">§1</a></li>
+    <li><a href="#ch2" onclick="this.closest('.nav-links').classList.remove('open');">§2</a></li>
+    <li><a href="#ch3" onclick="this.closest('.nav-links').classList.remove('open');">§3</a></li>
+    <li><a href="#ch4" onclick="this.closest('.nav-links').classList.remove('open');">§4</a></li>
+    <li><a href="#ch5" onclick="this.closest('.nav-links').classList.remove('open');">§5</a></li>
+    <li><a href="#download" onclick="this.closest('.nav-links').classList.remove('open');">Download</a></li>
   </ul>
 </nav>
 
@@ -1332,6 +1346,31 @@ export default function Report001Page() {
         rel="stylesheet"
       />
       <style dangerouslySetInnerHTML={{ __html: reportCss }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Report",
+            "@id": "https://nsi.dcxforce.co.jp/reports/001",
+            headline: "ファン資本（Fandomin Capital）の再設計：AI時代のSNSマーケティング戦略",
+            description: "AI時代のSNSマーケティングをファン資本（Fandomin Capital）という経営概念で再定義。5つの診断軸と実装フレームワークを提示。",
+            datePublished: "2026-06-23",
+            inLanguage: "ja-JP",
+            author: {
+              "@type": "Person",
+              name: "天野彬",
+              jobTitle: "Chief Strategy Officer",
+              affiliation: { "@type": "Organization", name: "DCXforce" },
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "New Strategy Institute by DCXforce",
+              url: "https://nsi.dcxforce.co.jp",
+            },
+          }),
+        }}
+      />
 
       <div dangerouslySetInnerHTML={{ __html: htmlBefore }} />
 
