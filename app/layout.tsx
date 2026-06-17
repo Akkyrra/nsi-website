@@ -36,12 +36,23 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${playfair.variable} ${inter.variable}`}>
       <head>
+        {/* ============================================
+            TRACKING TAGS — ここに計測タグを追加
+            例: Google Tag Manager <script> など
+            ============================================ */}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-inter bg-white text-navy antialiased">{children}</body>
+      <body className="font-inter bg-white text-navy antialiased">
+        {/* ============================================
+            TRACKING TAGS (body先頭) — GTM <noscript> など
+            ============================================ */}
+
+        {children}
+      </body>
     </html>
   );
 }

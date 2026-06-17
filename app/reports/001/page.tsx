@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const reportCss = `
 :root {
@@ -27,21 +29,6 @@ const reportCss = `
     line-height: 1.8;
     overflow-x: hidden;
   }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 1rem 2.5rem;
-    display: flex; align-items: center; justify-content: space-between;
-    background: rgba(10,22,40,0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(201,168,76,0.2);
-    transition: border-color 0.3s;
-  }
-  .nav-logo { font-family: 'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--gold); letter-spacing:0.15em; text-transform:uppercase; }
-  .nav-links { display:flex; gap:2rem; list-style:none; }
-  .nav-links a { font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(250,248,243,0.45); text-decoration:none; letter-spacing:0.1em; text-transform:uppercase; transition:color 0.2s; }
-  .nav-links a:hover { color:var(--gold); }
 
   /* HERO */
   .hero {
@@ -203,11 +190,6 @@ const reportCss = `
   .form-submit { width:100%; background:var(--gold); color:var(--navy); border:none; padding:1rem; font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:500; cursor:pointer; margin-top:0.5rem; transition:background 0.2s; }
   .form-submit:hover { background:var(--gold-light); }
 
-  /* FOOTER */
-  footer { background:#060e1a; padding:3rem 5vw; display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(201,168,76,0.1); }
-  .footer-logo { font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--gold); letter-spacing:0.15em; }
-  .footer-copy { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(250,248,243,0.2); letter-spacing:0.05em; }
-
   /* UTIL */
   .gold-divider { width:60px; height:1px; background:var(--gold); margin:2.5rem 0; }
   .tag-chips { display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:2rem; }
@@ -218,20 +200,8 @@ const reportCss = `
   .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease; }
   .reveal.visible { opacity:1; transform:translateY(0); }
 
-  /* HAMBURGER */
-  .nav-hamburger { display:none; flex-direction:column; justify-content:space-between; width:22px; height:16px; background:none; border:none; cursor:pointer; padding:0; }
-  .nav-hamburger span { display:block; width:100%; height:1.5px; background:var(--gold); border-radius:2px; transition:all 0.25s ease; transform-origin:center; }
-  .nav-hamburger.is-open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-  .nav-hamburger.is-open span:nth-child(2) { opacity:0; }
-  .nav-hamburger.is-open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
-
   /* RESPONSIVE */
   @media (max-width:900px) {
-    .nav-hamburger { display:flex; }
-    .nav-links { display:none; position:absolute; top:60px; left:0; right:0; flex-direction:column; gap:0; background:var(--navy); border-top:1px solid rgba(201,168,76,0.2); padding:0.5rem 0; z-index:999; }
-    .nav-links.open { display:flex; }
-    .nav-links li a { display:block; padding:1rem 2rem; font-size:0.75rem; letter-spacing:0.12em; border-bottom:1px solid rgba(255,255,255,0.05); }
-    .nav-links li:last-child a { border-bottom:none; }
     .chapter-body, .chapter-body.wide { grid-template-columns:1fr; gap:2.5rem; }
     .chapter-header { grid-template-columns:1fr; gap:1rem; }
     .chapter-num { font-size:5rem; }
@@ -246,23 +216,6 @@ const reportCss = `
 `;
 
 const htmlBefore = `
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">NSI — New Strategy Institute</div>
-  <button class="nav-hamburger" aria-label="メニューを開く" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open');this.classList.toggle('is-open');">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="#summary" onclick="this.closest('.nav-links').classList.remove('open');">Summary</a></li>
-    <li><a href="#ch1" onclick="this.closest('.nav-links').classList.remove('open');">§1</a></li>
-    <li><a href="#ch2" onclick="this.closest('.nav-links').classList.remove('open');">§2</a></li>
-    <li><a href="#ch3" onclick="this.closest('.nav-links').classList.remove('open');">§3</a></li>
-    <li><a href="#ch4" onclick="this.closest('.nav-links').classList.remove('open');">§4</a></li>
-    <li><a href="#ch5" onclick="this.closest('.nav-links').classList.remove('open');">§5</a></li>
-    <li><a href="#download" onclick="this.closest('.nav-links').classList.remove('open');">Download</a></li>
-  </ul>
-</nav>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -1258,11 +1211,6 @@ const htmlAfter = `
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">NSI — New Strategy Institute by DCXforce</div>
-  <div class="footer-copy">© 2026 DCXforce Inc. All rights reserved. Report #001</div>
-</footer>
 `;
 
 type FormState = "idle" | "submitting" | "success" | "error";
@@ -1345,8 +1293,7 @@ export default function Report001Page() {
         href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap"
         rel="stylesheet"
       />
-      <style dangerouslySetInnerHTML={{ __html: reportCss }} />
-      <script
+      <style dangerouslySetInnerHTML={{ __html: reportCss }} />      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -1371,6 +1318,23 @@ export default function Report001Page() {
           }),
         }}
       />
+
+      <Navbar />
+
+      {/* Section nav bar */}
+      <div style={{ position: "sticky", top: "64px", zIndex: 90, background: "rgba(10,22,40,0.97)", backdropFilter: "blur(10px)", borderBottom: "1px solid rgba(201,168,76,0.2)", padding: "0.6rem 2.5rem", display: "flex", justifyContent: "flex-end" }}>
+        <ul style={{ display: "flex", gap: "2rem", listStyle: "none", margin: 0, padding: 0 }}>
+          {[["Summary","#summary"],["§1","#ch1"],["§2","#ch2"],["§3","#ch3"],["§4","#ch4"],["§5","#ch5"],["Download","#download"]].map(([label, href]) => (
+            <li key={href}>
+              <a href={href} style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.62rem", color: "rgba(250,248,243,0.45)", textDecoration: "none", letterSpacing: "0.1em", textTransform: "uppercase", transition: "color 0.2s" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#c9a84c")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(250,248,243,0.45)")}>
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div dangerouslySetInnerHTML={{ __html: htmlBefore }} />
 
@@ -1435,6 +1399,8 @@ export default function Report001Page() {
       </section>
 
       <div dangerouslySetInnerHTML={{ __html: htmlAfter }} />
+
+      <Footer />
     </>
   );
 }
