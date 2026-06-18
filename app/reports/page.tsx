@@ -40,7 +40,7 @@ export default function ReportsPage() {
               </h2>
               <div className="w-10 h-0.5 bg-gold mb-6" />
               <p className="font-inter text-base text-navy/65 leading-relaxed">
-                SNSの「運用」は手段に過ぎない。ファンを資本として捉え直し、AI時代における持続的なブランド価値の形成を論じる。
+                SNSマーケティングの定石は、届けることに最適化されてきた。しかしAIが情報を中間処理する時代、蓄積されたシグナルの一貫性こそがブランドの評判を決める。本レポートは「Fandomin Capital」という独自概念を軸に、ファンとの関係性を経営資本として捉え直し、その設計・観測・実装の枠組みを提示する。
               </p>
             </div>
 
@@ -50,16 +50,16 @@ export default function ReportsPage() {
                 <span className="font-inter text-xs text-navy/40 uppercase tracking-widest w-20">
                   著者
                 </span>
-                <span className="font-inter text-sm font-semibold text-navy">
+                <a href="/profile" className="font-inter text-sm font-semibold text-navy hover:text-gold transition-colors">
                   天野 彬
-                </span>
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-inter text-xs text-navy/40 uppercase tracking-widest w-20">
                   形式
                 </span>
                 <span className="font-inter text-sm font-semibold text-navy">
-                  Web（無料）
+                  Webレポート、希望者にPDF版を配布
                 </span>
               </div>
             </div>
