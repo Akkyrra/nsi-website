@@ -8,10 +8,10 @@ export default function Logo({ variant = "dark" }: LogoProps) {
 
   return (
     <a href="/" className="flex flex-col leading-tight hover:opacity-80 transition-opacity">
-      <span className={`font-playfair text-lg font-bold tracking-tight ${primaryColor}`}>
+      <span className={`font-playfair text-xl lg:text-2xl font-bold tracking-tight ${primaryColor}`}>
         New Strategy Institute
       </span>
-      <span className={`font-inter text-xs font-medium tracking-widest ${secondaryColor}`}>
+      <span className={`font-inter text-[11px] font-medium tracking-[0.18em] ${secondaryColor}`}>
         BY DCXforce
       </span>
     </a>

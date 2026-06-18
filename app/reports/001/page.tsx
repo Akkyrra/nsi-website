@@ -1322,7 +1322,7 @@ export default function Report001Page() {
       <Navbar />
 
       {/* Section nav bar */}
-      <div style={{ position: "sticky", top: "64px", zIndex: 90, background: "rgba(10,22,40,0.97)", backdropFilter: "blur(10px)", borderBottom: "1px solid rgba(201,168,76,0.2)" }}>
+      <div style={{ position: "sticky", top: "80px", zIndex: 90, background: "rgba(10,22,40,0.97)", backdropFilter: "blur(10px)", borderBottom: "1px solid rgba(201,168,76,0.2)" }}>
         <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0.6rem 1.5rem", display: "flex", justifyContent: "flex-end" }}>
         <ul style={{ display: "flex", gap: "2rem", listStyle: "none", margin: 0, padding: 0 }}>
           {[["Summary","#summary"],["§1","#ch1"],["§2","#ch2"],["§3","#ch3"],["§4","#ch4"],["§5","#ch5"],["Download","#download"]].map(([label, href]) => (
