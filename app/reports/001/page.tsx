@@ -1272,7 +1272,7 @@ export default function Report001Page() {
     const sectionIds = ["summary", "ch1", "ch2", "ch3", "ch4", "ch5", "download"];
 
     // Show sidebar after hero leaves viewport
-    const hero = document.querySelector(".hero-section") as Element | null;
+    const hero = document.querySelector(".hero") as Element | null;
     const heroObs = new IntersectionObserver(
       ([e]) => setSidebarVisible(!e.isIntersecting),
       { threshold: 0 }
@@ -1352,97 +1352,87 @@ export default function Report001Page() {
 
       <Navbar />
 
-      {/* Side nav */}
-      {(() => {
-        const sections = [
-          { id: "summary", label: "Summary",  sub: "概要"      },
-          { id: "ch1",     label: "§ 1",      sub: "現在地"    },
-          { id: "ch2",     label: "§ 2",      sub: "AI"        },
-          { id: "ch3",     label: "§ 3",      sub: "設計"      },
-          { id: "ch4",     label: "§ 4",      sub: "観測"      },
-          { id: "ch5",     label: "§ 5",      sub: "結論"      },
-          { id: "download",label: "DL",        sub: "資料"      },
-        ];
-        return (
-          <nav
-            aria-label="レポート内目次"
-            style={{
-              position: "fixed",
-              top: "50%",
-              left: "clamp(0.75rem, 2vw, 2.5rem)",
-              transform: "translateY(-50%)",
-              zIndex: 80,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              gap: 0,
-              opacity: sidebarVisible ? 1 : 0,
-              pointerEvents: sidebarVisible ? "auto" : "none",
-              transition: "opacity 0.4s ease",
-            }}
-          >
-            {/* Vertical track line */}
-            <div style={{
-              position: "absolute",
-              left: "5px",
-              top: "10px",
-              bottom: "10px",
-              width: "1px",
-              background: "rgba(201,168,76,0.15)",
-            }} />
+      {/* Side nav — fixed left, scroll-spy */}
+      <div
+        style={{
+          position: "fixed",
+          top: "50%",
+          left: "clamp(0.5rem, 1.5vw, 2rem)",
+          transform: "translateY(-50%)",
+          zIndex: 80,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          opacity: sidebarVisible ? 1 : 0,
+          pointerEvents: sidebarVisible ? "auto" : "none",
+          transition: "opacity 0.4s ease",
+        }}
+      >
+        {/* Track line */}
+        <div style={{
+          position: "absolute",
+          left: "5px",
+          top: "8px",
+          bottom: "8px",
+          width: "1px",
+          background: "rgba(201,168,76,0.15)",
+        }} />
 
-            {sections.map(({ id, label, sub }) => {
-              const isActive = activeSection === id;
-              return (
-                <a
-                  key={id}
-                  href={`#${id}`}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.75rem",
-                    padding: "0.55rem 0",
-                    textDecoration: "none",
-                    position: "relative",
-                  }}
-                >
-                  {/* Dot */}
-                  <span style={{
-                    width: "11px",
-                    height: "11px",
-                    borderRadius: "50%",
-                    border: `1.5px solid ${isActive ? "#c9a84c" : "rgba(201,168,76,0.3)"}`,
-                    background: isActive ? "#c9a84c" : "transparent",
-                    flexShrink: 0,
-                    transition: "all 0.25s ease",
-                    boxShadow: isActive ? "0 0 8px rgba(201,168,76,0.5)" : "none",
-                  }} />
-                  {/* Labels */}
-                  <span style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
-                    <span style={{
-                      fontFamily: "'IBM Plex Mono', monospace",
-                      fontSize: "0.58rem",
-                      fontWeight: isActive ? 600 : 400,
-                      color: isActive ? "#c9a84c" : "rgba(201,168,76,0.35)",
-                      letterSpacing: "0.08em",
-                      textTransform: "uppercase",
-                      transition: "color 0.25s ease",
-                      lineHeight: 1,
-                    }}>{label}</span>
-                    <span style={{
-                      fontFamily: "'Noto Sans JP', sans-serif",
-                      fontSize: "0.52rem",
-                      color: isActive ? "rgba(250,248,243,0.7)" : "rgba(250,248,243,0.2)",
-                      transition: "color 0.25s ease",
-                      lineHeight: 1,
-                    }}>{sub}</span>
-                  </span>
-                </a>
-              );
-            })}
-          </nav>
-        );
-      })()}
+        {[
+          { id: "summary",  label: "Summary", sub: "概要"   },
+          { id: "ch1",      label: "§ 1",     sub: "現在地" },
+          { id: "ch2",      label: "§ 2",     sub: "AI"     },
+          { id: "ch3",      label: "§ 3",     sub: "設計"   },
+          { id: "ch4",      label: "§ 4",     sub: "観測"   },
+          { id: "ch5",      label: "§ 5",     sub: "結論"   },
+          { id: "download", label: "DL",      sub: "資料"   },
+        ].map(({ id, label, sub }) => {
+          const active = activeSection === id;
+          return (
+            <a
+              key={id}
+              href={`#${id}`}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.65rem",
+                padding: "0.5rem 0",
+                textDecoration: "none",
+              }}
+            >
+              <span style={{
+                width: "11px",
+                height: "11px",
+                borderRadius: "50%",
+                border: `1.5px solid ${active ? "#c9a84c" : "rgba(201,168,76,0.25)"}`,
+                background: active ? "#c9a84c" : "transparent",
+                flexShrink: 0,
+                transition: "all 0.25s",
+                boxShadow: active ? "0 0 8px rgba(201,168,76,0.5)" : "none",
+              }} />
+              <span style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+                <span style={{
+                  fontFamily: "'IBM Plex Mono', monospace",
+                  fontSize: "0.56rem",
+                  fontWeight: active ? 600 : 400,
+                  color: active ? "#c9a84c" : "rgba(201,168,76,0.3)",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  transition: "color 0.25s",
+                  lineHeight: 1,
+                }}>{label}</span>
+                <span style={{
+                  fontFamily: "'Noto Sans JP', sans-serif",
+                  fontSize: "0.5rem",
+                  color: active ? "rgba(250,248,243,0.65)" : "rgba(250,248,243,0.18)",
+                  transition: "color 0.25s",
+                  lineHeight: 1,
+                }}>{sub}</span>
+              </span>
+            </a>
+          );
+        })}
+      </div>
 
       <div dangerouslySetInnerHTML={{ __html: htmlBefore }} />
 
