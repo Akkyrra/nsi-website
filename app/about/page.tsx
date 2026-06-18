@@ -74,6 +74,10 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+
+          <p className="font-inter text-base lg:text-lg text-navy/70 leading-[2] max-w-3xl mt-14">
+            NSIはDCXforceの下部組織として、戦略の解像度を引き上げる役割を担います。左脳的な分析と、右脳的な熱量ある打ち手。それらが統合された「Brand Capital Strategy」をもって、クライアント・パートナー各社との協業を成功に導きます。
+          </p>
         </div>
       </section>
 
@@ -100,23 +104,6 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Our Relationship */}
-      <section className="bg-white py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-[280px_1fr] gap-10 md:gap-16">
-          <div>
-            <p className="font-inter text-xs font-semibold tracking-[0.2em] text-gold uppercase md:sticky md:top-28">
-              Our Relationship
-            </p>
-          </div>
-          <p className="font-inter text-base lg:text-lg text-navy/70 leading-[2] max-w-2xl">
-            NSIはDCXforceの下部組織として、戦略の解像度を引き上げる役割を担います。
-            左脳的な分析と、右脳的な熱量ある打ち手。
-            それらが統合された「Brand Capital Strategy」をもって、
-            クライアント・パートナー各社との協業を成功に導きます。
-          </p>
         </div>
       </section>
 
