@@ -1302,6 +1302,7 @@ export default function Report001Page() {
   const [formState, setFormState] = useState<FormState>("idle");
   const [activeSection, setActiveSection] = useState<string>("");
   const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [tocOpen, setTocOpen] = useState(false);
 
   // Inject report CSS once into <head> — stable across re-renders
   useEffect(() => {
@@ -1602,6 +1603,110 @@ export default function Report001Page() {
       </section>
 
       <div dangerouslySetInnerHTML={{ __html: htmlAfter }} />
+
+      {/* Floating TOC */}
+      {(() => {
+        const toc = [
+          { id: "summary", label: "Summary",      sub: "概要"   },
+          { id: "ch1",     label: "Chapter 1",    sub: "現在地" },
+          { id: "ch2",     label: "Chapter 2",    sub: "AI"     },
+          { id: "ch3",     label: "Chapter 3",    sub: "設計"   },
+          { id: "ch4",     label: "Chapter 4",    sub: "観測"   },
+          { id: "ch5",     label: "Chapter 5",    sub: "結論"   },
+          { id: "download",label: "Download",     sub: "資料DL" },
+        ];
+        return (
+          <>
+            {/* Backdrop */}
+            {tocOpen && (
+              <div
+                onClick={() => setTocOpen(false)}
+                style={{ position:"fixed", inset:0, zIndex:140, background:"rgba(10,22,40,0.5)", backdropFilter:"blur(2px)" }}
+              />
+            )}
+
+            {/* TOC Panel */}
+            <div style={{
+              position: "fixed",
+              bottom: tocOpen ? "80px" : "-100%",
+              right: "1.25rem",
+              zIndex: 150,
+              background: "rgba(10,22,40,0.97)",
+              border: "1px solid rgba(201,168,76,0.25)",
+              borderRadius: "12px",
+              padding: "1.25rem 0",
+              minWidth: "220px",
+              maxWidth: "280px",
+              transition: "bottom 0.35s cubic-bezier(0.34,1.56,0.64,1)",
+              boxShadow: "0 8px 40px rgba(0,0,0,0.4)",
+            }}>
+              <div style={{ padding: "0 1.25rem 1rem", borderBottom: "1px solid rgba(201,168,76,0.15)", marginBottom: "0.5rem" }}>
+                <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:"0.6rem", color:"rgba(201,168,76,0.6)", letterSpacing:"0.2em", textTransform:"uppercase" }}>
+                  Contents
+                </span>
+              </div>
+              {toc.map(({ id, label, sub }) => {
+                const active = activeSection === id;
+                return (
+                  <a
+                    key={id}
+                    href={`#${id}`}
+                    onClick={() => setTocOpen(false)}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.75rem",
+                      padding: "0.6rem 1.25rem",
+                      textDecoration: "none",
+                      background: active ? "rgba(201,168,76,0.08)" : "transparent",
+                      borderLeft: active ? "2px solid #c9a84c" : "2px solid transparent",
+                      transition: "all 0.15s",
+                    }}
+                  >
+                    <span style={{ display:"flex", flexDirection:"column", gap:"2px" }}>
+                      <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:"0.62rem", fontWeight: active ? 700 : 400, color: active ? "#c9a84c" : "rgba(250,248,243,0.55)", letterSpacing:"0.06em", textTransform:"uppercase", lineHeight:1 }}>
+                        {label}
+                      </span>
+                      <span style={{ fontFamily:"'Noto Sans JP',sans-serif", fontSize:"0.68rem", color: active ? "rgba(250,248,243,0.85)" : "rgba(250,248,243,0.35)", lineHeight:1.3 }}>
+                        {sub}
+                      </span>
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+
+            {/* TOC Toggle Button */}
+            <button
+              onClick={() => setTocOpen(o => !o)}
+              style={{
+                position: "fixed",
+                bottom: "1.5rem",
+                right: "1.25rem",
+                zIndex: 150,
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                background: tocOpen ? "#c9a84c" : "rgba(10,22,40,0.95)",
+                border: "1px solid rgba(201,168,76,0.4)",
+                borderRadius: "50px",
+                padding: "0.65rem 1.1rem",
+                cursor: "pointer",
+                transition: "all 0.25s",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.35)",
+                backdropFilter: "blur(8px)",
+              }}
+            >
+              <span style={{ fontSize:"0.9rem", lineHeight:1 }}>
+                {tocOpen ? "✕" : "≡"}
+              </span>
+              <span style={{ fontFamily:"'IBM Plex Mono',monospace", fontSize:"0.6rem", fontWeight:600, color: tocOpen ? "#0a1628" : "#c9a84c", letterSpacing:"0.12em", textTransform:"uppercase" }}>
+                {tocOpen ? "Close" : "目次"}
+              </span>
+            </button>
+          </>
+        );
+      })()}
 
       <Footer />
     </>
