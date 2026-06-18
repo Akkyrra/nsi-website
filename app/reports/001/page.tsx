@@ -1303,21 +1303,26 @@ export default function Report001Page() {
     );
     if (hero) heroObs.observe(hero);
 
-    // Highlight active section
-    const spyObs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id);
-        });
-      },
-      { rootMargin: "-10% 0px -80% 0px", threshold: 0 }
-    );
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) spyObs.observe(el);
-    });
+    // Scroll-spy: find which section top is closest above 30% viewport mark
+    const updateActive = () => {
+      const marker = window.scrollY + window.innerHeight * 0.3;
+      let current = sectionIds[0];
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= marker) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    };
 
-    return () => { heroObs.disconnect(); spyObs.disconnect(); };
+    updateActive(); // Run once on mount
+    window.addEventListener("scroll", updateActive, { passive: true });
+
+    return () => {
+      heroObs.disconnect();
+      window.removeEventListener("scroll", updateActive);
+    };
   }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
