@@ -201,7 +201,7 @@ const reportCss = `
   .will-animate { opacity:0; transform:translateY(24px); }
   .will-animate.visible { opacity:1; transform:none; }
 
-  /* RESPONSIVE */
+  /* RESPONSIVE — 900px */
   @media (max-width:900px) {
     .chapter-body, .chapter-body.wide { grid-template-columns:1fr; gap:2.5rem; }
     .chapter-header { grid-template-columns:1fr; gap:1rem; }
@@ -213,6 +213,59 @@ const reportCss = `
     .hero { padding:0 1.5rem 6vh; }
     .cta-buttons { flex-direction:column; align-items:center; }
     footer { flex-direction:column; gap:1rem; text-align:center; }
+  }
+
+  /* MOBILE — 768px */
+  @media (max-width:768px) {
+    html, body { overflow-x:hidden; max-width:100%; }
+
+    /* Sidebar hidden on mobile */
+    .report-sidebar { display:none !important; }
+
+    /* Force all multi-column grids to single column */
+    .soa-comparison,
+    .stat-row,
+    .insight-row,
+    .diagnostic-cards,
+    .failure-cards,
+    .summary-grid,
+    .layer-grid,
+    .chapter-body,
+    .chapter-body.wide,
+    .chapter-header { display:block !important; }
+
+    /* SOA comparison spacing */
+    .soa-col { margin-bottom:2.5rem; padding:2rem 1.5rem !important; }
+    .soa-col:last-child { margin-bottom:0; }
+    .soa-arrow { display:none !important; }
+
+    /* Summary cards */
+    .summary-item { padding:2rem 1.5rem !important; }
+
+    /* Chapter padding */
+    .chapter, .summary, .framework-section,
+    .diagnostic-section, .failure-section, .cta-section { padding:4rem 1.25rem !important; }
+
+    /* Download form */
+    .download-form { padding:2rem 1.25rem !important; max-width:100% !important; }
+
+    /* Hero */
+    .hero { min-height:calc(100vh - 6rem); padding:0 1.25rem 5vh; }
+    .hero-title { font-size:clamp(2.2rem,9vw,3.5rem) !important; }
+    .hero-tagline { font-size:0.9rem !important; }
+
+    /* Chapter number */
+    .chapter-num { font-size:4rem !important; }
+
+    /* Prevent any element from overflowing */
+    * { max-width:100%; box-sizing:border-box; word-break:break-word; }
+    img, svg { max-width:100% !important; height:auto !important; }
+
+    /* Stat blocks */
+    .stat-block { min-width:unset !important; }
+
+    /* Section labels */
+    .section-label { font-size:0.65rem !important; }
   }
 `;
 
@@ -1383,6 +1436,7 @@ export default function Report001Page() {
 
       {/* Side nav — fixed left, scroll-spy */}
       <div
+        className="report-sidebar"
         style={{
           position: "fixed",
           top: "50%",
