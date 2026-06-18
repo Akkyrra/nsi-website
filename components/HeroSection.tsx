@@ -15,7 +15,7 @@ export default function HeroSection() {
               我々はその全体を構想します。
             </h1>
             <p className="font-inter text-sm text-navy/65 leading-relaxed mb-7 max-w-lg">
-              New Strategy Institute by DCXforceは、企業・事業のグロース戦略を研究し、その知見を提供します。ソーシャル、ファイナンス、AI、ナラティブ…の交差点から、新しい局面を切り開くための包括的な変革プランを描き出します。
+              New Strategy Institute by DCXforceは、企業・事業のグロース戦略を研究し、その知見を提供するシンクタンクです。ソーシャル、ファイナンス、AI、ナラティブ…の交差点から、新しい局面を切り開くための包括的な変革プランを描き出します。
             </p>
             <a
               href="/about"

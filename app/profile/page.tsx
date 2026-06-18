@@ -48,9 +48,12 @@ export default function ProfilePage() {
           <p className="font-inter text-xs font-semibold tracking-[0.2em] text-gold uppercase mb-4">
             Member Profile
           </p>
-          <h1 className="font-playfair text-4xl lg:text-5xl font-bold text-white leading-tight">
+          <h1 className="font-playfair text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
             NSI Knowledge Contributors
           </h1>
+          <p className="font-inter text-base text-white/55 max-w-2xl leading-relaxed">
+            レポート、ニュースレター、ポッドキャスト、その他の各種発信活動に携わるNSIのメンバー、パートナーをご紹介します。
+          </p>
         </div>
       </section>
 
