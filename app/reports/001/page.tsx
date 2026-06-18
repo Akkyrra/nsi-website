@@ -32,7 +32,7 @@ const reportCss = `
 
   /* HERO */
   .hero {
-    min-height: 100vh; background: var(--navy);
+    min-height: calc(100vh - 6rem); background: var(--navy);
     display: flex; flex-direction: column; justify-content: flex-end;
     padding: 0 5vw 8vh; position: relative; overflow: hidden;
   }
@@ -1235,7 +1235,17 @@ export default function Report001Page() {
 
   useEffect(() => {
     const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
+
+    // Immediately show elements that are already in/above the viewport
+    // (handles direct URL hash navigation and fast scrolling)
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.95) {
+        el.classList.add('visible');
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
         setTimeout(() => entry.target.classList.add('visible'), i * 60);
