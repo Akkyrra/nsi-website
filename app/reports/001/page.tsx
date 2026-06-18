@@ -197,8 +197,9 @@ const reportCss = `
 
   /* ANIMATIONS */
   @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
-  .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease; }
-  .reveal.visible { opacity:1; transform:translateY(0); }
+  .reveal { opacity:1; transform:none; transition:opacity 0.7s ease, transform 0.7s ease; }
+  .will-animate { opacity:0; transform:translateY(24px); }
+  .will-animate.visible { opacity:1; transform:none; }
 
   /* RESPONSIVE */
   @media (max-width:900px) {
@@ -1234,26 +1235,26 @@ export default function Report001Page() {
   }, []);
 
   useEffect(() => {
+    // Content is always visible (.reveal default is opacity:1)
+    // Add scroll animation only to elements below the current viewport
     const reveals = document.querySelectorAll('.reveal');
-
-    // Immediately show elements that are already in/above the viewport
-    // (handles direct URL hash navigation and fast scrolling)
     reveals.forEach(el => {
       const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.95) {
-        el.classList.add('visible');
+      if (rect.top > window.innerHeight) {
+        // Below viewport: opt into animation
+        el.classList.add('will-animate');
       }
     });
 
     const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 60);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-  reveals.forEach(el => observer.observe(el));
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.will-animate').forEach(el => observer.observe(el));
 
   window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav') as HTMLElement | null;
