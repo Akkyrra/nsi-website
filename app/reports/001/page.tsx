@@ -1217,8 +1217,21 @@ type FormState = "idle" | "submitting" | "success" | "error";
 
 export default function Report001Page() {
   const [formState, setFormState] = useState<FormState>("idle");
-  const [activeSection, setActiveSection] = useState<string>("summary");
+  const [activeSection, setActiveSection] = useState<string>("");
   const [sidebarVisible, setSidebarVisible] = useState(false);
+
+  // Inject report CSS once into <head> — stable across re-renders
+  useEffect(() => {
+    const existing = document.getElementById("report-001-styles");
+    if (existing) return;
+    const styleEl = document.createElement("style");
+    styleEl.id = "report-001-styles";
+    styleEl.innerHTML = reportCss;
+    document.head.appendChild(styleEl);
+    return () => {
+      document.getElementById("report-001-styles")?.remove();
+    };
+  }, []);
 
   useEffect(() => {
     const reveals = document.querySelectorAll('.reveal');
@@ -1286,7 +1299,7 @@ export default function Report001Page() {
           if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
-      { rootMargin: "-20% 0px -60% 0px" }
+      { rootMargin: "-10% 0px -80% 0px", threshold: 0 }
     );
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
@@ -1324,7 +1337,7 @@ export default function Report001Page() {
         href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap"
         rel="stylesheet"
       />
-      <style dangerouslySetInnerHTML={{ __html: reportCss }} />      <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -1385,53 +1398,27 @@ export default function Report001Page() {
           { id: "ch3",      label: "§ 3",     sub: "設計"   },
           { id: "ch4",      label: "§ 4",     sub: "観測"   },
           { id: "ch5",      label: "§ 5",     sub: "結論"   },
-          { id: "download", label: "DL",      sub: "資料"   },
         ].map(({ id, label, sub }) => {
           const active = activeSection === id;
           return (
-            <a
-              key={id}
-              href={`#${id}`}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.65rem",
-                padding: "0.5rem 0",
-                textDecoration: "none",
-              }}
-            >
-              <span style={{
-                width: "11px",
-                height: "11px",
-                borderRadius: "50%",
-                border: `1.5px solid ${active ? "#c9a84c" : "rgba(201,168,76,0.25)"}`,
-                background: active ? "#c9a84c" : "transparent",
-                flexShrink: 0,
-                transition: "all 0.25s",
-                boxShadow: active ? "0 0 8px rgba(201,168,76,0.5)" : "none",
-              }} />
+            <a key={id} href={`#${id}`} style={{ display: "flex", alignItems: "center", gap: "0.65rem", padding: "0.5rem 0", textDecoration: "none" }}>
+              <span style={{ width: "11px", height: "11px", borderRadius: "50%", border: `1.5px solid ${active ? "#c9a84c" : "rgba(201,168,76,0.25)"}`, background: active ? "#c9a84c" : "transparent", flexShrink: 0, transition: "all 0.25s", boxShadow: active ? "0 0 8px rgba(201,168,76,0.5)" : "none" }} />
               <span style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
-                <span style={{
-                  fontFamily: "'IBM Plex Mono', monospace",
-                  fontSize: "0.56rem",
-                  fontWeight: active ? 600 : 400,
-                  color: active ? "#c9a84c" : "rgba(201,168,76,0.3)",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  transition: "color 0.25s",
-                  lineHeight: 1,
-                }}>{label}</span>
-                <span style={{
-                  fontFamily: "'Noto Sans JP', sans-serif",
-                  fontSize: "0.5rem",
-                  color: active ? "rgba(250,248,243,0.65)" : "rgba(250,248,243,0.18)",
-                  transition: "color 0.25s",
-                  lineHeight: 1,
-                }}>{sub}</span>
+                <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.56rem", fontWeight: active ? 600 : 400, color: active ? "#c9a84c" : "rgba(201,168,76,0.3)", letterSpacing: "0.08em", textTransform: "uppercase", transition: "color 0.25s", lineHeight: 1 }}>{label}</span>
+                <span style={{ fontFamily: "'Noto Sans JP', sans-serif", fontSize: "0.5rem", color: active ? "rgba(250,248,243,0.65)" : "rgba(250,248,243,0.18)", transition: "color 0.25s", lineHeight: 1 }}>{sub}</span>
               </span>
             </a>
           );
         })}
+
+        {/* DL — always-on CTA */}
+        <a href="#download" style={{ display: "flex", alignItems: "center", gap: "0.65rem", padding: "0.5rem 0", marginTop: "0.75rem", textDecoration: "none" }}>
+          <span style={{ width: "22px", height: "22px", borderRadius: "4px", background: "#c9a84c", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.65rem", color: "#0a1628", fontWeight: 700, boxShadow: "0 0 10px rgba(201,168,76,0.45)" }}>↓</span>
+          <span style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.56rem", fontWeight: 700, color: "#c9a84c", letterSpacing: "0.08em", textTransform: "uppercase", lineHeight: 1 }}>資料DL</span>
+            <span style={{ fontFamily: "'Noto Sans JP', sans-serif", fontSize: "0.5rem", color: "rgba(201,168,76,0.6)", lineHeight: 1 }}>無料</span>
+          </span>
+        </a>
       </div>
 
       <div dangerouslySetInnerHTML={{ __html: htmlBefore }} />
