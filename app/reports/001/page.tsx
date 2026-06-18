@@ -201,6 +201,14 @@ const reportCss = `
   .will-animate { opacity:0; transform:translateY(24px); }
   .will-animate.visible { opacity:1; transform:none; }
 
+  /* GRID CLASSES (moved from inline styles for mobile override) */
+  .rg-2   { display:grid; grid-template-columns:1fr 1fr; }
+  .rg-3   { display:grid; grid-template-columns:repeat(3,1fr); }
+  .rg-4   { display:grid; grid-template-columns:repeat(4,1fr); }
+  .rg-5   { display:grid; grid-template-columns:repeat(5,1fr); }
+  .rg-soa { display:grid; grid-template-columns:1fr 40px 1fr; align-items:stretch; }
+  .rg-wide { display:grid; grid-template-columns:55% 45%; }
+
   /* RESPONSIVE — 900px */
   @media (max-width:900px) {
     .chapter-body, .chapter-body.wide { grid-template-columns:1fr; gap:2.5rem; }
@@ -256,6 +264,17 @@ const reportCss = `
 
     /* Chapter number */
     .chapter-num { font-size:4rem !important; }
+
+    /* Grid classes — all collapse to single column */
+    .rg-2, .rg-3, .rg-4, .rg-5, .rg-soa, .rg-wide {
+      display: block !important;
+    }
+    .rg-2 > *, .rg-3 > *, .rg-4 > *, .rg-5 > *, .rg-soa > *, .rg-wide > * {
+      width: 100% !important;
+      min-width: unset !important;
+      margin-bottom: 1.5rem;
+    }
+    .rg-soa > *:nth-child(2) { display: none; } /* hide arrow */
 
     /* Force override inline display:grid (JS handles most, CSS handles rest) */
     [style*="grid-template-columns"] {
@@ -341,7 +360,7 @@ const htmlBefore = `
     </div>
   </div>
 
-  <div class="reveal" style="margin-left:-5vw; margin-right:-5vw; width:calc(100% + 10vw); max-width:none; display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(201,168,76,0.15);">
+  <div class="reveal" class="rg-2" style="margin-left:-5vw; margin-right:-5vw; width:calc(100% + 10vw); max-width:none; gap:1px; background:rgba(201,168,76,0.15);">
     <div class="stat-item">
       <div class="stat-num">約1.5兆円</div>
       <div class="stat-label">2026年 ソーシャルメディア<br>マーケティング市場規模（予測値）</div>
@@ -496,7 +515,7 @@ const htmlBefore = `
     </div>
     <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:2.5rem; margin-bottom:1rem;">
       <p style="font-size:0.88rem; color:rgba(250,248,243,0.6); line-height:2; margin-bottom:2rem;">GoogleはSEOとAI検索を「対立」ではなく「融合」と位置づけている。検索行動は一夜にして切り替わるのではなく、グラデーションとして移行していく。企業が問われるのは「どちらに対応するか」ではなく、<strong style="color:var(--white);">「両者にまたがって一貫したシグナルを蓄積できているか」</strong>だ。</p>
-      <div style="display:grid; grid-template-columns:1fr 40px 1fr; gap:0; align-items:stretch;">
+      <div class="rg-soa" style="gap:0; align-items:stretch;">
         <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); padding:2rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(250,248,243,0.35); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem;">SEO の重力</div>
           <ul class="soa-items">
@@ -563,7 +582,7 @@ const htmlBefore = `
   <!-- 3つの問題提起 -->
   <div class="reveal" style="max-width:1100px; margin-bottom:4rem;">
     <div class="section-label" style="margin-bottom:2rem;">Fandomin Capitalが解決する3つの問題</div>
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(201,168,76,0.15);">
+    <div class="rg-3" style="gap:1px; background:rgba(201,168,76,0.15);">
       <div style="background:var(--navy); padding:2.5rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:1rem;">問題 01</div>
         <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--white); margin-bottom:0.75rem; line-height:1.5;">SNS施策が単発で終わり、資産化されない</h4>
@@ -791,7 +810,7 @@ const htmlBefore = `
   <!-- 用語解説 -->
   <div class="reveal" style="max-width:1100px; margin-bottom:5rem;">
     <div class="section-label" style="margin-bottom:2rem;">図の読み方——4つの概念を理解する</div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+    <div class="rg-2" style="gap:1.5rem;">
       <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">外環 — PESO</div>
         <p style="font-size:0.88rem; color:rgba(250,248,243,0.75); line-height:1.9;">Paid（広告）・Earned（PR・メディア）・Shared（UGC・SNS）・Owned（製品・CRM）という4つの情報環境の軸。企業が情報をどこに配置するかという「場の設計」を示す。Fandomin Capital Loopでは、この外環がブランドと生活者の接触を設計する役割を担う。</p>
@@ -831,7 +850,7 @@ const htmlBefore = `
       <div style="margin-bottom:3rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem;">PESO × Fandomin Capital Loop で読む</div>
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(201,168,76,0.15);">
+        <div class="rg-2" style="gap:1px; background:rgba(201,168,76,0.15);">
           <div style="background:rgba(10,22,40,0.6); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Paid — 最小化戦略</div>
             <p style="font-size:0.87rem; color:rgba(250,248,243,0.7); line-height:1.9;">Patagoniaの広告費は売上比で業界最低水準だ。「Don't Buy This Jacket」のような広告を出すが、目的は購買促進ではなく哲学の表明。Paid を絞ることで、Earned と Shared の価値が相対的に高まる構造を意図的に設計している。</p>
@@ -852,7 +871,7 @@ const htmlBefore = `
       </div>
 
       <!-- Fan Moment / AI Signal -->
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:2.5rem;">
+      <div class="rg-2" style="gap:1.5rem; margin-bottom:2.5rem;">
         <div style="background:rgba(196,92,58,0.08); border:1px solid rgba(196,92,58,0.25); padding:1.75rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--coral); letter-spacing:0.15em; margin-bottom:0.75rem;">Fan Moment の所在</div>
           <p style="font-size:0.87rem; color:rgba(250,248,243,0.7); line-height:1.9;">「修理に出したら、想像以上に丁寧に直してくれた」という体験の瞬間。「この広告を見て、逆に買いたくなった」という認知の転換の瞬間。Fan Momentは購買時点ではなく、プロダクトの思想が体験として伝わる瞬間に宿る。</p>
@@ -864,7 +883,7 @@ const htmlBefore = `
       </div>
 
       <!-- ファクト：ストック的資産の増加 -->
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(201,168,76,0.15); margin-bottom:3rem;">
+      <div class="rg-3" style="gap:1px; background:rgba(201,168,76,0.15); margin-bottom:3rem;">
         <div style="background:rgba(10,22,40,0.5); padding:2rem; text-align:center;">
           <div style="font-family:'DM Serif Display',serif; font-size:2.4rem; color:var(--gold); line-height:1; margin-bottom:0.5rem;">4×</div>
           <div style="font-family:'Noto Sans JP',sans-serif; font-size:0.82rem; color:rgba(250,248,243,0.6); line-height:1.7;">2014年比の売上成長<br>10億ドル超（2024年）</div>
@@ -897,7 +916,7 @@ const htmlBefore = `
     <h2 class="reveal" style="font-family:'Shippori Mincho',serif; font-size:clamp(1.5rem,2.5vw,2rem); font-weight:700; color:var(--white); line-height:1.5; margin-bottom:1rem;">なぜ「わかっているのにできない」のか<br>——企業規模で異なる構造問題と、共通の出口</h2>
     <p class="reveal" style="font-size:0.95rem; color:rgba(250,248,243,0.6); line-height:2; max-width:720px; margin-bottom:4rem;">Fandomin Capitalの重要性を認識していても、実装できない企業が多い。その理由は企業規模によって異なる。しかしどちらの問題も、根本には同じ構造的な誤りがある。</p>
 
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;" class="reveal">
+    <div class="rg-2" style="gap:1.5rem; margin-bottom:1.5rem;" class="reveal">
       <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2.5rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.25rem;">大企業の構造的問題</div>
         <p style="font-size:0.9rem; color:rgba(250,248,243,0.75); line-height:2; margin-bottom:1rem;">大企業は統合プランニングの文脈でSNSを運用する。テレビCM・屋外広告等との組み合わせの中で活用されるが、アトリビューション分析が複雑になり、SNSの寄与度を単体で測ることが難しくなる。その結果、経営層への説明の困難度が増し、予算が削られていくことにもつながってしまう。現に、SNSマーケティングの課題のトップは、成果の説明の難しさであるという調査結果がある。さらに、大企業ほど「プロモーションの寄与度が低い」という構造的な特性がある——ブランドがすでに有名であるほど、個々の施策の効果測定が難しくなるためだ。</p>
@@ -918,7 +937,7 @@ const htmlBefore = `
 
     <div class="reveal" style="background:rgba(26,107,90,0.08); border:1px solid rgba(26,107,90,0.3); padding:3rem;">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#4db899; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem;">規模を問わず共通する根本問題</div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+      <div class="rg-2" style="gap:3rem; align-items:center;">
         <p style="font-family:'Shippori Mincho',serif; font-size:1.1rem; color:var(--white); line-height:1.9; font-weight:600;">「蓄積ではなく瞬間で評価する」という計測思想の問題。SNS運用・CRM・購買データが組織的に分断されており、誰も責任を持ってFandomin Capitalを観測・設計できていない。</p>
         <div style="padding:2rem; background:rgba(26,107,90,0.1); border:1px solid rgba(26,107,90,0.25);">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:#4db899; letter-spacing:0.12em; margin-bottom:0.75rem;">共通の処方箋</div>
@@ -1037,7 +1056,7 @@ const htmlBefore = `
     </div>
 
     <div class="section-label" style="margin-bottom:2rem; margin-top:1rem; opacity:0.6; font-size:0.55rem;">各軸の詳細</div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+    <div class="rg-2" style="gap:1.5rem;">
 
       <div style="background:var(--white); padding:2.5rem; border-left:3px solid var(--navy);">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Axis 01</div>
@@ -1078,7 +1097,7 @@ const htmlBefore = `
 
       <div style="background:var(--white); padding:2.5rem; border-left:3px solid var(--navy); grid-column:1/-1;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Axis 05</div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+        <div class="rg-2" style="gap:2rem;">
           <div>
             <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem;">Organizational Readiness<br><span style="font-size:0.85rem; font-weight:400; color:var(--gray);">組織の実装準備度</span></h4>
             <p style="font-size:0.87rem; color:var(--gray); line-height:1.9;">Fandomin CapitalはSNSチーム以外も含めた横断的な取り組みで捕捉する。組織の準備度を診断することが不可欠だ。</p>
@@ -1096,7 +1115,7 @@ const htmlBefore = `
   <div class="reveal" style="max-width:1100px; margin-bottom:5rem;">
     <div class="section-label" style="margin-bottom:2rem;">180日検証プログラム — まず観測し、仮説を置き、設計と検証の対象にする</div>
 
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-bottom:2.5rem;">
+    <div class="rg-3" style="gap:1.5rem; margin-bottom:2.5rem;">
       <div style="background:var(--white); padding:2.5rem; border-top:3px solid rgba(10,22,40,0.2);">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:rgba(10,22,40,0.5); letter-spacing:0.15em; margin-bottom:0.5rem;">Day 0–30</div>
         <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem;">Baseline Audit</h4>
@@ -1131,7 +1150,7 @@ const htmlBefore = `
 
     <div style="background:rgba(10,22,40,0.04); border:1px solid rgba(10,22,40,0.1); padding:2rem 2.5rem;">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(10,22,40,0.45); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.25rem;">自社の成熟度に合わせて始める — Measurement Level</div>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;">
+      <div class="rg-3" style="gap:1.5rem;">
         <div>
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(10,22,40,0.5); margin-bottom:0.4rem;">Level 1 — データ統合不要</div>
           <p style="font-size:0.83rem; color:var(--gray); line-height:1.9;">SNS・UGC・AIの定性分析からすぐ始められる。ツール不要、今日から実行可能。</p>
@@ -1154,7 +1173,7 @@ const htmlBefore = `
     <h4 style="font-family:'Shippori Mincho',serif; font-size:1.2rem; font-weight:600; color:var(--white); margin-bottom:0.5rem;">炎上はなぜ企業価値を毀損するのか</h4>
     <p style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(201,168,76,0.6); letter-spacing:0.05em; margin-bottom:2rem;">ナラティブ毀損がもたらす将来キャッシュフロー低下、そして割引率上昇への悪影響</p>
 
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem;">
+    <div class="rg-2" style="gap:3rem;">
       <div>
         <p style="font-size:0.9rem; color:rgba(250,248,243,0.75); line-height:2.1; margin-bottom:1.5rem;">炎上が怖いのは、単に評判が悪くなるからではない。より本質的には、企業のナラティブが傷むことで、将来キャッシュフローへの信頼が揺らぎ、資本市場から見たリスクが上がるからだ。</p>
         <p style="font-size:0.9rem; color:rgba(250,248,243,0.75); line-height:2.1; margin-bottom:1.5rem;">ブランド毀損はまず事業面に表れる。顧客離反、購入意向の低下、採用力の低下、従業員エンゲージメントの悪化——これらは将来キャッシュフローの前提を押し下げる。しかしそれだけではない。企業の語られ方が不安定になると、投資家・金融機関はその企業をより高いリスクとして見る。レピュテーションリスク・規制リスク・ガバナンスリスクが織り込まれ、株主資本コスト（ke）が上がり、WACCが上昇する。</p>
@@ -1166,7 +1185,7 @@ const htmlBefore = `
           <div style="font-family:'DM Serif Display',serif; font-size:1.1rem; color:var(--white); line-height:2;">
             EV = Σ <span style="color:var(--coral);">FCF<sub>t</sub></span> / (1 + <span style="color:var(--purple);">WACC</span>)<sup>t</sup>
           </div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem;">
+          <div class="rg-2" style="gap:1rem; margin-top:1.5rem;">
             <div style="background:rgba(196,92,58,0.1); border:1px solid rgba(196,92,58,0.3); padding:0.75rem; border-radius:4px;">
               <div style="font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:var(--coral); margin-bottom:0.25rem;">分子 ↓</div>
               <div style="font-size:0.78rem; color:rgba(250,248,243,0.7); line-height:1.6;">ナラティブ毀損<br>→ CF期待が低下</div>
@@ -1209,7 +1228,7 @@ const htmlBefore = `
       <p style="font-size:0.95rem; color:rgba(250,248,243,0.8); line-height:2;">SNS上の語りは、これまでマーケティング部門の周辺的なデータと見なされてきた。しかし企業価値の多くが無形資産によって説明される時代、その語りは非財務情報の一部として捉え直される。2027年3月期より、プライム市場上場企業に対してサステナビリティ・人的資本を含む非財務情報の開示が義務化される。ブランドへの信頼・ファンとの関係性・語りの蓄積——これらはまさに、財務諸表に映らない企業の無形資産だ。Fandomin Capitalを設計・計測する取り組みは、この潮流とも合流する。SNSマーケティングの問いは、もはやマーケティング部門だけの問いではない。</p>
     </div>
 
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem;" class="reveal">
+    <div class="rg-2" style="gap:4rem;" class="reveal">
       <div>
         <p style="font-size:1rem; color:rgba(250,248,243,0.75); line-height:2.1; margin-bottom:1.5rem;">Chapter 4で示した測定フレームが意味することは一つだ——Fandomin Capitalは、少なくとも観測できる。観測できるということは、仮説を置けるということだ。仮説を置けるということは、設計と検証の対象にできるということだ。</p>
       <p style="font-size:1rem; color:rgba(250,248,243,0.75); line-height:2.1; margin-bottom:1.5rem;">これまでのマーケティング論は、ファンとの関係性を「成果」として定性的に語ることはあっても、「資本」として設計・観測・経営言語で語る枠組みを持てていなかった。その欠落が、SNS投資を「なんとなく続けるか、止めるか」という二択に追い込んできた。</p>
@@ -1263,7 +1282,7 @@ const htmlAfter = `
 <section style="background:var(--navy-mid); padding:6rem 5vw; border-top:1px solid rgba(201,168,76,0.15);">
   <div style="max-width:1100px;">
     <div class="section-label reveal">About the Author</div>
-    <div class="reveal" style="display:grid; grid-template-columns:auto 1fr; gap:3rem; align-items:start; margin-top:2rem;">
+    <div class="reveal" class="rg-soa" style="gap:3rem; align-items:start; margin-top:2rem;">
       <img src="data:image/jpeg;base64,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"
            style="width:100px; height:100px; border-radius:4px; object-fit:cover; border:1px solid rgba(201,168,76,0.3); flex-shrink:0;" alt="天野彬">
       <div>
