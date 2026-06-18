@@ -257,6 +257,16 @@ const reportCss = `
     /* Chapter number */
     .chapter-num { font-size:4rem !important; }
 
+    /* Force override inline display:grid (JS handles most, CSS handles rest) */
+    [style*="grid-template-columns"] {
+      display: block !important;
+      grid-template-columns: unset !important;
+    }
+    [style*="grid-template-columns"] > * {
+      width: 100% !important;
+      min-width: unset !important;
+    }
+
     /* Prevent any element from overflowing */
     * { max-width:100%; box-sizing:border-box; word-break:break-word; }
     img, svg { max-width:100% !important; height:auto !important; }
@@ -1282,6 +1292,25 @@ export default function Report001Page() {
     styleEl.id = "report-001-styles";
     styleEl.innerHTML = reportCss;
     document.head.appendChild(styleEl);
+
+    // Fix inline display:grid styles on mobile
+    // CSS media queries cannot override inline styles, so we do it via JS
+    if (window.innerWidth <= 768) {
+      const fixGrids = () => {
+        document.querySelectorAll<HTMLElement>('[style*="grid-template-columns"]').forEach(el => {
+          el.style.display = "block";
+          el.style.gridTemplateColumns = "unset";
+          el.style.gap = "0";
+        });
+        // Re-add spacing between stacked items
+        document.querySelectorAll<HTMLElement>('[style*="grid-template-columns"] > div').forEach(el => {
+          if (!el.style.marginBottom) el.style.marginBottom = "1.5rem";
+        });
+      };
+      // Run after dangerouslySetInnerHTML has rendered
+      setTimeout(fixGrids, 0);
+    }
+
     return () => {
       document.getElementById("report-001-styles")?.remove();
     };
