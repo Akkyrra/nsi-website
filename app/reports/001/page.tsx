@@ -1217,6 +1217,8 @@ type FormState = "idle" | "submitting" | "success" | "error";
 
 export default function Report001Page() {
   const [formState, setFormState] = useState<FormState>("idle");
+  const [activeSection, setActiveSection] = useState<string>("summary");
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   useEffect(() => {
     const reveals = document.querySelectorAll('.reveal');
@@ -1263,6 +1265,35 @@ export default function Report001Page() {
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     loopObserver.observe(loopSvg);
   }
+  }, []);
+
+  // Sidebar scroll-spy
+  useEffect(() => {
+    const sectionIds = ["summary", "ch1", "ch2", "ch3", "ch4", "ch5", "download"];
+
+    // Show sidebar after hero leaves viewport
+    const hero = document.querySelector(".hero-section") as Element | null;
+    const heroObs = new IntersectionObserver(
+      ([e]) => setSidebarVisible(!e.isIntersecting),
+      { threshold: 0 }
+    );
+    if (hero) heroObs.observe(hero);
+
+    // Highlight active section
+    const spyObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      { rootMargin: "-20% 0px -60% 0px" }
+    );
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) spyObs.observe(el);
+    });
+
+    return () => { heroObs.disconnect(); spyObs.disconnect(); };
   }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -1321,22 +1352,97 @@ export default function Report001Page() {
 
       <Navbar />
 
-      {/* Section nav bar */}
-      <div style={{ position: "sticky", top: "96px", zIndex: 90, background: "rgba(10,22,40,0.97)", backdropFilter: "blur(10px)", borderBottom: "1px solid rgba(201,168,76,0.2)" }}>
-        <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0.6rem 1.5rem", display: "flex", justifyContent: "flex-end" }}>
-        <ul style={{ display: "flex", gap: "2rem", listStyle: "none", margin: 0, padding: 0 }}>
-          {[["Summary","#summary"],["§1","#ch1"],["§2","#ch2"],["§3","#ch3"],["§4","#ch4"],["§5","#ch5"],["Download","#download"]].map(([label, href]) => (
-            <li key={href}>
-              <a href={href} style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.62rem", color: "rgba(250,248,243,0.45)", textDecoration: "none", letterSpacing: "0.1em", textTransform: "uppercase", transition: "color 0.2s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#c9a84c")}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(250,248,243,0.45)")}>
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        </div>
-      </div>
+      {/* Side nav */}
+      {(() => {
+        const sections = [
+          { id: "summary", label: "Summary",  sub: "概要"      },
+          { id: "ch1",     label: "§ 1",      sub: "現在地"    },
+          { id: "ch2",     label: "§ 2",      sub: "AI"        },
+          { id: "ch3",     label: "§ 3",      sub: "設計"      },
+          { id: "ch4",     label: "§ 4",      sub: "観測"      },
+          { id: "ch5",     label: "§ 5",      sub: "結論"      },
+          { id: "download",label: "DL",        sub: "資料"      },
+        ];
+        return (
+          <nav
+            aria-label="レポート内目次"
+            style={{
+              position: "fixed",
+              top: "50%",
+              left: "clamp(0.75rem, 2vw, 2.5rem)",
+              transform: "translateY(-50%)",
+              zIndex: 80,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: 0,
+              opacity: sidebarVisible ? 1 : 0,
+              pointerEvents: sidebarVisible ? "auto" : "none",
+              transition: "opacity 0.4s ease",
+            }}
+          >
+            {/* Vertical track line */}
+            <div style={{
+              position: "absolute",
+              left: "5px",
+              top: "10px",
+              bottom: "10px",
+              width: "1px",
+              background: "rgba(201,168,76,0.15)",
+            }} />
+
+            {sections.map(({ id, label, sub }) => {
+              const isActive = activeSection === id;
+              return (
+                <a
+                  key={id}
+                  href={`#${id}`}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.75rem",
+                    padding: "0.55rem 0",
+                    textDecoration: "none",
+                    position: "relative",
+                  }}
+                >
+                  {/* Dot */}
+                  <span style={{
+                    width: "11px",
+                    height: "11px",
+                    borderRadius: "50%",
+                    border: `1.5px solid ${isActive ? "#c9a84c" : "rgba(201,168,76,0.3)"}`,
+                    background: isActive ? "#c9a84c" : "transparent",
+                    flexShrink: 0,
+                    transition: "all 0.25s ease",
+                    boxShadow: isActive ? "0 0 8px rgba(201,168,76,0.5)" : "none",
+                  }} />
+                  {/* Labels */}
+                  <span style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
+                    <span style={{
+                      fontFamily: "'IBM Plex Mono', monospace",
+                      fontSize: "0.58rem",
+                      fontWeight: isActive ? 600 : 400,
+                      color: isActive ? "#c9a84c" : "rgba(201,168,76,0.35)",
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      transition: "color 0.25s ease",
+                      lineHeight: 1,
+                    }}>{label}</span>
+                    <span style={{
+                      fontFamily: "'Noto Sans JP', sans-serif",
+                      fontSize: "0.52rem",
+                      color: isActive ? "rgba(250,248,243,0.7)" : "rgba(250,248,243,0.2)",
+                      transition: "color 0.25s ease",
+                      lineHeight: 1,
+                    }}>{sub}</span>
+                  </span>
+                </a>
+              );
+            })}
+          </nav>
+        );
+      })()}
 
       <div dangerouslySetInnerHTML={{ __html: htmlBefore }} />
 
