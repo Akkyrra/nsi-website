@@ -1282,10 +1282,10 @@ const htmlAfter = `
 <section style="background:var(--navy-mid); padding:6rem 5vw; border-top:1px solid rgba(201,168,76,0.15);">
   <div style="max-width:1100px;">
     <div class="section-label reveal">About the Author</div>
-    <div class="reveal" class="rg-soa" style="gap:3rem; align-items:start; margin-top:2rem;">
+    <div class="reveal" style="display:flex; gap:3rem; align-items:flex-start; margin-top:2rem; flex-wrap:wrap;">
       <img src="/amano.jpg"
-           style="width:100px; height:100px; border-radius:4px; object-fit:cover; border:1px solid rgba(201,168,76,0.3); flex-shrink:0;" alt="天野彬">
-      <div>
+           style="width:200px; height:240px; border-radius:6px; object-fit:cover; object-position:center top; border:1px solid rgba(201,168,76,0.3); flex-shrink:0;" alt="天野彬">
+      <div style="flex:1; min-width:280px;">
         <div style="font-family:'Shippori Mincho',serif; font-size:1.4rem; font-weight:700; color:var(--white); margin-bottom:0.4rem;">天野 彬</div>
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.1em; margin-bottom:1.5rem;">Akira Amano</div>
         <p style="font-size:0.9rem; color:rgba(250,248,243,0.65); line-height:2; max-width:660px;">New Strategy Institute（NSI）Founding Director。DCXforce 執行役員 Chief Strategy Officer。東京大学大学院学際情報学府修士課程修了（M.A.）。株式会社電通にてデジタルマーケティングの研究開発・コンサルティングを主導。日本経済新聞電子版Think! エキスパートコメンテーター、日本広告学会理事、明治学院大学非常勤講師。『新世代のビジネスはスマホの中から生まれる』『SNS変遷史』『情報メディア白書（共著）』『広告白書（共著）』など著書多数。</p>
