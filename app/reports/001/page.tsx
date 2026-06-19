@@ -1308,6 +1308,7 @@ type FormState = "idle" | "submitting" | "success" | "error";
 
 export default function Report001Page() {
   const [formState, setFormState] = useState<FormState>("idle");
+  const [formAgreed, setFormAgreed] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const [tocOpen, setTocOpen] = useState(false);
@@ -1596,11 +1597,22 @@ export default function Report001Page() {
                     送信に失敗しました。時間をおいて再度お試しください。
                   </p>
                 )}
+                <label style={{ display: "flex", alignItems: "flex-start", gap: "0.6rem", cursor: "pointer" }}>
+                  <input
+                    type="checkbox"
+                    checked={formAgreed}
+                    onChange={e => setFormAgreed(e.target.checked)}
+                    style={{ marginTop: "2px", width: "16px", height: "16px", flexShrink: 0, cursor: "pointer", accentColor: "#c9a84c" }}
+                  />
+                  <span style={{ fontFamily: "'Noto Sans JP', sans-serif", fontSize: "0.75rem", color: "rgba(250,248,243,0.55)", lineHeight: "1.7" }}>
+                    <a href="https://dcxforce.co.jp/privacy-policy/#link1" target="_blank" rel="noopener noreferrer" style={{ color: "#c9a84c", textDecoration: "underline" }}>プライバシーポリシー</a>に同意する
+                  </span>
+                </label>
                 <button
                   type="submit"
                   className="form-submit"
-                  disabled={formState === "submitting"}
-                  style={{ opacity: formState === "submitting" ? 0.6 : 1 }}
+                  disabled={formState === "submitting" || !formAgreed}
+                  style={{ opacity: (formState === "submitting" || !formAgreed) ? 0.4 : 1 }}
                 >
                   {formState === "submitting" ? "送信中..." : "Submit →"}
                 </button>

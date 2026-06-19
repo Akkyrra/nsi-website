@@ -35,6 +35,9 @@ const ishikawa = {
     "この間、企業や公共機関の存在意義、価値について思考を深めていった。そのカギとなる「ブランド」について特に関心を持ち、無形固定資産としてのブランドが企業競争力と収益力の枢要を占めることを見て、その価値の科学的算定が企業結合での正確なデューデリジェンスおよび「のれん」を計上した後の減損・増価評価に不可欠だという問題提起をするに至った。",
     "現在は東京富士大学大学院客員教授（マーケティング）、一般社団法人アカデミックグルーヴ（理事・共同創設者）。",
   ],
+  books: [
+    "ACADEMIC GROOVE ―東京大学アカデミックグルーヴ",
+  ],
 };
 
 export default function ProfilePage() {
@@ -195,6 +198,21 @@ export default function ProfilePage() {
                     {para}
                   </p>
                 ))}
+              </div>
+
+              {/* Books */}
+              <div className="px-8 py-8 border-t border-navy/10" style={{ backgroundColor: "#f9f9f9" }}>
+                <p className="font-inter text-xs font-semibold text-navy/40 tracking-widest uppercase mb-5">
+                  Books
+                </p>
+                <ul className="flex flex-col gap-2">
+                  {ishikawa.books.map((title) => (
+                    <li key={title} className="font-inter text-sm text-navy/70 flex items-start gap-2">
+                      <span className="text-gold mt-1 flex-shrink-0">—</span>
+                      {title}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
             </article>

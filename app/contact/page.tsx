@@ -16,6 +16,7 @@ const contactTypes = [
 
 export default function ContactPage() {
   const [state, setState] = useState<FormState>("idle");
+  const [agreed, setAgreed] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -166,18 +167,33 @@ export default function ContactPage() {
                   </p>
                 )}
 
+                {/* Privacy consent */}
+                <label className="flex items-start gap-3 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    checked={agreed}
+                    onChange={e => setAgreed(e.target.checked)}
+                    className="mt-0.5 w-4 h-4 accent-navy flex-shrink-0 cursor-pointer"
+                  />
+                  <span className="font-inter text-xs text-navy/60 leading-relaxed">
+                    <a
+                      href="https://dcxforce.co.jp/privacy-policy/#link1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-gold transition-colors"
+                    >プライバシーポリシー</a>
+                    に同意する
+                  </span>
+                </label>
+
                 {/* Submit */}
                 <button
                   type="submit"
-                  disabled={state === "submitting"}
-                  className="font-inter text-sm font-semibold bg-navy text-white px-6 py-4 rounded hover:bg-navy/85 transition-colors tracking-widest uppercase disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={state === "submitting" || !agreed}
+                  className="font-inter text-sm font-semibold bg-navy text-white px-6 py-4 rounded hover:bg-navy/85 transition-colors tracking-widest uppercase disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                   {state === "submitting" ? "送信中..." : "送信する →"}
                 </button>
-
-                <p className="font-inter text-xs text-navy/35 text-center leading-relaxed">
-                  ご入力いただいた情報はお問い合わせへの返答以外の目的には使用しません。
-                </p>
 
               </form>
             )}

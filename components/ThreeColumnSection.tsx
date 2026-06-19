@@ -13,6 +13,7 @@ type NewsletterState = "idle" | "submitting" | "success" | "error";
 
 export default function ThreeColumnSection() {
   const [nlState, setNlState] = useState<NewsletterState>("idle");
+  const [nlAgreed, setNlAgreed] = useState(false);
 
   async function handleNewsletter(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -137,10 +138,21 @@ export default function ThreeColumnSection() {
                     送信に失敗しました。再度お試しください。
                   </p>
                 )}
+                <label className="flex items-start gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={nlAgreed}
+                    onChange={e => setNlAgreed(e.target.checked)}
+                    className="mt-0.5 w-4 h-4 accent-navy flex-shrink-0 cursor-pointer"
+                  />
+                  <span className="font-inter text-xs text-navy/55 leading-relaxed">
+                    <a href="https://dcxforce.co.jp/privacy-policy/#link1" target="_blank" rel="noopener noreferrer" className="underline hover:text-gold transition-colors">プライバシーポリシー</a>に同意する
+                  </span>
+                </label>
                 <button
                   type="submit"
-                  disabled={nlState === "submitting"}
-                  className="font-inter text-sm font-semibold bg-navy text-gold px-5 py-3 rounded hover:bg-navy/85 transition-colors tracking-widest uppercase disabled:opacity-50"
+                  disabled={nlState === "submitting" || !nlAgreed}
+                  className="font-inter text-sm font-semibold bg-navy text-gold px-5 py-3 rounded hover:bg-navy/85 transition-colors tracking-widest uppercase disabled:opacity-40"
                 >
                   {nlState === "submitting" ? "送信中..." : "登録する"}
                 </button>
