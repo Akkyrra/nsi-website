@@ -16,7 +16,7 @@ export default function ReportsPage() {
             戦略の知を、形にする。
           </h1>
           <p className="font-inter text-base text-white/55 max-w-2xl leading-relaxed">
-            NSIが発行するリサーチレポートは、ソーシャル・ファイナンス・ナラティブの交差点から、事業価値を蓄積するためのマーケティング戦略を提示します。
+            NSIはリサーチレポートやニュースレターを通じて、ソーシャル・ファイナンス・ナラティブの交差点から、事業価値を蓄積するためのマーケティング戦略を提示します。
           </p>
         </div>
       </section>
