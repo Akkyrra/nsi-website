@@ -48,7 +48,7 @@ const reportCss = `
   }
   .hero-meta { font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:2.5rem; opacity:0; animation:fadeUp 0.8s ease 0.2s forwards; }
   .hero-title { font-family:'Shippori Mincho',serif; font-size:clamp(2.8rem,6vw,5.5rem); font-weight:700; color:var(--white); line-height:1.25; letter-spacing:-0.01em; margin-bottom:1.5rem; opacity:0; animation:fadeUp 0.8s ease 0.4s forwards; }
-  .hero-title em { font-style:italic; color:var(--gold); font-family:'DM Serif Display',serif; }
+  .hero-title em { color:var(--gold); font-family:'Shippori Mincho',serif; }
   .hero-subtitle { font-family:'IBM Plex Mono',monospace; font-size:0.85rem; color:rgba(250,248,243,0.5); letter-spacing:0.05em; margin-bottom:4rem; opacity:0; animation:fadeUp 0.8s ease 0.6s forwards; }
   .hero-tagline { font-size:1.05rem; color:rgba(250,248,243,0.7); max-width:520px; line-height:2; padding-left:1.5rem; border-left:2px solid var(--gold); opacity:0; animation:fadeUp 0.8s ease 0.8s forwards; }
   .hero-scroll { position:absolute; bottom:3rem; right:5vw; display:flex; flex-direction:column; align-items:center; gap:0.5rem; opacity:0; animation:fadeUp 0.8s ease 1.2s forwards; }
@@ -57,25 +57,25 @@ const reportCss = `
   @keyframes scrollPulse { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(1.1)} }
 
   /* SUMMARY */
-  .summary { background:var(--off-white); padding:8rem 5vw; }
+  .summary { background:var(--off-white); padding:12rem 5vw; }
   .section-label { font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.25em; text-transform:uppercase; margin-bottom:3rem; display:flex; align-items:center; gap:1rem; }
   .section-label::after { content:''; flex:1; max-width:60px; height:1px; background:var(--gold); }
   .summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(10,22,40,0.1); max-width:1100px; }
   .summary-item { background:var(--off-white); padding:3rem; position:relative; transition:background 0.3s; }
   .summary-item:hover { background:var(--white); }
-  .summary-num { font-family:'DM Serif Display',serif; font-size:3.5rem; color:rgba(201,168,76,0.15); position:absolute; top:1.5rem; right:2rem; line-height:1; }
+  .summary-num { font-family:'Shippori Mincho',serif; font-size:3.5rem; color:rgba(201,168,76,0.15); position:absolute; top:1.5rem; right:2rem; line-height:1; }
   .summary-item h3 { font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem; line-height:1.6; }
   .summary-item p { font-size:0.88rem; color:var(--gray); line-height:1.9; }
 
   /* CHAPTERS */
-  .chapter { padding:8rem 5vw; position:relative; }
+  .chapter { padding:12rem 5vw; position:relative; background:#ffffff; border-top:1px solid rgba(0,0,0,0.08); }
   .chapter-dark { background:var(--navy); color:var(--white); }
   .chapter-mid { background:var(--navy-mid); color:var(--white); }
   .chapter-light { background:var(--off-white); }
   .chapter-header { display:grid; grid-template-columns:auto 1fr; gap:3rem; align-items:start; margin-bottom:5rem; max-width:1100px; }
-  .chapter-num { font-family:'DM Serif Display',serif; font-size:clamp(5rem,10vw,9rem); line-height:0.85; color:rgba(201,168,76,0.12); letter-spacing:-0.03em; }
+  .chapter-num { font-family:'Shippori Mincho',serif; font-size:clamp(5rem,10vw,9rem); line-height:0.85; color:rgba(201,168,76,0.12); letter-spacing:-0.03em; }
   .chapter-title h2 { font-family:'Shippori Mincho',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:700; line-height:1.4; margin-bottom:0.75rem; }
-  .chapter-dark .chapter-title h2, .chapter-mid .chapter-title h2 { color:var(--white); }
+  .chapter-dark .chapter-title h2, .chapter-mid .chapter-title h2 { color:var(--navy); }
   .chapter-title .chapter-sub { font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--gold); letter-spacing:0.1em; }
   .chapter-body { max-width:1100px; display:grid; grid-template-columns:1fr 1fr; gap:4rem; }
   .chapter-body.wide { grid-template-columns:3fr 2fr; }
@@ -88,7 +88,7 @@ const reportCss = `
   /* STAT ROW */
   .stat-row { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(201,168,76,0.1); max-width:1100px; margin-top:4rem; }
   .stat-item { background:var(--navy); padding:3rem 2rem; text-align:center; }
-  .stat-num { font-family:'DM Serif Display',serif; font-size:3.5rem; color:var(--gold); line-height:1; margin-bottom:0.75rem; }
+  .stat-num { font-family:'Shippori Mincho',serif; font-size:3.5rem; color:var(--gold); line-height:1; margin-bottom:0.75rem; }
   .stat-label { font-size:0.85rem; color:rgba(250,248,243,0.5); line-height:1.7; }
   .stat-source { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(201,168,76,0.4); margin-top:0.5rem; letter-spacing:0.05em; }
 
@@ -124,7 +124,7 @@ const reportCss = `
   .soa-col.new .soa-items li::before { background:var(--gold); }
 
   /* FAILURE PATTERNS */
-  .failure-section { background:var(--navy-mid); padding:8rem 5vw; }
+  .failure-section { background:#ffffff; padding:12rem 5vw; }
   .failure-intro { max-width:680px; margin-bottom:4rem; }
   .failure-intro h2 { font-family:'Shippori Mincho',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); font-weight:700; color:var(--white); line-height:1.5; margin-bottom:1.5rem; }
   .failure-intro p { color:rgba(250,248,243,0.65); font-size:0.97rem; line-height:2; }
@@ -141,9 +141,9 @@ const reportCss = `
   .failure-diagnosis p { font-size:0.82rem; color:rgba(250,248,243,0.6); line-height:1.7; margin:0; }
 
   /* FRAMEWORK */
-  .framework-section { background:var(--navy); padding:8rem 5vw; }
+  .framework-section { background:#ffffff; padding:12rem 5vw; }
   .framework-definition { background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.25); padding:3rem 3.5rem; margin-bottom:5rem; position:relative; }
-  .framework-definition::before { content:'"'; font-family:'DM Serif Display',serif; font-size:8rem; color:rgba(201,168,76,0.1); position:absolute; top:-1rem; left:2rem; line-height:1; }
+  .framework-definition::before { content:'"'; font-family:'Shippori Mincho',serif; font-size:8rem; color:rgba(201,168,76,0.1); position:absolute; top:-1rem; left:2rem; line-height:1; }
   .framework-definition p { font-family:'Shippori Mincho',serif; font-size:clamp(1.05rem,1.8vw,1.3rem); color:var(--white); line-height:2; }
   .framework-definition strong { color:var(--gold); font-weight:600; }
   .loop-diagram { width:100%; max-width:700px; margin:0 auto 3rem; display:block; }
@@ -161,11 +161,11 @@ const reportCss = `
   .layer-arrow span { font-family:'IBM Plex Mono',monospace; font-size:1.5rem; color:rgba(201,168,76,0.3); }
 
   /* DIAGNOSTIC */
-  .diagnostic-section { background:var(--off-white); padding:8rem 5vw; }
+  .diagnostic-section { background:var(--off-white); padding:12rem 5vw; }
   .diagnostic-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1100px; margin-top:4rem; }
   .diagnostic-card { background:var(--white); padding:3rem 2.5rem; border-bottom:3px solid var(--navy); transition:border-color 0.3s, transform 0.3s; }
   .diagnostic-card:hover { border-color:var(--gold); transform:translateY(-4px); }
-  .dc-num { font-family:'DM Serif Display',serif; font-size:3rem; color:rgba(10,22,40,0.07); line-height:1; margin-bottom:0.75rem; }
+  .dc-num { font-family:'Shippori Mincho',serif; font-size:3rem; color:rgba(10,22,40,0.07); line-height:1; margin-bottom:0.75rem; }
   .dc-tag { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.75rem; }
   .diagnostic-card h3 { font-family:'Shippori Mincho',serif; font-size:1.1rem; font-weight:600; color:var(--navy); margin-bottom:1rem; line-height:1.5; }
   .diagnostic-card p { font-size:0.87rem; color:var(--gray); line-height:1.9; }
@@ -304,7 +304,7 @@ const htmlBefore = `
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-meta" style="font-size:0.8rem; letter-spacing:0.2em; color:var(--navy); font-family:'IBM Plex Mono',monospace; margin-bottom:1.5rem; background:var(--gold); display:inline-block; padding:0.5rem 1.25rem; border-radius:2px; font-weight:700;">NSI Report #001 — June 2026</div>
-  <h1 class="hero-title">ファン資本の<em>再設計</em><br><span style="font-size:0.6em;font-family:'DM Serif Display',serif;font-style:italic;color:rgba(250,248,243,0.4);">Redesigning Fandomain Capital</span></h1>
+  <h1 class="hero-title">ファン資本の<em>再設計</em><br><span style="font-size:0.6em;font-family:'Shippori Mincho',serif;color:rgba(250,248,243,0.4);">Redesigning Fandomain Capital</span></h1>
   <div class="hero-subtitle" style="font-size:clamp(1rem,2vw,1.3rem); color:rgba(250,248,243,0.7); font-family:'Shippori Mincho',serif; margin-top:0.75rem; letter-spacing:0.03em;">AI時代のSNSマーケティングを、運用から資本形成へ</div>
   <p class="hero-tagline">SNSマーケティングの定石は、届けることに最適化されてきた。しかしAIが情報を中間処理する時代、蓄積されたシグナルの一貫性こそがブランドの評判を決める。本レポートは「Fandomain Capital」という独自概念を軸に、ファンとの関係性を経営資本として捉え直し、その設計・観測・実装の枠組みを提示する。</p>
   <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
@@ -481,6 +481,14 @@ const htmlBefore = `
       <text x="340" y="436" text-anchor="middle" font-family="Shippori Mincho,serif" font-size="13" fill="#0a1628" font-weight="600">その鍵を握るのが、「蓄積思想」である。</text>
     </svg>
   </div>
+  <!-- Chapter CTA -->
+  <div class="reveal" style="max-width:1100px; margin-top:5rem;">
+    <a href="#download" style="display:flex; align-items:center; justify-content:space-between; gap:2rem; background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.25); padding:2rem 2.5rem; text-decoration:none; flex-wrap:wrap;">
+      <p style="font-family:'Shippori Mincho',serif; font-size:clamp(0.95rem,1.5vw,1.1rem); color:var(--navy); line-height:1.7; font-weight:600; margin:0;">SNS投資の意味が変わった。その全体像を、Framework Kitで整理する。</p>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; white-space:nowrap; flex-shrink:0;">Framework Kitを入手 →</span>
+    </a>
+  </div>
+
 </section>
 
 <!-- CHAPTER 2 -->
@@ -528,7 +536,7 @@ const htmlBefore = `
           </ul>
         </div>
         <div style="display:flex; align-items:center; justify-content:center; background:rgba(201,168,76,0.06);">
-          <span style="font-family:'DM Serif Display',serif; font-size:1.2rem; color:rgba(201,168,76,0.5);">→</span>
+          <span style="font-family:'Shippori Mincho',serif; font-size:1.2rem; color:rgba(201,168,76,0.5);">→</span>
         </div>
         <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem;">LLMO の重力</div>
@@ -566,6 +574,14 @@ const htmlBefore = `
 
   <div class="reveal" style="max-width:1100px; margin-top:3rem; padding:2rem 3rem; background:rgba(201,168,76,0.06); border-left:3px solid var(--gold);">
     <p style="font-family:'Shippori Mincho',serif; font-size:1.05rem; color:var(--white); line-height:1.9;">AIは「誰が言ったか」を圧縮する。人間は「どのブランドを信じるか」をより重視する——だからこそ、語られ続けることが資本になる。</p>
+  </div>
+
+  <!-- Chapter CTA -->
+  <div class="reveal" style="max-width:1100px; margin-top:5rem;">
+    <a href="#download" style="display:flex; align-items:center; justify-content:space-between; gap:2rem; background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.25); padding:2rem 2.5rem; text-decoration:none; flex-wrap:wrap;">
+      <p style="font-family:'Shippori Mincho',serif; font-size:clamp(0.95rem,1.5vw,1.1rem); color:var(--navy); line-height:1.7; font-weight:600; margin:0;">AIに読まれるブランドの条件を、診断リストで確認する。</p>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; white-space:nowrap; flex-shrink:0;">Framework Kitを入手 →</span>
+    </a>
   </div>
 
 </section>
@@ -825,7 +841,7 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(201,168,76,0.5); letter-spacing:0.1em;">Fandomain Capital Loopの実装例</div>
       </div>
 
-      <h3 style="font-family:'DM Serif Display',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); color:var(--white); font-weight:400; font-style:italic; margin-bottom:0.5rem;">Patagonia</h3>
+      <h3 style="font-family:'Shippori Mincho',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); color:var(--white); font-weight:400; margin-bottom:0.5rem;">Patagonia</h3>
       <p style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(250,248,243,0.4); letter-spacing:0.1em; margin-bottom:2.5rem;">アウトドアアパレル / 1973年創業 / 米国・非上場 / 推定年商10億ドル超</p>
 
       <!-- リード文 -->
@@ -880,7 +896,7 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(77,184,153,0.6); letter-spacing:0.1em;">国内・実装型のリファレンス</div>
       </div>
       <p style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:#4db899; letter-spacing:0.15em; margin-bottom:1rem;">TYPE B — 実装型：ファンとの場の運営が資本になる</p>
-      <h3 style="font-family:'DM Serif Display',serif; font-size:clamp(1.4rem,2.2vw,1.9rem); color:var(--white); font-weight:400; font-style:italic; margin-bottom:0.4rem;">ヤッホーブルーイング</h3>
+      <h3 style="font-family:'Shippori Mincho',serif; font-size:clamp(1.4rem,2.2vw,1.9rem); color:var(--white); font-weight:400; margin-bottom:0.4rem;">ヤッホーブルーイング</h3>
       <p style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:rgba(250,248,243,0.4); letter-spacing:0.1em; margin-bottom:2rem;">クラフトビール / 「よなよなエール」/ 長野・軽井沢発</p>
 
       <p style="font-size:0.95rem; color:rgba(250,248,243,0.8); line-height:2.1; margin-bottom:2rem; border-left:2px solid #1a6b5a; padding-left:1.5rem;">Patagoniaが「理念の一貫性」からファン資本を立ち上げたとすれば、ヤッホーブルーイングは「ファンと過ごす場の運営」から積み上げる対照的なリファレンスだ。理念を掲げて待つのではなく、ファンと顔の見える関係を継続的に設計し続ける——日本の生活者市場で、Fandomain Capital Loopがどう回るかを示してくれる。</p>
@@ -900,14 +916,22 @@ const htmlBefore = `
     </div>
   </div>
 
+  <!-- Chapter CTA -->
+  <div class="reveal" style="max-width:1100px; margin-top:5rem;">
+    <a href="#download" style="display:flex; align-items:center; justify-content:space-between; gap:2rem; background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.25); padding:2rem 2.5rem; text-decoration:none; flex-wrap:wrap;">
+      <p style="font-family:'Shippori Mincho',serif; font-size:clamp(0.95rem,1.5vw,1.1rem); color:var(--navy); line-height:1.7; font-weight:600; margin:0;">Fandomain Capital Loopの高解像度図解をKitに同梱している。</p>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; white-space:nowrap; flex-shrink:0;">Framework Kitを入手 →</span>
+    </a>
+  </div>
+
 </section>
 
 <!-- COLUMN + PATTERN ANALYSIS -->
-<section style="background:var(--navy-mid); padding:8rem 5vw;">
+<section style="background:#ffffff; padding:12rem 5vw; border-top:1px solid rgba(0,0,0,0.08);">
   <div style="max-width:1100px;">
     <div class="section-label reveal">Column — SNSマーケティングの非対称性と処方箋</div>
-    <h2 class="reveal" style="font-family:'Shippori Mincho',serif; font-size:clamp(1.5rem,2.5vw,2rem); font-weight:700; color:var(--white); line-height:1.5; margin-bottom:1rem;">なぜ「わかっているのにできない」のか<br>——企業規模で異なる構造問題と、共通の出口</h2>
-    <p class="reveal" style="font-size:0.95rem; color:rgba(250,248,243,0.6); line-height:2; max-width:720px; margin-bottom:4rem;">Fandomain Capitalの重要性を認識していても、実装できない企業が多い。その理由は企業規模によって異なる。しかしどちらの問題も、根本には同じ構造的な誤りがある。</p>
+    <h2 class="reveal" style="font-family:'Shippori Mincho',serif; font-size:clamp(1.5rem,2.5vw,2rem); font-weight:700; color:var(--navy); line-height:1.5; margin-bottom:1rem;">なぜ「わかっているのにできない」のか<br>——企業規模で異なる構造問題と、共通の出口</h2>
+    <p class="reveal" style="font-size:0.95rem; color:rgba(15,40,90,0.6); line-height:2; max-width:720px; margin-bottom:4rem;">Fandomain Capitalの重要性を認識していても、実装できない企業が多い。その理由は企業規模によって異なる。しかしどちらの問題も、根本には同じ構造的な誤りがある。</p>
 
     <div class="rg-2" style="gap:1.5rem; margin-bottom:1.5rem;" class="reveal">
       <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2.5rem;">
@@ -1185,7 +1209,7 @@ const htmlBefore = `
       <div>
         <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2rem; margin-bottom:1.5rem; text-align:center;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(201,168,76,0.5); letter-spacing:0.15em; margin-bottom:1rem;">ENTERPRISE VALUE</div>
-          <div style="font-family:'DM Serif Display',serif; font-size:1.1rem; color:var(--white); line-height:2;">
+          <div style="font-family:'Shippori Mincho',serif; font-size:1.1rem; color:var(--white); line-height:2;">
             EV = Σ <span style="color:var(--coral);">FCF<sub>t</sub></span> / (1 + <span style="color:var(--purple);">WACC</span>)<sup>t</sup>
           </div>
           <div class="rg-2" style="gap:1rem; margin-top:1.5rem;">
@@ -1208,11 +1232,19 @@ const htmlBefore = `
     </div>
   </div>
 
+  <!-- Chapter CTA -->
+  <div class="reveal" style="max-width:1100px; margin-top:5rem;">
+    <a href="#download" style="display:flex; align-items:center; justify-content:space-between; gap:2rem; background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.25); padding:2rem 2.5rem; text-decoration:none; flex-wrap:wrap;">
+      <p style="font-family:'Shippori Mincho',serif; font-size:clamp(0.95rem,1.5vw,1.1rem); color:var(--navy); line-height:1.7; font-weight:600; margin:0;">5つの診断軸を自社にあてはめるチェックリストをKitで入手する。</p>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; white-space:nowrap; flex-shrink:0;">Framework Kitを入手 →</span>
+    </a>
+  </div>
+
 </section>
 
 <!-- CHAPTER 5: Conclusion -->
 <!-- CHAPTER 5: Conclusion -->
-<section style="background:var(--navy); padding:8rem 5vw; position:relative; overflow:hidden;" id="ch5">
+<section style="background:#ffffff; padding:12rem 5vw; border-top:1px solid rgba(0,0,0,0.08); position:relative; overflow:hidden;" id="ch5">
   <div style="position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 70%);"></div>
 
   <div style="max-width:1100px; position:relative;">
@@ -1220,7 +1252,7 @@ const htmlBefore = `
       <div class="chapter-num" style="color:rgba(201,168,76,0.1);">05</div>
       <div class="chapter-title">
         <div class="section-label">Chapter 5 — Conclusion</div>
-        <h2 style="color:var(--white);">SNSマーケティングは、<br>運用の問題ではなく<em style="font-family:'DM Serif Display',serif; color:var(--gold);">経営の問題</em>だ。</h2>
+        <h2 style="color:var(--white);">SNSマーケティングは、<br>運用の問題ではなく<em style="font-family:'Shippori Mincho',serif; color:var(--gold);">経営の問題</em>だ。</h2>
         <div class="chapter-sub" style="color:var(--gold);">From Measurement to Design</div>
       </div>
     </div>
@@ -1277,6 +1309,14 @@ const htmlBefore = `
       <p style="font-size:0.95rem; color:rgba(250,248,243,0.75); line-height:2.1; max-width:640px; margin:0 auto 1.5rem;">AIが情報環境を再編し、無形資産への問いが経営の中心に移る時代に、ブランドが積み上げてきた信頼・語り・関係性は、企業価値の構成要素としてますます重視されるようになるでしょう。Fandomain Capitalはその問いへの、最初の答えです。NSIはその上位概念にあたるBrand Capital Strategyを基軸に、ブランドの無形資産を設計・計測・実装するチャレンジを続けてまいります。</p>
     </div>
   </div>
+  <!-- Chapter CTA -->
+  <div class="reveal" style="max-width:1100px; margin-top:5rem;">
+    <a href="#download" style="display:flex; align-items:center; justify-content:space-between; gap:2rem; background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.25); padding:2rem 2.5rem; text-decoration:none; flex-wrap:wrap;">
+      <p style="font-family:'Shippori Mincho',serif; font-size:clamp(0.95rem,1.5vw,1.1rem); color:var(--navy); line-height:1.7; font-weight:600; margin:0;">設計と計測の次のステップを、NSIと話す。</p>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; white-space:nowrap; flex-shrink:0;">Framework Kitを入手 →</span>
+    </a>
+  </div>
+
 </section>
 `;
 
@@ -1461,7 +1501,7 @@ export default function Report001Page() {
   return (
     <>
       <link
-        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap"
         rel="stylesheet"
       />
       <script
