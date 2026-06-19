@@ -189,6 +189,7 @@ export default function ContactPage() {
                 {/* Submit */}
                 <button
                   type="submit"
+                  id="gtm-contact-submit"
                   disabled={state === "submitting" || !agreed}
                   className="font-inter text-sm font-semibold bg-navy text-white px-6 py-4 rounded hover:bg-navy/85 transition-colors tracking-widest uppercase disabled:opacity-40 disabled:cursor-not-allowed"
                 >

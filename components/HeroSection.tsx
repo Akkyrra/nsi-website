@@ -19,6 +19,7 @@ export default function HeroSection() {
             </p>
             <a
               href="/about"
+              id="gtm-about-nsi"
               className="font-inter text-sm font-semibold text-white bg-navy px-5 py-2.5 rounded hover:bg-navy/85 transition-colors inline-flex items-center gap-2 group"
             >
               About NSI

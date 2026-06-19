@@ -1650,6 +1650,7 @@ export default function Report001Page() {
                 </label>
                 <button
                   type="submit"
+                  id="gtm-reports-submit"
                   className="form-submit"
                   disabled={formState === "submitting" || !formAgreed}
                   style={{ opacity: (formState === "submitting" || !formAgreed) ? 0.4 : 1 }}

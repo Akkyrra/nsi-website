@@ -25,6 +25,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
+              id="NSI_global_nav_click"
               className="font-inter text-sm font-medium text-navy/80 hover:text-navy transition-colors"
             >
               {link.label}
@@ -32,6 +33,7 @@ export default function Navbar() {
           ))}
           <a
             href="/contact"
+            id="NSI_global_nav_click"
             className="font-inter text-sm font-medium bg-navy text-white px-5 py-2 rounded hover:bg-navy/85 transition-colors"
           >
             Contact
@@ -57,6 +59,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
+              id="NSI_global_nav_click"
               className="font-inter text-sm font-medium text-navy/80 hover:text-navy"
               onClick={() => setMenuOpen(false)}
             >
@@ -65,6 +68,7 @@ export default function Navbar() {
           ))}
           <a
             href="/contact"
+            id="NSI_global_nav_click"
             className="font-inter text-sm font-medium bg-navy text-white px-5 py-2 rounded text-center hover:bg-navy/85"
             onClick={() => setMenuOpen(false)}
           >

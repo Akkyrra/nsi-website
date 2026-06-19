@@ -152,6 +152,7 @@ export default function ThreeColumnSection() {
                 <button
                   type="submit"
                   disabled={nlState === "submitting" || !nlAgreed}
+                  id="gtm-newsletter-submit"
                   className="font-inter text-sm font-semibold bg-navy text-gold px-5 py-3 rounded hover:bg-navy/85 transition-colors tracking-widest uppercase disabled:opacity-40"
                 >
                   {nlState === "submitting" ? "送信中..." : "登録する"}
