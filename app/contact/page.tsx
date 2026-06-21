@@ -68,7 +68,7 @@ export default function ContactPage() {
           <div className="w-full max-w-[640px]">
 
             {state === "success" ? (
-              <div className="border border-gold/30 rounded-2xl p-12 flex flex-col items-center gap-5 text-center">
+              <div id="contact_complete" className="border border-gold/30 rounded-2xl p-12 flex flex-col items-center gap-5 text-center">
                 <span className="text-gold text-5xl">✓</span>
                 <h2 className="font-playfair text-2xl font-bold text-navy">
                   送信完了
