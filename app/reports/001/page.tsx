@@ -636,7 +636,7 @@ const htmlBefore = `
     <a href="#download" style="display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; text-decoration:none; background:linear-gradient(135deg, var(--navy), var(--navy-mid)); border:1px solid rgba(201,168,76,0.3); padding:2.25rem 2.75rem;">
       <div>
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">SNS投資の意味が変わった。その全体像を、Framework Kitで整理する。</div>
-        <p style="font-size:0.95rem; color:rgba(250,248,243,0.85); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
+        <p style="font-size:0.95rem; color:rgba(15,40,90,0.85); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
       </div>
       <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
     </a>
@@ -748,7 +748,7 @@ const htmlBefore = `
     <div class="chapter-num">03</div>
     <div class="chapter-title">
       <div class="section-label">Chapter 3</div>
-      <h2 style="color:var(--white);">Fandomain Capitalの設計<br>——ブランドの領地をいかに築くか</h2>
+      <h2 style="color:var(--navy);">Fandomain Capitalの設計<br>——ブランドの領地をいかに築くか</h2>
       <div class="chapter-sub">Designing Fandomain Capital</div>
     </div>
   </div>
@@ -759,30 +759,30 @@ const htmlBefore = `
     <div class="rg-3" style="gap:1px; background:rgba(201,168,76,0.15);">
       <div style="background:var(--navy); padding:2.5rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:1rem;">問題 01</div>
-        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--white); margin-bottom:0.75rem; line-height:1.5;">SNS施策が単発で終わり、資産化されない</h4>
-        <p style="font-size:0.85rem; color:rgba(250,248,243,0.55); line-height:1.9;">キャンペーンが終わると消える。バズっても翌月には忘れられる。蓄積思想のないSNS投資は、費用であって資産にならない。</p>
+        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:0.75rem; line-height:1.5;">SNS施策が単発で終わり、資産化されない</h4>
+        <p style="font-size:0.85rem; color:rgba(15,40,90,0.55); line-height:1.9;">キャンペーンが終わると消える。バズっても翌月には忘れられる。蓄積思想のないSNS投資は、費用であって資産にならない。</p>
       </div>
       <div style="background:var(--navy); padding:2.5rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:1rem;">問題 02</div>
-        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--white); margin-bottom:0.75rem; line-height:1.5;">AI時代に、ブランドが比較検討に載らなくなる</h4>
-        <p style="font-size:0.85rem; color:rgba(250,248,243,0.55); line-height:1.9;">AIの回答に入らないブランドは、生活者の選択肢に浮かばない。一貫したシグナルの蓄積なしに、Share of Answersは獲得できない。</p>
+        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:0.75rem; line-height:1.5;">AI時代に、ブランドが比較検討に載らなくなる</h4>
+        <p style="font-size:0.85rem; color:rgba(15,40,90,0.55); line-height:1.9;">AIの回答に入らないブランドは、生活者の選択肢に浮かばない。一貫したシグナルの蓄積なしに、Share of Answersは獲得できない。</p>
       </div>
       <div style="background:var(--navy); padding:2.5rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:1rem;">問題 03</div>
-        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--white); margin-bottom:0.75rem; line-height:1.5;">経営層に、SNS投資の中長期価値を説明できない</h4>
-        <p style="font-size:0.85rem; color:rgba(250,248,243,0.55); line-height:1.9;">フォロワー数やエンゲージメント率では、投資対効果を語れない。Fandomain Capitalという資本概念が、経営言語への翻訳を可能にする。</p>
+        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:0.75rem; line-height:1.5;">経営層に、SNS投資の中長期価値を説明できない</h4>
+        <p style="font-size:0.85rem; color:rgba(15,40,90,0.55); line-height:1.9;">フォロワー数やエンゲージメント率では、投資対効果を語れない。Fandomain Capitalという資本概念が、経営言語への翻訳を可能にする。</p>
       </div>
     </div>
   </div>
 
   <div class="framework-definition reveal">
     <div style="font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.25rem;">NSI Original Concept</div>
-    <p style="font-size:0.88rem; color:rgba(250,248,243,0.55); line-height:1.9; margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid rgba(201,168,76,0.15);"><strong style="color:rgba(250,248,243,0.8);">Fandomain Capital</strong>は、<strong style="color:rgba(250,248,243,0.8);">Fandom（ファンダム）</strong>と<strong style="color:rgba(250,248,243,0.8);">Domain（領域・領地）</strong>を一語に溶け合わせたNSIの造語だ。Fandom の末尾に Domain が重なり、綴りの中に「領地」がそのまま残る。ブランドがファンの語りの中に築く「文化的な領地」を、経営資本として捉え直す——その概念的意図を一語に込めている。</p>
+    <p style="font-size:0.88rem; color:rgba(15,40,90,0.55); line-height:1.9; margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid rgba(201,168,76,0.15);"><strong style="color:rgba(15,40,90,0.8);">Fandomain Capital</strong>は、<strong style="color:rgba(15,40,90,0.8);">Fandom（ファンダム）</strong>と<strong style="color:rgba(15,40,90,0.8);">Domain（領域・領地）</strong>を一語に溶け合わせたNSIの造語だ。Fandom の末尾に Domain が重なり、綴りの中に「領地」がそのまま残る。ブランドがファンの語りの中に築く「文化的な領地」を、経営資本として捉え直す——その概念的意図を一語に込めている。</p>
     <p><strong>Fandomain Capital</strong>とは、ブランドがファンダムの文化的領域において築く、持続的に影響力を発揮する無形資産である。ソーシャルキャピタルと同様に、信頼・共鳴・誠実さの積み重ねによってのみ蓄積され、<strong>【Growth】顧客生涯価値（LTV）の向上・【Resilience】企業価値毀損への耐性・【Discoverability】AIによる推奨・参照獲得</strong>という三つの事業効果に転換される。<strong>広告費で買えず、バズで一時的に膨らませることもできない。積み上げるしかない。</strong></p>
   </div>
 
   <div class="chapter-body wide reveal" style="max-width:1100px; margin-bottom:5rem;">
-    <div class="body-text" style="color:rgba(250,248,243,0.75);">
+    <div class="body-text" style="color:rgba(15,40,90,0.75);">
       <p>「ファンを大切に」という言説は業界に広まった。しかしその結果、「ファン」という言葉が軽くなりすぎている。フォロワーもファン、エンゲージした人もファン、一度買った人もファン——すべてが「ファン」と呼ばれる現状がある。概念のインフレは、実務的な意味を失わせる。</p>
       <div class="gold-divider"></div>
       <p>「資本」という言葉に違和感を持った読者こそ、正しい感覚を持っている。しかしここで言う「資本」はロバート・パットナムのソーシャルキャピタル（社会関係資本）と同じ系譜にある概念だ。信頼・規範・ネットワークの蓄積が社会全体の生産性を上げるように、Fandomain Capitalはブランドとファンの双方が豊かになる関係性の蓄積から生まれる。広告費で買えず、一方が他方を搾取することでは積み上がらない。</p>
@@ -979,11 +979,11 @@ const htmlBefore = `
       </div>
       <div style="background:rgba(26,107,90,0.08); border:1px solid rgba(26,107,90,0.3); padding:2rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:#4db899; letter-spacing:0.15em; margin-bottom:0.75rem;">内環 — 生活者の心理ループ</div>
-        <p style="font-size:0.88rem; color:rgba(250,248,243,0.75); line-height:1.9;">体験・感動 → 社会化・共鳴 → 再解釈・深化 という三段階のループ。ここで重要なのは「再解釈・深化」だ。ファンの体験は固定されていない。語られるたびに、他者の声に触れるたびに、その意味は遡及的に豊かになっていく。<strong style="color:#4db899;">人がファンになるのは特定の一瞬ではなく、この再解釈が重なって関係が深まっていく過程そのものだ。</strong>だからループが「繰り返し」ではなく「螺旋」になる——一周するたびに、Fandomain Capitalは同じ場所ではなく、より深い層に戻ってくる。これがAISASのような線形モデルと根本的に異なる点だ。</p>
+        <p style="font-size:0.88rem; color:rgba(15,40,90,0.75); line-height:1.9;">体験・感動 → 社会化・共鳴 → 再解釈・深化 という三段階のループ。ここで重要なのは「再解釈・深化」だ。ファンの体験は固定されていない。語られるたびに、他者の声に触れるたびに、その意味は遡及的に豊かになっていく。<strong style="color:#4db899;">人がファンになるのは特定の一瞬ではなく、この再解釈が重なって関係が深まっていく過程そのものだ。</strong>だからループが「繰り返し」ではなく「螺旋」になる——一周するたびに、Fandomain Capitalは同じ場所ではなく、より深い層に戻ってくる。これがAISASのような線形モデルと根本的に異なる点だ。</p>
       </div>
       <div style="background:rgba(60,52,137,0.08); border:1px solid rgba(60,52,137,0.3); padding:2rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:#7f77dd; letter-spacing:0.15em; margin-bottom:0.75rem;">中央 — Fandomain Capital</div>
-        <p style="font-size:0.88rem; color:rgba(250,248,243,0.75); line-height:1.9;">外環（情報環境）と内環（生活者心理）が噛み合って回るとき、その中心に積み上がっていくのがFandomain Capitalだ。ループが一周するごとに層が一枚増える——それが中央の積層が厚みを増していく意味である。広告費で一気に買えるものではなく、ループが回り続けた時間の総量としてしか蓄積されない。</p>
+        <p style="font-size:0.88rem; color:rgba(15,40,90,0.75); line-height:1.9;">外環（情報環境）と内環（生活者心理）が噛み合って回るとき、その中心に積み上がっていくのがFandomain Capitalだ。ループが一周するごとに層が一枚増える——それが中央の積層が厚みを増していく意味である。広告費で一気に買えるものではなく、ループが回り続けた時間の総量としてしか蓄積されない。</p>
     </div>
   </div>
 
@@ -1011,19 +1011,19 @@ const htmlBefore = `
         <div class="rg-2" style="gap:1px; background:rgba(201,168,76,0.15);">
           <div style="background:rgba(10,22,40,0.6); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Paid — 最小化戦略</div>
-            <p style="font-size:0.87rem; color:rgba(250,248,243,0.7); line-height:1.9;">Patagoniaの広告費は売上比で業界最低水準だ。「Don't Buy This Jacket」のような広告を出すが、目的は購買促進ではなく哲学の表明。Paid を絞ることで、Earned と Shared の価値が相対的に高まる構造を意図的に設計している。</p>
+            <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">Patagoniaの広告費は売上比で業界最低水準だ。「Don't Buy This Jacket」のような広告を出すが、目的は購買促進ではなく哲学の表明。Paid を絞ることで、Earned と Shared の価値が相対的に高まる構造を意図的に設計している。</p>
           </div>
           <div style="background:rgba(10,22,40,0.6); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Owned — 体験設計の核</div>
-            <p style="font-size:0.87rem; color:rgba(250,248,243,0.7); line-height:1.9;">「Worn Wear」修理プログラムは、製品を売った後もブランドとの接点を継続させる仕組みだ。修理を体験した顧客は「長く使える」という評価をUGCに変える。Ownedの体験が、Sharedのシグナルを生み出す起点になっている。</p>
+            <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">「Worn Wear」修理プログラムは、製品を売った後もブランドとの接点を継続させる仕組みだ。修理を体験した顧客は「長く使える」という評価をUGCに変える。Ownedの体験が、Sharedのシグナルを生み出す起点になっている。</p>
           </div>
           <div style="background:rgba(10,22,40,0.6); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Shared — ファンの語りが資本になる</div>
-            <p style="font-size:0.87rem; color:rgba(250,248,243,0.7); line-height:1.9;">#MyPatagoniaキャンペーンでは、顧客が自分のアウトドア体験をシェアする場を設けた。UGCは「丈夫」「環境に配慮」「一生使える」という評価語に収束し、それがブランドの語りの核になっていく。ファンは購買者ではなく、共同の語り手になる。</p>
+            <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">#MyPatagoniaキャンペーンでは、顧客が自分のアウトドア体験をシェアする場を設けた。UGCは「丈夫」「環境に配慮」「一生使える」という評価語に収束し、それがブランドの語りの核になっていく。ファンは購買者ではなく、共同の語り手になる。</p>
           </div>
           <div style="background:rgba(10,22,40,0.6); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Earned — メディアが語りたくなる構造</div>
-            <p style="font-size:0.87rem; color:rgba(250,248,243,0.7); line-height:1.9;">「Don't Buy This Jacket」はメディアが自発的に報道した。効果のためにPRした結果ではなく、哲学を行動で示したことへの反応だ。EarnedはPaidで買うものではなく、PRODUCTとOwnedの一貫性が蓄積された結果として生まれることをPatagoniaは体現している。</p>
+            <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">「Don't Buy This Jacket」はメディアが自発的に報道した。効果のためにPRした結果ではなく、哲学を行動で示したことへの反応だ。EarnedはPaidで買うものではなく、PRODUCTとOwnedの一貫性が蓄積された結果として生まれることをPatagoniaは体現している。</p>
           </div>
         </div>
       </div>
@@ -1060,11 +1060,11 @@ const htmlBefore = `
       <div class="rg-2" style="gap:1px; background:rgba(26,107,90,0.15); margin-bottom:2rem;">
         <div style="background:rgba(10,22,40,0.55); padding:1.75rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#4db899; letter-spacing:0.15em; margin-bottom:0.75rem;">Owned / Shared — ファンと過ごす「場」</div>
-          <p style="font-size:0.86rem; color:rgba(250,248,243,0.7); line-height:1.9;">大規模なファンイベント「超宴（ちょううたげ）」をはじめ、ファンと直接会い、ともに時間を過ごす場を継続的に設計してきた。買って終わりではなく、ファンが「自分の居場所」として語りはじめる——Ownedの体験がShared（UGC・口コミ）を生む循環が、企業側の意図として運営されている。</p>
+          <p style="font-size:0.86rem; color:rgba(15,40,90,0.7); line-height:1.9;">大規模なファンイベント「超宴（ちょううたげ）」をはじめ、ファンと直接会い、ともに時間を過ごす場を継続的に設計してきた。買って終わりではなく、ファンが「自分の居場所」として語りはじめる——Ownedの体験がShared（UGC・口コミ）を生む循環が、企業側の意図として運営されている。</p>
         </div>
         <div style="background:rgba(10,22,40,0.55); padding:1.75rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#4db899; letter-spacing:0.15em; margin-bottom:0.75rem;">関係性の非対称性をなくす運営</div>
-          <p style="font-size:0.86rem; color:rgba(250,248,243,0.7); line-height:1.9;">EC（楽天市場店）での丁寧な双方向コミュニケーション、社内のニックネーム文化やフラットな組織運営、社長「てんちょ」を含めた人の顔が見える発信。ブランドとファンが対等な語り手として並ぶ関係——本レポートの操作的定義における「自発的に語るファン」が、設計によって生まれている。</p>
+          <p style="font-size:0.86rem; color:rgba(15,40,90,0.7); line-height:1.9;">EC（楽天市場店）での丁寧な双方向コミュニケーション、社内のニックネーム文化やフラットな組織運営、社長「てんちょ」を含めた人の顔が見える発信。ブランドとファンが対等な語り手として並ぶ関係——本レポートの操作的定義における「自発的に語るファン」が、設計によって生まれている。</p>
         </div>
       </div>
 
@@ -1314,8 +1314,8 @@ const htmlBefore = `
       </div>
       <div style="background:var(--navy); padding:2.5rem; border-top:3px solid var(--gold);">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.5rem;">Day 91–180</div>
-        <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--white); margin-bottom:1rem;">Business Impact Review</h4>
-        <ul style="list-style:none; font-size:0.85rem; color:rgba(250,248,243,0.65); line-height:2.1;">
+        <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem;">Business Impact Review</h4>
+        <ul style="list-style:none; font-size:0.85rem; color:rgba(15,40,90,0.65); line-height:2.1;">
           <li>· 語り・AI回答・指名検索の変化を検証</li>
           <li>· LTV・リピート・推奨率への寄与を確認</li>
           <li>· ROIC-WACCスプレッドへの影響仮説を提示</li>
@@ -1356,14 +1356,14 @@ const htmlBefore = `
 
   <div class="reveal" style="max-width:1100px; margin-top:5rem; background:var(--navy); padding:3rem; border-left:3px solid var(--gold);">
     <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem;">Column — ファイナンス論との接続</div>
-    <h4 style="font-family:'Shippori Mincho',serif; font-size:1.2rem; font-weight:600; color:var(--white); margin-bottom:0.5rem;">炎上はなぜ企業価値を毀損するのか</h4>
+    <h4 style="font-family:'Shippori Mincho',serif; font-size:1.2rem; font-weight:600; color:var(--navy); margin-bottom:0.5rem;">炎上はなぜ企業価値を毀損するのか</h4>
     <p style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(201,168,76,0.6); letter-spacing:0.05em; margin-bottom:2rem;">ナラティブ毀損がもたらす将来キャッシュフロー低下、そして割引率上昇への悪影響</p>
 
     <div class="rg-2" style="gap:3rem;">
       <div>
-        <p style="font-size:0.9rem; color:rgba(250,248,243,0.75); line-height:2.1; margin-bottom:1.5rem;">炎上が怖いのは、単に評判が悪くなるからではない。より本質的には、企業のナラティブが傷むことで、将来キャッシュフローへの信頼が揺らぎ、資本市場から見たリスクが上がるからだ。</p>
-        <p style="font-size:0.9rem; color:rgba(250,248,243,0.75); line-height:2.1; margin-bottom:1.5rem;">ブランド毀損はまず事業面に表れる。顧客離反、購入意向の低下、採用力の低下、従業員エンゲージメントの悪化——これらは将来キャッシュフローの前提を押し下げる。しかしそれだけではない。企業の語られ方が不安定になると、投資家・金融機関はその企業をより高いリスクとして見る。レピュテーションリスク・規制リスク・ガバナンスリスクが織り込まれ、株主資本コスト（ke）が上がり、WACCが上昇する。</p>
-        <p style="font-size:0.9rem; color:rgba(250,248,243,0.75); line-height:2.1;">企業価値は、将来キャッシュフローを割引率で現在価値に戻したものだ。ナラティブの毀損は、<strong style="color:var(--white);">分子（キャッシュフロー期待）を下げると同時に、分母（割引率）を上げる。二重に企業価値を毀損する。</strong></p>
+        <p style="font-size:0.9rem; color:rgba(15,40,90,0.75); line-height:2.1; margin-bottom:1.5rem;">炎上が怖いのは、単に評判が悪くなるからではない。より本質的には、企業のナラティブが傷むことで、将来キャッシュフローへの信頼が揺らぎ、資本市場から見たリスクが上がるからだ。</p>
+        <p style="font-size:0.9rem; color:rgba(15,40,90,0.75); line-height:2.1; margin-bottom:1.5rem;">ブランド毀損はまず事業面に表れる。顧客離反、購入意向の低下、採用力の低下、従業員エンゲージメントの悪化——これらは将来キャッシュフローの前提を押し下げる。しかしそれだけではない。企業の語られ方が不安定になると、投資家・金融機関はその企業をより高いリスクとして見る。レピュテーションリスク・規制リスク・ガバナンスリスクが織り込まれ、株主資本コスト（ke）が上がり、WACCが上昇する。</p>
+        <p style="font-size:0.9rem; color:rgba(15,40,90,0.75); line-height:2.1;">企業価値は、将来キャッシュフローを割引率で現在価値に戻したものだ。ナラティブの毀損は、<strong style="color:var(--navy);">分子（キャッシュフロー期待）を下げると同時に、分母（割引率）を上げる。二重に企業価値を毀損する。</strong></p>
       </div>
       <div>
         <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2rem; margin-bottom:1.5rem; text-align:center;">
@@ -1382,7 +1382,7 @@ const htmlBefore = `
             </div>
           </div>
         </div>
-        <p style="font-size:0.88rem; color:rgba(250,248,243,0.6); line-height:2;">ROICがWACCを上回ることで企業価値は創造される。ならばSNS上のナラティブを整えることは、単なるブランドコミュニケーションではない。将来キャッシュフローへの信頼を高め、リスクプレミアムを抑え、WACCの上昇を防ぐための<strong style="color:var(--white);">経営活動</strong>だ。</p>
+        <p style="font-size:0.88rem; color:rgba(15,40,90,0.6); line-height:2;">ROICがWACCを上回ることで企業価値は創造される。ならばSNS上のナラティブを整えることは、単なるブランドコミュニケーションではない。将来キャッシュフローへの信頼を高め、リスクプレミアムを抑え、WACCの上昇を防ぐための<strong style="color:var(--navy);">経営活動</strong>だ。</p>
       </div>
     </div>
 
