@@ -97,8 +97,8 @@ const reportCss = `
   .insight-card { padding:2.5rem 2rem; border:1px solid rgba(201,168,76,0.2); transition:border-color 0.3s, transform 0.3s; }
   .insight-card:hover { border-color:var(--gold); transform:translateY(-4px); }
   .insight-card .ic-label { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem; }
-  .insight-card h4 { font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); line-height:1.6; margin-bottom:1rem; }
-  .insight-card p { font-size:0.85rem; color:rgba(15,40,90,0.55); line-height:1.9; }
+  .insight-card h4 { font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:rgba(250,248,243,0.9); line-height:1.6; margin-bottom:1rem; }
+  .insight-card p { font-size:0.85rem; color:rgba(250,248,243,0.65); line-height:1.9; }
 
   /* SHARE OF ANSWERS VISUAL */
   .soa-visual { max-width:1100px; margin-top:5rem; }
@@ -199,37 +199,7 @@ const reportCss = `
   @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
   .reveal { opacity:1; transform:none; transition:opacity 0.7s ease, transform 0.7s ease; }
   .will-animate { opacity:0; transform:translateY(24px); }
-  .will-animate.visible { opacity:1; transform:none; }
-
-  /* ── DARK-BG TEXT RESTORE ─────────────────────────────────────────
-     章内の紺背景ボックス・カード類の文字を白に戻す
-     白背景化の際に子要素テキストも紺変換してしまったリカバー用
-  ────────────────────────────────────────────────────────────────── */
-  [style*="background:var(--navy)"],
-  [style*="background:var(--navy-mid)"],
-  [style*="background:var(--navy-deep)"],
-  [style*="background:rgba(10,22,40"],
-  [style*="background:rgba(10,16,32"],
-  [style*="background:rgba(6,14,26"],
-  [style*="background:#0a1628"],
-  [style*="background:#0f2040"],
-  [style*="background:#060e1a"] {
-    color: rgba(250,248,243,0.85) !important;
-  }
-  [style*="background:var(--navy)"] *,
-  [style*="background:var(--navy-mid)"] *,
-  [style*="background:var(--navy-deep)"] *,
-  [style*="background:rgba(10,22,40"] *,
-  [style*="background:rgba(10,16,32"] *,
-  [style*="background:rgba(6,14,26"] *,
-  [style*="background:#0a1628"] *,
-  [style*="background:#0f2040"] *,
-  [style*="background:#060e1a"] * { color: inherit; }
-
-  .pull-quote, .chapter-dark, .chapter-mid { color: rgba(250,248,243,0.85) !important; }
-  .pull-quote *, .chapter-dark *, .chapter-mid * { color: inherit; }
-
-  /* GRID CLASSES (moved from inline styles for mobile override) */
+  .will-animate.visible { opacity:1; transform:none; }  /* GRID CLASSES (moved from inline styles for mobile override) */
   .rg-2   { display:grid; grid-template-columns:1fr 1fr; }
   .rg-3   { display:grid; grid-template-columns:repeat(3,1fr); }
   .rg-4   { display:grid; grid-template-columns:repeat(4,1fr); }
@@ -324,11 +294,89 @@ const reportCss = `
     /* Section labels */
     .section-label { font-size:0.65rem !important; }
   }
-  /* White-section text overrides */
-  .diagnostic-section .insight-card,
-  .framework-section .insight-card,
-  .failure-section .insight-card { background:rgba(15,40,90,0.04); }
-  .soa-col { background:rgba(15,40,90,0.03) !important; }
+
+  /* ═══════════════════════════════════════════════════════════════
+     COMPREHENSIVE TEXT COLOR FIX — セクション別背景に応じた文字色
+     ch1(.chapter)=白, ch2(.chapter-dark)=紺, ch3(.framework-section)=白
+     ch4(inline off-white)=ベージュ, ch5(inline navy)=紺
+  ═══════════════════════════════════════════════════════════════ */
+
+  /* ── 白/ベージュ背景セクション: 暗色テキスト ── */
+  .chapter .chapter-title h2,
+  .framework-section .chapter-title h2,
+  [style*="background:var(--off-white)"] .chapter-title h2 {
+    color: rgba(15,40,90,0.85) !important;
+  }
+  .chapter .chapter-sub,
+  .framework-section .chapter-sub,
+  [style*="background:var(--off-white)"] .chapter-sub {
+    color: rgba(15,40,90,0.4) !important;
+  }
+  .chapter .chapter-num,
+  .framework-section .chapter-num,
+  [style*="background:var(--off-white)"] .chapter-num {
+    color: rgba(15,40,90,0.06) !important;
+  }
+  .chapter .chapter-body p,
+  .framework-section .chapter-body p,
+  [style*="background:var(--off-white)"] .chapter-body p {
+    color: rgba(15,40,90,0.7) !important;
+  }
+  .chapter .framework-definition p,
+  .framework-section .framework-definition p {
+    color: rgba(15,40,90,0.7) !important;
+  }
+  .chapter .three-layer h3,
+  .framework-section .three-layer h3 {
+    color: rgba(15,40,90,0.85) !important;
+  }
+  .chapter .layer-item h4,
+  .framework-section .layer-item h4 {
+    color: rgba(15,40,90,0.8) !important;
+  }
+  .chapter .layer-item p,
+  .framework-section .layer-item p {
+    color: rgba(15,40,90,0.6) !important;
+  }
+  .failure-intro h2 { color: rgba(15,40,90,0.85) !important; }
+  .failure-intro p  { color: rgba(15,40,90,0.65) !important; }
+
+  /* ── 紺背景セクション(ch2 chapter-dark, ch5 inline navy): 白テキスト ── */
+  .chapter-dark .chapter-title h2,
+  [style*="background:var(--navy)"] .chapter-title h2 {
+    color: rgba(250,248,243,0.92) !important;
+  }
+  .chapter-dark .chapter-sub,
+  [style*="background:var(--navy)"] .chapter-sub {
+    color: rgba(250,248,243,0.45) !important;
+  }
+  .chapter-dark .chapter-num,
+  [style*="background:var(--navy)"] .chapter-num {
+    color: rgba(250,248,243,0.04) !important;
+  }
+  .chapter-dark .chapter-body p,
+  [style*="background:var(--navy)"] .chapter-body p {
+    color: rgba(250,248,243,0.65) !important;
+  }
+  .chapter-dark .insight-card h4 { color: rgba(250,248,243,0.9) !important; }
+  .chapter-dark .insight-card p  { color: rgba(250,248,243,0.65) !important; }
+  [style*="background:var(--navy)"] h2 { color: rgba(250,248,243,0.9) !important; }
+  [style*="background:var(--navy)"] h3 { color: rgba(250,248,243,0.85) !important; }
+  [style*="background:var(--navy)"] h4 { color: rgba(250,248,243,0.85) !important; }
+  [style*="background:var(--navy)"] p  { color: rgba(250,248,243,0.65) !important; }
+  [style*="background:var(--navy-mid)"] h2 { color: rgba(250,248,243,0.9) !important; }
+  [style*="background:var(--navy-mid)"] h3 { color: rgba(250,248,243,0.85) !important; }
+  [style*="background:var(--navy-mid)"] p  { color: rgba(250,248,243,0.65) !important; }
+  [style*="background:var(--off-white)"] h2 { color: rgba(15,40,90,0.85) !important; }
+  [style*="background:var(--off-white)"] p  { color: rgba(15,40,90,0.7) !important; }
+  [style*="background:rgba(10,22,40"] h2, [style*="background:rgba(10,22,40"] h3,
+  [style*="background:rgba(10,22,40"] h4, [style*="background:rgba(10,22,40"] p {
+    color: rgba(250,248,243,0.8) !important;
+  }
+  /* failure-card: has inline dark bg */
+  .failure-card h3 { color: rgba(250,248,243,0.92) !important; }
+  .failure-card p  { color: rgba(250,248,243,0.65) !important; }
+  .failure-diagnosis p { color: rgba(250,248,243,0.55) !important; }
 
 `;
 
