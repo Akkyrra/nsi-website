@@ -201,6 +201,34 @@ const reportCss = `
   .will-animate { opacity:0; transform:translateY(24px); }
   .will-animate.visible { opacity:1; transform:none; }
 
+  /* ── DARK-BG TEXT RESTORE ─────────────────────────────────────────
+     章内の紺背景ボックス・カード類の文字を白に戻す
+     白背景化の際に子要素テキストも紺変換してしまったリカバー用
+  ────────────────────────────────────────────────────────────────── */
+  [style*="background:var(--navy)"],
+  [style*="background:var(--navy-mid)"],
+  [style*="background:var(--navy-deep)"],
+  [style*="background:rgba(10,22,40"],
+  [style*="background:rgba(10,16,32"],
+  [style*="background:rgba(6,14,26"],
+  [style*="background:#0a1628"],
+  [style*="background:#0f2040"],
+  [style*="background:#060e1a"] {
+    color: rgba(250,248,243,0.85) !important;
+  }
+  [style*="background:var(--navy)"] *,
+  [style*="background:var(--navy-mid)"] *,
+  [style*="background:var(--navy-deep)"] *,
+  [style*="background:rgba(10,22,40"] *,
+  [style*="background:rgba(10,16,32"] *,
+  [style*="background:rgba(6,14,26"] *,
+  [style*="background:#0a1628"] *,
+  [style*="background:#0f2040"] *,
+  [style*="background:#060e1a"] * { color: inherit; }
+
+  .pull-quote, .chapter-dark, .chapter-mid { color: rgba(250,248,243,0.85) !important; }
+  .pull-quote *, .chapter-dark *, .chapter-mid * { color: inherit; }
+
   /* GRID CLASSES (moved from inline styles for mobile override) */
   .rg-2   { display:grid; grid-template-columns:1fr 1fr; }
   .rg-3   { display:grid; grid-template-columns:repeat(3,1fr); }

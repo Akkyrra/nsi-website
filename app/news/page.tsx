@@ -18,14 +18,14 @@ interface NewsItem {
 // 追加するときは先頭に追記（新しい順）
 const newsItems: NewsItem[] = [
   {
-    date: "2025.06.23",
+    date: "2025.06.24",
     category: "MEDIA",
     title: "NSIの開設、そして第一弾レポートの発表についてプレスリリースを配信しました",
     href: "#",
     external: false,
   },
   {
-    date: "2025.06.23",
+    date: "2025.06.24",
     category: "REPORT",
     title: "#001 ファン資本の再設計 公開",
     href: "/reports",
