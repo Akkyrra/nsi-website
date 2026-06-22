@@ -103,7 +103,7 @@ const reportCss = `
   /* SHARE OF ANSWERS VISUAL */
   .soa-visual { max-width:1100px; margin-top:5rem; }
   .soa-header { display:flex; align-items:baseline; gap:1rem; margin-bottom:2rem; }
-  .soa-header h3 { font-family:'Shippori Mincho',serif; font-size:1.3rem; font-weight:600; color:var(--navy); }
+  .soa-header h3 { font-family:'Shippori Mincho',serif; font-size:1.3rem; font-weight:600; color:rgba(250,248,243,0.9); }
   .soa-header span { font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; }
   .soa-comparison { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
   .soa-col { padding:2.5rem; }
@@ -113,12 +113,12 @@ const reportCss = `
   .soa-col.old .soa-col-label { color:rgba(250,248,243,0.3); }
   .soa-col.new .soa-col-label { color:var(--gold); }
   .soa-col h4 { font-family:'Shippori Mincho',serif; font-size:1.15rem; font-weight:600; margin-bottom:1rem; }
-  .soa-col.old h4 { color:rgba(15,40,90,0.5); text-decoration:line-through; text-decoration-color:rgba(250,248,243,0.3); }
-  .soa-col.new h4 { color:var(--navy); }
+  .soa-col.old h4 { color:rgba(250,248,243,0.4); text-decoration:line-through; text-decoration-color:rgba(250,248,243,0.25); }
+  .soa-col.new h4 { color:rgba(250,248,243,0.92); }
   .soa-items { list-style:none; }
   .soa-items li { font-size:0.88rem; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.05); display:flex; align-items:center; gap:0.75rem; }
   .soa-col.old .soa-items li { color:rgba(250,248,243,0.35); }
-  .soa-col.new .soa-items li { color:rgba(15,40,90,0.75); }
+  .soa-col.new .soa-items li { color:rgba(250,248,243,0.75); }
   .soa-items li::before { content:''; width:6px; height:6px; border-radius:50%; flex-shrink:0; }
   .soa-col.old .soa-items li::before { background:rgba(255,255,255,0.15); }
   .soa-col.new .soa-items li::before { background:var(--gold); }
@@ -435,6 +435,15 @@ const reportCss = `
   [style*="background:#ffffff"] h2 { color: rgba(15,40,90,0.88) !important; }
   [style*="background:#ffffff"] h3 { color: rgba(15,40,90,0.85) !important; }
   [style*="background:#ffffff"] p  { color: rgba(15,40,90,0.72) !important; }
+
+  /* Chapter CTA text in dark-bg sections */
+  .chapter-dark .reveal > a > p  { color: rgba(250,248,243,0.88) !important; }
+  [style*="background:var(--navy)"] .reveal > a > p { color: rgba(250,248,243,0.88) !important; }
+  /* SOA section-level overrides (belt+suspenders) */
+  .chapter-dark .soa-header h3   { color: rgba(250,248,243,0.9)  !important; }
+  .chapter-dark .soa-col.new h4  { color: rgba(250,248,243,0.92) !important; }
+  .chapter-dark .soa-col.old h4  { color: rgba(250,248,243,0.4)  !important; }
+  .chapter-dark .soa-col.new .soa-items li { color: rgba(250,248,243,0.75) !important; }
 
 `;
 
@@ -1267,7 +1276,7 @@ const htmlBefore = `
         <div class="rg-2" style="gap:2rem;">
           <div>
             <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem;">Organizational Readiness<br><span style="font-size:0.85rem; font-weight:400; color:var(--gray);">組織の実装準備度</span></h4>
-            <p style="font-size:0.87rem; color:var(--gray); line-height:1.9;">Fandomain CapitalはSNSチーム以外も含めた横断的な取り組みで捕捉する。組織の準備度を診断することが不可欠だ。</p>
+            <p style="font-size:0.87rem; color:rgba(15,40,90,0.72); line-height:1.9;">Fandomain CapitalはSNSチーム以外も含めた横断的な取り組みで捕捉する。組織の準備度を診断することが不可欠だ。</p>
           </div>
           <div style="font-size:0.8rem; color:var(--gray); line-height:2; padding:1rem; background:rgba(10,22,40,0.04); border-radius:4px;">
             SNS・CRM・EC・購買データの統合状況 / 短期指標と中長期指標の分離設計 / ブランド・CRM・PR・経営が同じ指標を共有しているか / UGC・レビュー・AI回答の定点観測体制 / 月次・四半期の仮説検証サイクル
@@ -1319,16 +1328,16 @@ const htmlBefore = `
       <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(10,22,40,0.45); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.25rem;">自社の成熟度に合わせて始める — Measurement Level</div>
       <div class="rg-3" style="gap:1.5rem;">
         <div>
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(10,22,40,0.5); margin-bottom:0.4rem;">Level 1 — データ統合不要</div>
-          <p style="font-size:0.83rem; color:var(--gray); line-height:1.9;">SNS・UGC・AIの定性分析からすぐ始められる。ツール不要、今日から実行可能。</p>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(15,40,90,0.6); margin-bottom:0.4rem;">Level 1 — データ統合不要</div>
+          <p style="font-size:0.83rem; color:rgba(15,40,90,0.72); line-height:1.9;">SNS・UGC・AIの定性分析からすぐ始められる。ツール不要、今日から実行可能。</p>
         </div>
         <div>
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.4rem;">Level 2 — CRM・購買と連携</div>
-          <p style="font-size:0.83rem; color:var(--gray); line-height:1.9;">SNS接触者と非接触者のLTV差分、指名検索への影響など、データを繋いで仮説を定量化する。</p>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(15,40,90,0.55); margin-bottom:0.4rem;">Level 2 — CRM・購買と連携</div>
+          <p style="font-size:0.83rem; color:rgba(15,40,90,0.72); line-height:1.9;">SNS接触者と非接触者のLTV差分、指名検索への影響など、データを繋いで仮説を定量化する。</p>
         </div>
         <div>
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--navy); margin-bottom:0.4rem;">Level 3 — 経営指標への接続</div>
-          <p style="font-size:0.83rem; color:var(--gray); line-height:1.9;">LTV・価格プレミアム・リスクプレミアムを通じた企業価値への影響仮説を経営層に提示できる水準。</p>
+          <p style="font-size:0.83rem; color:rgba(15,40,90,0.72); line-height:1.9;">LTV・価格プレミアム・リスクプレミアムを通じた企業価値への影響仮説を経営層に提示できる水準。</p>
         </div>
       </div>
     </div>
