@@ -89,7 +89,7 @@ const reportCss = `
   .stat-row { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(201,168,76,0.1); max-width:1100px; margin-top:4rem; }
   .stat-item { background:var(--navy); padding:3rem 2rem; text-align:center; }
   .stat-num { font-family:'Shippori Mincho',serif; font-size:3.5rem; color:var(--gold); line-height:1; margin-bottom:0.75rem; }
-  .stat-label { font-size:0.85rem; color:rgba(15,40,90,0.5); line-height:1.7; }
+  .stat-label { font-size:0.85rem; color:rgba(250,248,243,0.55); line-height:1.7; }
   .stat-source { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(201,168,76,0.4); margin-top:0.5rem; letter-spacing:0.05em; }
 
   /* INSIGHT CARDS */
@@ -110,14 +110,14 @@ const reportCss = `
   .soa-col.old { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); }
   .soa-col.new { background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); }
   .soa-col-label { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem; }
-  .soa-col.old .soa-col-label { color:rgba(15,40,90,0.3); }
+  .soa-col.old .soa-col-label { color:rgba(250,248,243,0.3); }
   .soa-col.new .soa-col-label { color:var(--gold); }
   .soa-col h4 { font-family:'Shippori Mincho',serif; font-size:1.15rem; font-weight:600; margin-bottom:1rem; }
-  .soa-col.old h4 { color:rgba(15,40,90,0.5); text-decoration:line-through; text-decoration-color:rgba(15,40,90,0.3); }
+  .soa-col.old h4 { color:rgba(15,40,90,0.5); text-decoration:line-through; text-decoration-color:rgba(250,248,243,0.3); }
   .soa-col.new h4 { color:var(--navy); }
   .soa-items { list-style:none; }
   .soa-items li { font-size:0.88rem; padding:0.6rem 0; border-bottom:1px solid rgba(255,255,255,0.05); display:flex; align-items:center; gap:0.75rem; }
-  .soa-col.old .soa-items li { color:rgba(15,40,90,0.35); }
+  .soa-col.old .soa-items li { color:rgba(250,248,243,0.35); }
   .soa-col.new .soa-items li { color:rgba(15,40,90,0.75); }
   .soa-items li::before { content:''; width:6px; height:6px; border-radius:50%; flex-shrink:0; }
   .soa-col.old .soa-items li::before { background:rgba(255,255,255,0.15); }
@@ -378,6 +378,64 @@ const reportCss = `
   .failure-card p  { color: rgba(250,248,243,0.65) !important; }
   .failure-diagnosis p { color: rgba(250,248,243,0.55) !important; }
 
+  /* ═══════════════════════════════════════════════
+     TEXT COLOR — section-specific final overrides
+     (handles CSS-class-based elements, complements
+     the inline-style processing done in Python)
+  ═══════════════════════════════════════════════ */
+
+  /* ch1 .chapter (white bg) */
+  .chapter .chapter-title h2    { color: rgba(15,40,90,0.88) !important; }
+  .chapter .chapter-sub         { color: rgba(15,40,90,0.4)  !important; }
+  .chapter .chapter-num         { color: rgba(15,40,90,0.06) !important; }
+  .chapter .chapter-body p      { color: rgba(15,40,90,0.72) !important; }
+
+  /* ch2 .chapter-dark (navy bg) */
+  .chapter-dark .chapter-title h2 { color: rgba(250,248,243,0.92) !important; }
+  .chapter-dark .chapter-sub      { color: rgba(250,248,243,0.42) !important; }
+  .chapter-dark .chapter-num      { color: rgba(250,248,243,0.04) !important; }
+  .chapter-dark .chapter-body p   { color: rgba(250,248,243,0.65) !important; }
+  .chapter-dark .insight-card h4  { color: rgba(250,248,243,0.9)  !important; }
+  .chapter-dark .insight-card p   { color: rgba(250,248,243,0.65) !important; }
+  .chapter-dark .stat-label       { color: rgba(250,248,243,0.55) !important; }
+
+  /* ch3 .framework-section (white bg) */
+  .framework-section .chapter-title h2 { color: rgba(15,40,90,0.88) !important; }
+  .framework-section .chapter-sub      { color: rgba(15,40,90,0.4)  !important; }
+  .framework-section .chapter-num      { color: rgba(15,40,90,0.06) !important; }
+  .framework-section p                 { color: rgba(15,40,90,0.72) !important; }
+  .framework-section .layer-item h4   { color: rgba(15,40,90,0.85) !important; }
+  .framework-section .layer-item p    { color: rgba(15,40,90,0.65) !important; }
+  .framework-section .three-layer h3  { color: rgba(15,40,90,0.85) !important; }
+
+  /* ch4 inline off-white */
+  [style*="background:var(--off-white)"] h2 { color: rgba(15,40,90,0.88) !important; }
+  [style*="background:var(--off-white)"] h3 { color: rgba(15,40,90,0.85) !important; }
+  [style*="background:var(--off-white)"] p  { color: rgba(15,40,90,0.72) !important; }
+
+  /* ch5 inline navy & any inline navy within chapters */
+  [style*="background:var(--navy)"] h2 { color: rgba(250,248,243,0.92) !important; }
+  [style*="background:var(--navy)"] h3 { color: rgba(250,248,243,0.88) !important; }
+  [style*="background:var(--navy)"] h4 { color: rgba(250,248,243,0.88) !important; }
+  [style*="background:var(--navy)"] p  { color: rgba(250,248,243,0.65) !important; }
+  [style*="background:var(--navy-mid)"] h2 { color: rgba(250,248,243,0.92) !important; }
+  [style*="background:var(--navy-mid)"] h3 { color: rgba(250,248,243,0.88) !important; }
+  [style*="background:var(--navy-mid)"] p  { color: rgba(250,248,243,0.65) !important; }
+  [style*="background:rgba(10,22,40"] h2, [style*="background:rgba(10,22,40"] p
+    { color: rgba(250,248,243,0.8) !important; }
+
+  /* failure section */
+  .failure-intro h2  { color: rgba(15,40,90,0.88) !important; }
+  .failure-intro p   { color: rgba(15,40,90,0.7)  !important; }
+  .failure-card h3   { color: rgba(250,248,243,0.92) !important; }
+  .failure-card p    { color: rgba(250,248,243,0.65) !important; }
+  .failure-diagnosis p { color: rgba(250,248,243,0.55) !important; }
+
+  /* column section (now white) — inline bg changed to #ffffff */
+  [style*="background:#ffffff"] h2 { color: rgba(15,40,90,0.88) !important; }
+  [style*="background:#ffffff"] h3 { color: rgba(15,40,90,0.85) !important; }
+  [style*="background:#ffffff"] p  { color: rgba(15,40,90,0.72) !important; }
+
 `;
 
 const htmlBefore = `
@@ -610,10 +668,10 @@ const htmlBefore = `
       <span>Share of Answers</span>
     </div>
     <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:2.5rem; margin-bottom:1rem;">
-      <p style="font-size:0.88rem; color:rgba(250,248,243,0.6); line-height:2; margin-bottom:2rem;">GoogleはSEOとAI検索を「対立」ではなく「融合」と位置づけている。検索行動は一夜にして切り替わるのではなく、グラデーションとして移行していく。企業が問われるのは「どちらに対応するか」ではなく、<strong style="color:var(--white);">「両者にまたがって一貫したシグナルを蓄積できているか」</strong>だ。</p>
+      <p style="font-size:0.88rem; color:rgba(15,40,90,0.6); line-height:2; margin-bottom:2rem;">GoogleはSEOとAI検索を「対立」ではなく「融合」と位置づけている。検索行動は一夜にして切り替わるのではなく、グラデーションとして移行していく。企業が問われるのは「どちらに対応するか」ではなく、<strong style="color:var(--navy);">「両者にまたがって一貫したシグナルを蓄積できているか」</strong>だ。</p>
       <div class="rg-soa" style="gap:0; align-items:stretch;">
         <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); padding:2rem;">
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(250,248,243,0.35); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem;">SEO の重力</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(15,40,90,0.35); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem;">SEO の重力</div>
           <ul class="soa-items">
             <li>キーワード順位・クリック数</li>
             <li>被リンク・ドメイン権威</li>
@@ -635,7 +693,7 @@ const htmlBefore = `
         </div>
       </div>
       <div style="margin-top:1.5rem; padding:1rem 1.5rem; background:rgba(201,168,76,0.06); border-left:2px solid rgba(201,168,76,0.4);">
-        <p style="font-size:0.85rem; color:rgba(250,248,243,0.65); line-height:1.9;">共通する本質：<strong style="color:var(--white);">信頼できる情報が、複数の文脈で一貫して蓄積されていること。</strong>SEOもLLMOも、その点では同じ問いに答えを求めている。</p>
+        <p style="font-size:0.85rem; color:rgba(15,40,90,0.65); line-height:1.9;">共通する本質：<strong style="color:var(--navy);">信頼できる情報が、複数の文脈で一貫して蓄積されていること。</strong>SEOもLLMOも、その点では同じ問いに答えを求めている。</p>
       </div>
     </div>
   </div>
@@ -659,7 +717,7 @@ const htmlBefore = `
   </div>
 
   <div class="reveal" style="max-width:1100px; margin-top:3rem; padding:2rem 3rem; background:rgba(201,168,76,0.06); border-left:3px solid var(--gold);">
-    <p style="font-family:'Shippori Mincho',serif; font-size:1.05rem; color:var(--white); line-height:1.9;">AIは「誰が言ったか」を圧縮する。人間は「どのブランドを信じるか」をより重視する——だからこそ、語られ続けることが資本になる。</p>
+    <p style="font-family:'Shippori Mincho',serif; font-size:1.05rem; color:var(--navy); line-height:1.9;">AIは「誰が言ったか」を圧縮する。人間は「どのブランドを信じるか」をより重視する——だからこそ、語られ続けることが資本になる。</p>
   </div>
 
   <!-- ch2 CTA -->
@@ -667,7 +725,7 @@ const htmlBefore = `
     <a href="#download" style="display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; text-decoration:none; background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.3); padding:2.25rem 2.75rem;">
       <div>
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">AIに読まれるブランドの条件を、診断リストで確認する。</div>
-        <p style="font-size:0.95rem; color:rgba(250,248,243,0.75); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
+        <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
       </div>
       <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
     </a>
@@ -726,19 +784,19 @@ const htmlBefore = `
       <p style="margin-top:1.5rem;">このループはPESOという既存の情報環境の枠組みを外環として取り込み、生活者の心理プロセスを内環として組み合わせた二重構造になっている。なぜ線形モデルではなくループ構造なのか。AISASのような線形モデルは購買という「終点」を想定する。しかしFandomain Capitalに終点はない。ファンとの関係は購買後も続き、語りが再解釈され、さらに深い体験への期待が生まれる。ループが一周するたびに資本は螺旋状に深まっていく。</p>
     </div>
     <div>
-      <div class="pull-quote" style="background:rgba(201,168,76,0.08); border-left-color:var(--gold); color:var(--white); padding:2rem 2.5rem;">
+      <div class="pull-quote" style="background:rgba(201,168,76,0.08); border-left-color:var(--gold); color:var(--navy); padding:2rem 2.5rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem;">3つの事業効果</div>
         <div style="margin-bottom:1.5rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:0.6rem;">【Growth】LTV向上</div>
-          <p style="font-size:0.95rem; color:rgba(250,248,243,0.75); line-height:1.9;">リピート率・推奨率・単価の上昇。ファンは繰り返し買い、他者に語る。</p>
+          <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.9;">リピート率・推奨率・単価の上昇。ファンは繰り返し買い、他者に語る。</p>
         </div>
         <div style="border-top:1px solid rgba(201,168,76,0.15); padding-top:1.5rem; margin-bottom:1.5rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:0.6rem;">【Resilience】企業価値毀損への耐性</div>
-          <p style="font-size:0.95rem; color:rgba(250,248,243,0.75); line-height:1.9;">炎上や競合参入の局面において、蓄積されたファンの語りがナラティブ毀損を緩和し、将来キャッシュフロー期待の低下とリスクプレミアム上昇を抑える。これは単なるブランド危機対応ではなく、企業価値毀損への耐性である。</p>
+          <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.9;">炎上や競合参入の局面において、蓄積されたファンの語りがナラティブ毀損を緩和し、将来キャッシュフロー期待の低下とリスクプレミアム上昇を抑える。これは単なるブランド危機対応ではなく、企業価値毀損への耐性である。</p>
         </div>
         <div style="border-top:1px solid rgba(201,168,76,0.15); padding-top:1.5rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:0.6rem;">【Discoverability】AI推奨・参照獲得</div>
-          <p style="font-size:0.95rem; color:rgba(250,248,243,0.75); line-height:1.9;">一貫したシグナルがAIの回答に参照されやすくなる。Share of Answersを獲得し、比較検討のテーブルに載り続ける。</p>
+          <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.9;">一貫したシグナルがAIの回答に参照されやすくなる。Share of Answersを獲得し、比較検討のテーブルに載り続ける。</p>
         </div>
       </div>
     </div>
@@ -750,22 +808,22 @@ const htmlBefore = `
   <div class="reveal" style="max-width:1100px; margin-bottom:5rem;">
     <div style="border-left:3px solid var(--gold); background:rgba(201,168,76,0.04); padding:3.5rem 3.5rem 3.5rem 3rem;">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem;">Column</div>
-      <h3 style="font-family:'Shippori Mincho',serif; font-size:clamp(1.2rem,2vw,1.6rem); font-weight:700; color:var(--white); line-height:1.5; margin-bottom:2.5rem;">なぜ、ループでなければならないのか</h3>
+      <h3 style="font-family:'Shippori Mincho',serif; font-size:clamp(1.2rem,2vw,1.6rem); font-weight:700; color:var(--navy); line-height:1.5; margin-bottom:2.5rem;">なぜ、ループでなければならないのか</h3>
 
-      <p style="font-size:0.97rem; color:rgba(250,248,243,0.8); line-height:2.2; margin-bottom:1.5rem;">ファンマーケティングの論者のほとんどが見落としていることがある。ファンの体験は、体験した瞬間に完成しない、ということだ。</p>
+      <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">ファンマーケティングの論者のほとんどが見落としていることがある。ファンの体験は、体験した瞬間に完成しない、ということだ。</p>
 
-      <p style="font-size:0.97rem; color:rgba(250,248,243,0.8); line-height:2.2; margin-bottom:1.5rem;">購買直後の満足感、初めて使ったときの感動——それらは確かにリアルな体験だ。しかし、その体験の「意味」は、その後の時間の中で変わり続ける。他のファンの語りに触れたとき、ブランドが新たな姿勢を見せたとき、あるいは自分自身の文脈が変わったとき、人はかつての体験を遡及的に読み直す。「あのとき感じたのは、こういうことだったのか」と。</p>
+      <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">購買直後の満足感、初めて使ったときの感動——それらは確かにリアルな体験だ。しかし、その体験の「意味」は、その後の時間の中で変わり続ける。他のファンの語りに触れたとき、ブランドが新たな姿勢を見せたとき、あるいは自分自身の文脈が変わったとき、人はかつての体験を遡及的に読み直す。「あのとき感じたのは、こういうことだったのか」と。</p>
 
-      <p style="font-size:0.97rem; color:rgba(250,248,243,0.8); line-height:2.2; margin-bottom:1.5rem;">（これは哲学者・東浩紀が「訂正可能性」と呼ぶ概念と相似する。過去の出来事は変えられないが、過去の意味は現在によって書き換えられ続ける、という思想だ。）</p>
+      <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">（これは哲学者・東浩紀が「訂正可能性」と呼ぶ概念と相似する。過去の出来事は変えられないが、過去の意味は現在によって書き換えられ続ける、という思想だ。）</p>
 
-      <p style="font-size:0.97rem; color:rgba(250,248,243,0.8); line-height:2.2; margin-bottom:1.5rem;">これがFandomain Capital Loopを線形モデルではなくループ構造にした理由の核心だ。体験→語りという二段階で完結するモデル——AISASのような購買ファネルの延長線上にある発想——では、この「意味の更新」が捉えられない。<strong style="color:var(--white);">再解釈・深化という第三の段階を置かなければ、ファンとブランドの関係が時間とともに深まっていくメカニズムを記述できない。</strong></p>
+      <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">これがFandomain Capital Loopを線形モデルではなくループ構造にした理由の核心だ。体験→語りという二段階で完結するモデル——AISASのような購買ファネルの延長線上にある発想——では、この「意味の更新」が捉えられない。<strong style="color:var(--navy);">再解釈・深化という第三の段階を置かなければ、ファンとブランドの関係が時間とともに深まっていくメカニズムを記述できない。</strong></p>
 
-      <p style="font-size:0.97rem; color:rgba(250,248,243,0.8); line-height:2.2; margin-bottom:1.5rem;">そしてこれは、ブランド自身にも同様に起きる。Patagoniaは創業以来、「アウトドアウェアのメーカー」から「環境活動家の集団」へ、そして「反消費主義の思想体」へと、自己の意味を語り直し続けてきた。製品は変わっていない。変わったのは、その製品をめぐる語りの文脈だ。そしてその語り直しのたびに、ファンとの関係は一段深い層に移行してきた。</p>
+      <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">そしてこれは、ブランド自身にも同様に起きる。Patagoniaは創業以来、「アウトドアウェアのメーカー」から「環境活動家の集団」へ、そして「反消費主義の思想体」へと、自己の意味を語り直し続けてきた。製品は変わっていない。変わったのは、その製品をめぐる語りの文脈だ。そしてその語り直しのたびに、ファンとの関係は一段深い層に移行してきた。</p>
 
-      <p style="font-size:0.97rem; color:rgba(250,248,243,0.8); line-height:2.2; margin-bottom:2.5rem;">マーケティングの効果測定がこの現象を捉えられないのは、時間軸が短すぎるからだ。キャンペーン終了後3ヶ月でROIを測定するとき、「再解釈・深化」はまだ起きていない。あるいはすでに起きているのに、スナップショットの指標には映らない。</p>
+      <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:2.5rem;">マーケティングの効果測定がこの現象を捉えられないのは、時間軸が短すぎるからだ。キャンペーン終了後3ヶ月でROIを測定するとき、「再解釈・深化」はまだ起きていない。あるいはすでに起きているのに、スナップショットの指標には映らない。</p>
 
       <div style="border-top:1px solid rgba(201,168,76,0.2); padding-top:2rem;">
-        <p style="font-family:'Shippori Mincho',serif; font-size:1.05rem; color:var(--white); line-height:1.9; font-weight:600;">ループが「繰り返し」ではなく「螺旋」である理由がここにある。一周するたびに同じ場所に戻るのではなく、意味の層が厚くなって戻ってくる。それがFandomain Capitalが「資本として積み上がる」という比喩の実態だ。資本は瞬間に生まれない。時間の中でしか育たない。</p>
+        <p style="font-family:'Shippori Mincho',serif; font-size:1.05rem; color:var(--navy); line-height:1.9; font-weight:600;">ループが「繰り返し」ではなく「螺旋」である理由がここにある。一周するたびに同じ場所に戻るのではなく、意味の層が厚くなって戻ってくる。それがFandomain Capitalが「資本として積み上がる」という比喩の実態だ。資本は瞬間に生まれない。時間の中でしか育たない。</p>
       </div>
     </div>
   </div>
@@ -908,7 +966,7 @@ const htmlBefore = `
     <div class="rg-2" style="gap:1.5rem;">
       <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">外環 — PESO</div>
-        <p style="font-size:0.88rem; color:rgba(250,248,243,0.75); line-height:1.9;">Paid（広告）・Earned（PR・メディア）・Shared（UGC・SNS）・Owned（製品・CRM）という4つの情報環境の軸。企業が情報をどこに配置するかという「場の設計」を示す。Fandomain Capital Loopでは、この外環がブランドと生活者の接触を設計する役割を担う。<br><br>そしてこの外環全体には、もう一つの観測レイヤーが偏在する——<strong style="color:#9b94e8;">AI Signal</strong>だ。SharedがEarnedを生み、EarnedがAIに参照され、次の生活者の体験の前段階に影響する。AIは情報環境の外側からループ全体を観測し、一貫したシグナルを持つブランドを回答生成の中で参照しやすくなる。図中の各辺に置かれた「AI Signal」は、この偏在を示している。Share of Answersへの接続点でもある。</p>
+        <p style="font-size:0.88rem; color:rgba(15,40,90,0.75); line-height:1.9;">Paid（広告）・Earned（PR・メディア）・Shared（UGC・SNS）・Owned（製品・CRM）という4つの情報環境の軸。企業が情報をどこに配置するかという「場の設計」を示す。Fandomain Capital Loopでは、この外環がブランドと生活者の接触を設計する役割を担う。<br><br>そしてこの外環全体には、もう一つの観測レイヤーが偏在する——<strong style="color:#9b94e8;">AI Signal</strong>だ。SharedがEarnedを生み、EarnedがAIに参照され、次の生活者の体験の前段階に影響する。AIは情報環境の外側からループ全体を観測し、一貫したシグナルを持つブランドを回答生成の中で参照しやすくなる。図中の各辺に置かれた「AI Signal」は、この偏在を示している。Share of Answersへの接続点でもある。</p>
       </div>
       <div style="background:rgba(26,107,90,0.08); border:1px solid rgba(26,107,90,0.3); padding:2rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:#4db899; letter-spacing:0.15em; margin-bottom:0.75rem;">内環 — 生活者の心理ループ</div>
@@ -930,12 +988,12 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(201,168,76,0.5); letter-spacing:0.1em;">Fandomain Capital Loopの実装例</div>
       </div>
 
-      <h3 style="font-family:'DM Serif Display',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); color:var(--white); font-weight:400; font-style:italic; margin-bottom:0.5rem;">Patagonia</h3>
-      <p style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(250,248,243,0.4); letter-spacing:0.1em; margin-bottom:2.5rem;">アウトドアアパレル / 1973年創業 / 米国・非上場 / 推定年商10億ドル超</p>
+      <h3 style="font-family:'DM Serif Display',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); color:var(--navy); font-weight:400; font-style:italic; margin-bottom:0.5rem;">Patagonia</h3>
+      <p style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(15,40,90,0.4); letter-spacing:0.1em; margin-bottom:2.5rem;">アウトドアアパレル / 1973年創業 / 米国・非上場 / 推定年商10億ドル超</p>
 
       <!-- リード文 -->
       <p style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--coral); letter-spacing:0.15em; margin-bottom:1.25rem;">TYPE A — 理念型：哲学の一貫性が資本になる</p>
-      <p style="font-size:1rem; color:rgba(250,248,243,0.8); line-height:2.1; margin-bottom:3rem; border-left:2px solid var(--gold); padding-left:1.5rem;">「Don't Buy This Jacket（このジャケットを買わないでください）」——2011年のブラックフライデーにPatagoniaがニューヨーク・タイムズに掲載した全面広告だ。製品の購入を抑制するよう呼びかけるこの広告は、逆説的にブランドへの信頼と語りを爆発的に生んだ。これはコミュニケーションの巧みさではない。プロダクトと体験が先にあったから機能した話だ。</p>
+      <p style="font-size:1rem; color:rgba(15,40,90,0.8); line-height:2.1; margin-bottom:3rem; border-left:2px solid var(--gold); padding-left:1.5rem;">「Don't Buy This Jacket（このジャケットを買わないでください）」——2011年のブラックフライデーにPatagoniaがニューヨーク・タイムズに掲載した全面広告だ。製品の購入を抑制するよう呼びかけるこの広告は、逆説的にブランドへの信頼と語りを爆発的に生んだ。これはコミュニケーションの巧みさではない。プロダクトと体験が先にあったから機能した話だ。</p>
 
       <!-- PESO分析 -->
       <div style="margin-bottom:3rem;">
@@ -965,13 +1023,13 @@ const htmlBefore = `
       <div style="margin-bottom:2.5rem;">
         <div style="background:rgba(60,52,137,0.08); border:1px solid rgba(60,52,137,0.25); padding:1.75rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#7f77dd; letter-spacing:0.15em; margin-bottom:0.75rem;">AI Signal の収束</div>
-          <p style="font-size:0.87rem; color:rgba(250,248,243,0.7); line-height:1.9;">「サステナブルなアウトドアブランドは？」とAIに問うと、Patagoniaは必ず登場する。異なる媒体・異なる文脈で「環境への誠実さ」「修理文化」「反消費主義」という評価語が一貫して収束しているため、AIが参照しやすい信頼のシグナルとして機能している。</p>
+          <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">「サステナブルなアウトドアブランドは？」とAIに問うと、Patagoniaは必ず登場する。異なる媒体・異なる文脈で「環境への誠実さ」「修理文化」「反消費主義」という評価語が一貫して収束しているため、AIが参照しやすい信頼のシグナルとして機能している。</p>
         </div>
       </div>
 
       <!-- 結論 -->
       <div style="border-top:1px solid rgba(201,168,76,0.2); padding-top:2rem;">
-        <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--white); line-height:2; font-weight:600;">Patagoniaが証明しているのは、Fandomain Capitalとは「コミュニケーションを工夫した結果」ではないということだ。プロダクトの哲学が体験に一貫し、体験がファンの語りに変わり、語りがAIシグナルとして収束する。その積み上がりの結果として、広告費を売上比で業界最低水準に抑えながら、AIにも生活者にも一貫して参照されるブランドであり続けている。これは、ファン資本が「理念の一貫性」から立ち上がることを示す象徴的なケースだ。</p>
+        <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--navy); line-height:2; font-weight:600;">Patagoniaが証明しているのは、Fandomain Capitalとは「コミュニケーションを工夫した結果」ではないということだ。プロダクトの哲学が体験に一貫し、体験がファンの語りに変わり、語りがAIシグナルとして収束する。その積み上がりの結果として、広告費を売上比で業界最低水準に抑えながら、AIにも生活者にも一貫して参照されるブランドであり続けている。これは、ファン資本が「理念の一貫性」から立ち上がることを示す象徴的なケースだ。</p>
       </div>
 
     </div>
@@ -985,10 +1043,10 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(77,184,153,0.6); letter-spacing:0.1em;">国内・実装型のリファレンス</div>
       </div>
       <p style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:#4db899; letter-spacing:0.15em; margin-bottom:1rem;">TYPE B — 実装型：ファンとの場の運営が資本になる</p>
-      <h3 style="font-family:'DM Serif Display',serif; font-size:clamp(1.4rem,2.2vw,1.9rem); color:var(--white); font-weight:400; font-style:italic; margin-bottom:0.4rem;">ヤッホーブルーイング</h3>
-      <p style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:rgba(250,248,243,0.4); letter-spacing:0.1em; margin-bottom:2rem;">クラフトビール / 「よなよなエール」/ 長野・軽井沢発</p>
+      <h3 style="font-family:'DM Serif Display',serif; font-size:clamp(1.4rem,2.2vw,1.9rem); color:var(--navy); font-weight:400; font-style:italic; margin-bottom:0.4rem;">ヤッホーブルーイング</h3>
+      <p style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:rgba(15,40,90,0.4); letter-spacing:0.1em; margin-bottom:2rem;">クラフトビール / 「よなよなエール」/ 長野・軽井沢発</p>
 
-      <p style="font-size:0.95rem; color:rgba(250,248,243,0.8); line-height:2.1; margin-bottom:2rem; border-left:2px solid #1a6b5a; padding-left:1.5rem;">Patagoniaが「理念の一貫性」からファン資本を立ち上げたとすれば、ヤッホーブルーイングは「ファンと過ごす場の運営」から積み上げる対照的なリファレンスだ。理念を掲げて待つのではなく、ファンと顔の見える関係を継続的に設計し続ける——日本の生活者市場で、Fandomain Capital Loopがどう回るかを示してくれる。</p>
+      <p style="font-size:0.95rem; color:rgba(15,40,90,0.8); line-height:2.1; margin-bottom:2rem; border-left:2px solid #1a6b5a; padding-left:1.5rem;">Patagoniaが「理念の一貫性」からファン資本を立ち上げたとすれば、ヤッホーブルーイングは「ファンと過ごす場の運営」から積み上げる対照的なリファレンスだ。理念を掲げて待つのではなく、ファンと顔の見える関係を継続的に設計し続ける——日本の生活者市場で、Fandomain Capital Loopがどう回るかを示してくれる。</p>
 
       <div class="rg-2" style="gap:1px; background:rgba(26,107,90,0.15); margin-bottom:2rem;">
         <div style="background:rgba(10,22,40,0.55); padding:1.75rem;">
@@ -1001,7 +1059,7 @@ const htmlBefore = `
         </div>
       </div>
 
-      <p style="font-family:'Shippori Mincho',serif; font-size:0.97rem; color:var(--white); line-height:2; font-weight:600; border-top:1px solid rgba(26,107,90,0.2); padding-top:1.75rem;">理念型と実装型、入口は違う。だが両者が示す本質は同じだ——ファン資本は、広告の巧拙ではなく、ブランドとファンが対等に語り合う関係を「どれだけ継続的に設計したか」から立ち上がる。海外の象徴例と国内の運営例が、同じ一つの構造を別の角度から照らしている。</p>
+      <p style="font-family:'Shippori Mincho',serif; font-size:0.97rem; color:var(--navy); line-height:2; font-weight:600; border-top:1px solid rgba(26,107,90,0.2); padding-top:1.75rem;">理念型と実装型、入口は違う。だが両者が示す本質は同じだ——ファン資本は、広告の巧拙ではなく、ブランドとファンが対等に語り合う関係を「どれだけ継続的に設計したか」から立ち上がる。海外の象徴例と国内の運営例が、同じ一つの構造を別の角度から照らしている。</p>
     </div>
   </div>
 
@@ -1010,7 +1068,7 @@ const htmlBefore = `
     <a href="#download" style="display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; text-decoration:none; background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.3); padding:2.25rem 2.75rem;">
       <div>
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">Fandomain Capital Loopの高解像度図解をKitに同梱している。</div>
-        <p style="font-size:0.95rem; color:rgba(250,248,243,0.75); line-height:1.8; max-width:620px;">Fandomain Capital Loopの高解像度版を含むレポートPDFをダウンロード</p>
+        <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.8; max-width:620px;">Fandomain Capital Loopの高解像度版を含むレポートPDFをダウンロード</p>
       </div>
       <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
     </a>
@@ -1028,10 +1086,10 @@ const htmlBefore = `
     <div class="rg-2" style="gap:1.5rem; margin-bottom:1.5rem;" class="reveal">
       <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2.5rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.25rem;">大企業の構造的問題</div>
-        <p style="font-size:0.9rem; color:rgba(250,248,243,0.75); line-height:2; margin-bottom:1rem;">大企業は統合プランニングの文脈でSNSを運用する。テレビCM・屋外広告等との組み合わせの中で活用されるが、アトリビューション分析が複雑になり、SNSの寄与度を単体で測ることが難しくなる。その結果、経営層への説明の困難度が増し、予算が削られていくことにもつながってしまう。現に、SNSマーケティングの課題のトップは、成果の説明の難しさであるという調査結果がある。さらに、大企業ほど「プロモーションの寄与度が低い」という構造的な特性がある——ブランドがすでに有名であるほど、個々の施策の効果測定が難しくなるためだ。</p>
+        <p style="font-size:0.9rem; color:rgba(15,40,90,0.75); line-height:2; margin-bottom:1rem;">大企業は統合プランニングの文脈でSNSを運用する。テレビCM・屋外広告等との組み合わせの中で活用されるが、アトリビューション分析が複雑になり、SNSの寄与度を単体で測ることが難しくなる。その結果、経営層への説明の困難度が増し、予算が削られていくことにもつながってしまう。現に、SNSマーケティングの課題のトップは、成果の説明の難しさであるという調査結果がある。さらに、大企業ほど「プロモーションの寄与度が低い」という構造的な特性がある——ブランドがすでに有名であるほど、個々の施策の効果測定が難しくなるためだ。</p>
         <div style="padding:1rem 1.25rem; background:rgba(201,168,76,0.08); border-left:2px solid rgba(201,168,76,0.4);">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:var(--gold); letter-spacing:0.12em; margin-bottom:0.4rem;">処方箋</div>
-          <p style="font-size:0.85rem; color:rgba(250,248,243,0.7); line-height:1.8;">効果がないのではなく、<strong style="color:var(--white);">測る単位と時間軸を間違えている</strong>。Fandomain Capitalの観点から、計測の枠組みそのものを再設計する。</p>
+          <p style="font-size:0.85rem; color:rgba(15,40,90,0.7); line-height:1.8;">効果がないのではなく、<strong style="color:var(--navy);">測る単位と時間軸を間違えている</strong>。Fandomain Capitalの観点から、計測の枠組みそのものを再設計する。</p>
         </div>
       </div>
       <div style="background:rgba(196,92,58,0.06); border:1px solid rgba(196,92,58,0.2); padding:2.5rem;">
@@ -1281,7 +1339,7 @@ const htmlBefore = `
     <a href="#download" style="display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; text-decoration:none; background:linear-gradient(135deg, var(--navy), var(--navy-mid)); border:1px solid rgba(201,168,76,0.3); padding:2.25rem 2.75rem; transition:border-color .2s ease;">
       <div>
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">5つの診断軸を自社にあてはめるチェックリストをKitで入手する。</div>
-        <p style="font-size:0.95rem; color:rgba(250,248,243,0.85); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
+        <p style="font-size:0.95rem; color:rgba(15,40,90,0.85); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
       </div>
       <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
     </a>
@@ -1301,17 +1359,17 @@ const htmlBefore = `
       <div>
         <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2rem; margin-bottom:1.5rem; text-align:center;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(201,168,76,0.5); letter-spacing:0.15em; margin-bottom:1rem;">ENTERPRISE VALUE</div>
-          <div style="font-family:'DM Serif Display',serif; font-size:1.1rem; color:var(--white); line-height:2;">
+          <div style="font-family:'DM Serif Display',serif; font-size:1.1rem; color:var(--navy); line-height:2;">
             EV = Σ <span style="color:var(--coral);">FCF<sub>t</sub></span> / (1 + <span style="color:var(--purple);">WACC</span>)<sup>t</sup>
           </div>
           <div class="rg-2" style="gap:1rem; margin-top:1.5rem;">
             <div style="background:rgba(196,92,58,0.1); border:1px solid rgba(196,92,58,0.3); padding:0.75rem; border-radius:4px;">
               <div style="font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:var(--coral); margin-bottom:0.25rem;">分子 ↓</div>
-              <div style="font-size:0.78rem; color:rgba(250,248,243,0.7); line-height:1.6;">ナラティブ毀損<br>→ CF期待が低下</div>
+              <div style="font-size:0.78rem; color:rgba(15,40,90,0.7); line-height:1.6;">ナラティブ毀損<br>→ CF期待が低下</div>
             </div>
             <div style="background:rgba(60,52,137,0.1); border:1px solid rgba(60,52,137,0.3); padding:0.75rem; border-radius:4px;">
               <div style="font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:#7f77dd; margin-bottom:0.25rem;">分母 ↑</div>
-              <div style="font-size:0.78rem; color:rgba(250,248,243,0.7); line-height:1.6;">リスクプレミアム上昇<br>→ WACC上昇</div>
+              <div style="font-size:0.78rem; color:rgba(15,40,90,0.7); line-height:1.6;">リスクプレミアム上昇<br>→ WACC上昇</div>
             </div>
           </div>
         </div>
@@ -1320,7 +1378,7 @@ const htmlBefore = `
     </div>
 
     <div style="margin-top:2rem; padding:1.5rem 2rem; background:rgba(201,168,76,0.08); border-left:2px solid var(--gold);">
-      <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--white); line-height:1.9; font-weight:600;">ファン資本とは、好意的な投稿の集合ではない。それは危機時にも企業価値を支える、社会的な信用のバッファである。</p>
+      <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--navy); line-height:1.9; font-weight:600;">ファン資本とは、好意的な投稿の集合ではない。それは危機時にも企業価値を支える、社会的な信用のバッファである。</p>
     </div>
   </div>
 
@@ -1329,7 +1387,7 @@ const htmlBefore = `
     <a href="#download" style="display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap; text-decoration:none; background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.3); padding:2.25rem 2.75rem;">
       <div>
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">設計と計測の次のステップを、NSIと話す。</div>
-        <p style="font-size:0.95rem; color:rgba(250,248,243,0.75); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
+        <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
       </div>
       <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
     </a>
@@ -1355,7 +1413,7 @@ const htmlBefore = `
     <!-- 非財務情報の潮流 -->
     <div class="reveal" style="max-width:1100px; margin-bottom:4rem; padding:2rem 2.5rem; background:rgba(201,168,76,0.06); border-left:3px solid rgba(201,168,76,0.4);">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.75rem;">Context — 無形資産への説明責任が高まる時代</div>
-      <p style="font-size:0.95rem; color:rgba(250,248,243,0.8); line-height:2;">SNS上の語りは、これまでマーケティング部門の周辺的なデータと見なされてきた。しかし企業価値の多くが無形資産によって説明される時代、その語りも企業の説明責任の射程に入りつつある。非財務情報の開示が段階的に拡充され、無形資産やブランド価値をどう語るかが経営の課題として前景化してきた——これはその大きな潮流の一例だ。ブランドへの信頼・ファンとの関係性・語りの蓄積は、まさに財務諸表に映らない企業の無形資産であり、Fandomain Capitalを設計・計測する取り組みは、この流れと自然に合流する。SNSマーケティングの問いは、もはやマーケティング部門だけの問いではない。</p>
+      <p style="font-size:0.95rem; color:rgba(15,40,90,0.8); line-height:2;">SNS上の語りは、これまでマーケティング部門の周辺的なデータと見なされてきた。しかし企業価値の多くが無形資産によって説明される時代、その語りも企業の説明責任の射程に入りつつある。非財務情報の開示が段階的に拡充され、無形資産やブランド価値をどう語るかが経営の課題として前景化してきた——これはその大きな潮流の一例だ。ブランドへの信頼・ファンとの関係性・語りの蓄積は、まさに財務諸表に映らない企業の無形資産であり、Fandomain Capitalを設計・計測する取り組みは、この流れと自然に合流する。SNSマーケティングの問いは、もはやマーケティング部門だけの問いではない。</p>
     </div>
 
     <div class="rg-2" style="gap:4rem;" class="reveal">
@@ -1369,7 +1427,7 @@ const htmlBefore = `
           <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--white); line-height:1.9;">Fandomain Capital Loopが回るとき、ブランドはファンダムの中に「領地」を持つ。それはPESOのようなメディア発想では届かない、生活者の中の心的な存在感（Mental Availability）を想起させる。</p>
         </div>
         <div style="border-left:2px solid var(--gold); padding:1.5rem 2rem; background:rgba(201,168,76,0.05);">
-          <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--white); line-height:1.9;">Fandomain Capitalの設計は、SNS担当者だけで完結しない。しかしだからこそ、取り組んだ企業には持続的な競争優位が生まれる。</p>
+          <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--navy); line-height:1.9;">Fandomain Capitalの設計は、SNS担当者だけで完結しない。しかしだからこそ、取り組んだ企業には持続的な競争優位が生まれる。</p>
         </div>
       </div>
     </div>
@@ -1380,28 +1438,28 @@ const htmlBefore = `
         <div class="diagnostic-card" style="background:rgba(255,255,255,0.05); border-bottom-color:var(--gold);">
           <div class="dc-num" style="color:rgba(201,168,76,0.15);">01</div>
           <div class="dc-tag">自己診断チェック</div>
-          <h3 style="color:var(--white);">ナラティブの存在を確認する</h3>
-          <p style="color:rgba(250,248,243,0.65);">自社のブランドについて、顧客が自発的に使う言葉（評価語）を把握しているか。SNS・レビュー・口コミに、一貫したナラティブの軸が浮かび上がっているか。把握できていないなら、Fandomain Capitalの現在地が見えていない状態だ。</p>
+          <h3 style="color:var(--navy);">ナラティブの存在を確認する</h3>
+          <p style="color:rgba(15,40,90,0.65);">自社のブランドについて、顧客が自発的に使う言葉（評価語）を把握しているか。SNS・レビュー・口コミに、一貫したナラティブの軸が浮かび上がっているか。把握できていないなら、Fandomain Capitalの現在地が見えていない状態だ。</p>
         </div>
         <div class="diagnostic-card" style="background:rgba(255,255,255,0.05); border-bottom-color:var(--gold);">
           <div class="dc-num" style="color:rgba(201,168,76,0.15);">02</div>
           <div class="dc-tag">自己診断チェック</div>
-          <h3 style="color:var(--white);">シグナルと関係性を分けて見る</h3>
-          <p style="color:rgba(250,248,243,0.65);">SNS上で語られる内容（外から見えるシグナル）と、実際の顧客との接触履歴・購買データ（内側の関係性）を、両方把握しているか。多くの企業は前者しか見ていない。後者なしにFandomain Capitalは設計できない。</p>
+          <h3 style="color:var(--navy);">シグナルと関係性を分けて見る</h3>
+          <p style="color:rgba(15,40,90,0.65);">SNS上で語られる内容（外から見えるシグナル）と、実際の顧客との接触履歴・購買データ（内側の関係性）を、両方把握しているか。多くの企業は前者しか見ていない。後者なしにFandomain Capitalは設計できない。</p>
         </div>
         <div class="diagnostic-card" style="background:rgba(255,255,255,0.05); border-bottom-color:var(--gold);">
           <div class="dc-num" style="color:rgba(201,168,76,0.15);">03</div>
           <div class="dc-tag">自己診断チェック</div>
-          <h3 style="color:var(--white);">AIにブランドは参照されているか</h3>
-          <p style="color:rgba(250,248,243,0.65);">主要なカテゴリワードでAIに問いかけたとき、自社ブランドは回答に現れるか。現れるとしても、どんな文脈で語られているか。AIに参照されないブランドは、次の世代の比較検討のテーブルに載らない。</p>
+          <h3 style="color:var(--navy);">AIにブランドは参照されているか</h3>
+          <p style="color:rgba(15,40,90,0.65);">主要なカテゴリワードでAIに問いかけたとき、自社ブランドは回答に現れるか。現れるとしても、どんな文脈で語られているか。AIに参照されないブランドは、次の世代の比較検討のテーブルに載らない。</p>
         </div>
       </div>
     </div>
 
     <div class="reveal" style="margin-top:5rem; padding:4rem; background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); text-align:center;">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.3em; text-transform:uppercase; margin-bottom:2rem;">Afterword</div>
-      <p style="font-family:'Shippori Mincho',serif; font-size:clamp(1.2rem,2.5vw,1.8rem); color:var(--white); line-height:1.8; font-weight:600; margin-bottom:1.5rem;">ファンとの関係を「資本」として設計する発想を、<br>これからのマーケティング論にインストールする。</p>
-      <p style="font-size:0.95rem; color:rgba(250,248,243,0.75); line-height:2.1; max-width:640px; margin:0 auto 1.5rem;">AIが情報環境を再編し、無形資産への問いが経営の中心に移る時代に、ブランドが積み上げてきた信頼・語り・関係性は、企業価値の構成要素としてますます重視されるようになるでしょう。Fandomain Capitalはその問いへの、最初の答えです。NSIはその上位概念にあたるBrand Capital Strategyを基軸に、ブランドの無形資産を設計・計測・実装するチャレンジを続けてまいります。</p>
+      <p style="font-family:'Shippori Mincho',serif; font-size:clamp(1.2rem,2.5vw,1.8rem); color:var(--navy); line-height:1.8; font-weight:600; margin-bottom:1.5rem;">ファンとの関係を「資本」として設計する発想を、<br>これからのマーケティング論にインストールする。</p>
+      <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:2.1; max-width:640px; margin:0 auto 1.5rem;">AIが情報環境を再編し、無形資産への問いが経営の中心に移る時代に、ブランドが積み上げてきた信頼・語り・関係性は、企業価値の構成要素としてますます重視されるようになるでしょう。Fandomain Capitalはその問いへの、最初の答えです。NSIはその上位概念にあたるBrand Capital Strategyを基軸に、ブランドの無形資産を設計・計測・実装するチャレンジを続けてまいります。</p>
     </div>
   </div>
 </section>
