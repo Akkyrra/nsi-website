@@ -36,7 +36,10 @@ const ishikawa = {
     "現在は東京富士大学大学院客員教授（マーケティング）、一般社団法人アカデミックグルーヴ（理事・共同創設者）。",
   ],
   books: [
-    "ACADEMIC GROOVE ―東京大学アカデミックグルーヴ",
+    {
+      title: "ACADEMIC GROOVE ―東京大学アカデミックグルーヴ",
+      url: "https://www.utp.or.jp/book/b305770.html",
+    },
   ],
 };
 
@@ -195,7 +198,13 @@ export default function ProfilePage() {
                 </p>
                 {ishikawa.bio.map((para, i) => (
                   <p key={i} className="font-inter text-sm text-navy/70 leading-[1.9]">
-                    {para}
+                    {i === 2 ? (
+                      <>
+                        現在は東京富士大学大学院客員教授（マーケティング）、
+                        <a href="https://academicgroove.org/" target="_blank" rel="noopener noreferrer" className="text-navy underline underline-offset-2 hover:text-gold transition-colors">一般社団法人アカデミックグルーヴ</a>
+                        （理事・共同創設者）。
+                      </>
+                    ) : para}
                   </p>
                 ))}
               </div>
@@ -206,10 +215,12 @@ export default function ProfilePage() {
                   Books
                 </p>
                 <ul className="flex flex-col gap-2">
-                  {ishikawa.books.map((title) => (
-                    <li key={title} className="font-inter text-sm text-navy/70 flex items-start gap-2">
+                  {ishikawa.books.map((book) => (
+                    <li key={book.title} className="font-inter text-sm text-navy/70 flex items-start gap-2">
                       <span className="text-gold mt-1 flex-shrink-0">—</span>
-                      {title}
+                      <a href={book.url} target="_blank" rel="noopener noreferrer" className="hover:text-gold underline underline-offset-2 transition-colors">
+                        {book.title}
+                      </a>
                     </li>
                   ))}
                 </ul>
