@@ -677,7 +677,7 @@ const htmlBefore = `
       <span>Share of Answers</span>
     </div>
     <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:2.5rem; margin-bottom:1rem;">
-      <p style="font-size:0.88rem; color:rgba(15,40,90,0.6); line-height:2; margin-bottom:2rem;">GoogleはSEOとAI検索を「対立」ではなく「融合」と位置づけている。検索行動は一夜にして切り替わるのではなく、グラデーションとして移行していく。企業が問われるのは「どちらに対応するか」ではなく、<strong style="color:var(--navy);">「両者にまたがって一貫したシグナルを蓄積できているか」</strong>だ。</p>
+      <p style="font-size:0.88rem; color:rgba(15,40,90,0.6); line-height:2; margin-bottom:2rem;">GoogleはSEOとAI検索を「対立」ではなく「融合」と位置づけている。検索行動は一夜にして切り替わるのではなく、グラデーションとして移行していく。企業が問われるのは「どちらに対応するか」ではなく、<strong style="color:rgba(250,248,243,0.88);">「両者にまたがって一貫したシグナルを蓄積できているか」</strong>だ。</p>
       <div class="rg-soa" style="gap:0; align-items:stretch;">
         <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); padding:2rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(15,40,90,0.35); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem;">SEO の重力</div>
@@ -702,7 +702,7 @@ const htmlBefore = `
         </div>
       </div>
       <div style="margin-top:1.5rem; padding:1rem 1.5rem; background:rgba(201,168,76,0.06); border-left:2px solid rgba(201,168,76,0.4);">
-        <p style="font-size:0.85rem; color:rgba(15,40,90,0.65); line-height:1.9;">共通する本質：<strong style="color:var(--navy);">信頼できる情報が、複数の文脈で一貫して蓄積されていること。</strong>SEOもLLMOも、その点では同じ問いに答えを求めている。</p>
+        <p style="font-size:0.85rem; color:rgba(15,40,90,0.65); line-height:1.9;">共通する本質：<strong style="color:rgba(250,248,243,0.88);">信頼できる情報が、複数の文脈で一貫して蓄積されていること。</strong>SEOもLLMOも、その点では同じ問いに答えを求めている。</p>
       </div>
     </div>
   </div>
@@ -726,7 +726,7 @@ const htmlBefore = `
   </div>
 
   <div class="reveal" style="max-width:1100px; margin-top:3rem; padding:2rem 3rem; background:rgba(201,168,76,0.06); border-left:3px solid var(--gold);">
-    <p style="font-family:'Shippori Mincho',serif; font-size:1.05rem; color:var(--navy); line-height:1.9;">AIは「誰が言ったか」を圧縮する。人間は「どのブランドを信じるか」をより重視する——だからこそ、語られ続けることが資本になる。</p>
+    <p style="font-family:'Shippori Mincho',serif; font-size:1.05rem; color:rgba(250,248,243,0.88); line-height:1.9;">AIは「誰が言ったか」を圧縮する。人間は「どのブランドを信じるか」をより重視する——だからこそ、語られ続けることが資本になる。</p>
   </div>
 
   <!-- ch2 CTA -->
@@ -736,7 +736,7 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">AIに読まれるブランドの条件を、診断リストで確認する。</div>
         <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
       </div>
-      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
+      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:rgba(250,248,243,0.88); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
     </a>
   </div>
 
