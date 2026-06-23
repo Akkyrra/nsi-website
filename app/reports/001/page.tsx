@@ -843,9 +843,9 @@ const htmlBefore = `
   <div class="reveal" style="max-width:1100px; margin-bottom:5rem;">
     <div style="border-left:3px solid var(--gold); background:rgba(201,168,76,0.04); padding:3.5rem 3.5rem 3.5rem 3rem;">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem;">Column</div>
-      <h3 style="font-family:'Shippori Mincho',serif; font-size:clamp(1.2rem,2vw,1.6rem); font-weight:700; color:var(--navy); line-height:1.5; margin-bottom:2.5rem;">なぜ、ループでなければならないのか</h3>
+      <h3 style="font-family:'Shippori Mincho',serif; font-size:clamp(1.2rem,2vw,1.6rem); font-weight:700; color:var(--navy); line-height:1.5; margin-bottom:2.5rem;">なぜ、ループ構造でなければならないのか</h3>
 
-      <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">ファンマーケティングの論者のほとんどが見落としていることがある。ファンの体験は、体験した瞬間に完成しない、ということだ。</p>
+      <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">ファンマーケティング論の多くが見落としているように思われる点がある。ファンの体験は、体験した瞬間に完成しない、ということだ。</p>
 
       <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">購買直後の満足感、初めて使ったときの感動——それらは確かにリアルな体験だ。しかし、その体験の「意味」は、その後の時間の中で変わり続ける。他のファンの語りに触れたとき、ブランドが新たな姿勢を見せたとき、あるいは自分自身の文脈が変わったとき、人はかつての体験を遡及的に読み直す。「あのとき感じたのは、こういうことだったのか」と。</p>
 
@@ -1037,19 +1037,19 @@ const htmlBefore = `
         <div class="rg-2" style="gap:1px; background:rgba(201,168,76,0.15);">
           <div style="background:rgba(10,22,40,0.6); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Paid — 最小化戦略</div>
-            <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">Patagoniaの広告費は売上比で業界最低水準だ。「Don't Buy This Jacket」のような広告を出すが、目的は購買促進ではなく哲学の表明。Paid を絞ることで、Earned と Shared の価値が相対的に高まる構造を意図的に設計している。</p>
+            <p style="font-size:0.87rem; color:rgba(250,248,243,0.78); line-height:1.9;">Patagoniaの広告費は売上比で業界最低水準だ。「Don't Buy This Jacket」のような広告を出すが、目的は購買促進ではなく哲学の表明。Paid を絞ることで、Earned と Shared の価値が相対的に高まる構造を意図的に設計している。</p>
           </div>
           <div style="background:rgba(10,22,40,0.6); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Owned — 体験設計の核</div>
-            <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">「Worn Wear」修理プログラムは、製品を売った後もブランドとの接点を継続させる仕組みだ。修理を体験した顧客は「長く使える」という評価をUGCに変える。Ownedの体験が、Sharedのシグナルを生み出す起点になっている。</p>
+            <p style="font-size:0.87rem; color:rgba(250,248,243,0.78); line-height:1.9;">「Worn Wear」修理プログラムは、製品を売った後もブランドとの接点を継続させる仕組みだ。修理を体験した顧客は「長く使える」という評価をUGCに変える。Ownedの体験が、Sharedのシグナルを生み出す起点になっている。</p>
           </div>
           <div style="background:rgba(10,22,40,0.6); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Shared — ファンの語りが資本になる</div>
-            <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">#MyPatagoniaキャンペーンでは、顧客が自分のアウトドア体験をシェアする場を設けた。UGCは「丈夫」「環境に配慮」「一生使える」という評価語に収束し、それがブランドの語りの核になっていく。ファンは購買者ではなく、共同の語り手になる。</p>
+            <p style="font-size:0.87rem; color:rgba(250,248,243,0.78); line-height:1.9;">#MyPatagoniaキャンペーンでは、顧客が自分のアウトドア体験をシェアする場を設けた。UGCは「丈夫」「環境に配慮」「一生使える」という評価語に収束し、それがブランドの語りの核になっていく。ファンは購買者ではなく、共同の語り手になる。</p>
           </div>
           <div style="background:rgba(10,22,40,0.6); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Earned — メディアが語りたくなる構造</div>
-            <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">「Don't Buy This Jacket」はメディアが自発的に報道した。効果のためにPRした結果ではなく、哲学を行動で示したことへの反応だ。EarnedはPaidで買うものではなく、PRODUCTとOwnedの一貫性が蓄積された結果として生まれることをPatagoniaは体現している。</p>
+            <p style="font-size:0.87rem; color:rgba(250,248,243,0.78); line-height:1.9;">「Don't Buy This Jacket」はメディアが自発的に報道した。効果のためにPRした結果ではなく、哲学を行動で示したことへの反応だ。EarnedはPaidで買うものではなく、PRODUCTとOwnedの一貫性が蓄積された結果として生まれることをPatagoniaは体現している。</p>
           </div>
         </div>
       </div>
@@ -1081,20 +1081,20 @@ const htmlBefore = `
       <h3 style="font-family:'DM Serif Display',serif; font-size:clamp(1.4rem,2.2vw,1.9rem); color:var(--navy); font-weight:400; font-style:italic; margin-bottom:0.4rem;">ヤッホーブルーイング</h3>
       <p style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:rgba(15,40,90,0.4); letter-spacing:0.1em; margin-bottom:2rem;">クラフトビール / 「よなよなエール」/ 長野・軽井沢発</p>
 
-      <p style="font-size:0.95rem; color:rgba(15,40,90,0.8); line-height:2.1; margin-bottom:2rem; border-left:2px solid #1a6b5a; padding-left:1.5rem;">Patagoniaが「理念の一貫性」からファン資本を立ち上げたとすれば、ヤッホーブルーイングは「ファンと過ごす場の運営」から積み上げる対照的なリファレンスだ。理念を掲げて待つのではなく、ファンと顔の見える関係を継続的に設計し続ける——日本の生活者市場で、Fandomain Capital Loopがどう回るかを示してくれる。</p>
+      <p style="font-size:0.95rem; color:rgba(15,40,90,0.8); line-height:2.1; margin-bottom:2rem; border-left:2px solid #1a6b5a; padding-left:1.5rem;">Patagoniaが「理念の一貫性」からファン資本を立ち上げたとすれば、ヤッホーブルーイングは「ファンと過ごす場の設計」から内環を回し続けることで資本を積み上げる対照的なリファレンスだ。体験の場が用意されるたびに、ファンの内側では感動が生まれ、それが語りとして社会化され、他のファンの再解釈を経てさらに深化していく。その螺旋が一周するごとに、Fandomain Capitalの層が一枚厚くなる——日本の生活者市場でそのループが実際にどう駆動するかを示してくれる事例だ。</p>
 
       <div class="rg-2" style="gap:1px; background:rgba(26,107,90,0.15); margin-bottom:2rem;">
         <div style="background:rgba(10,22,40,0.55); padding:1.75rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#4db899; letter-spacing:0.15em; margin-bottom:0.75rem;">Owned / Shared — ファンと過ごす「場」</div>
-          <p style="font-size:0.86rem; color:rgba(15,40,90,0.7); line-height:1.9;">大規模なファンイベント「超宴（ちょううたげ）」をはじめ、ファンと直接会い、ともに時間を過ごす場を継続的に設計してきた。買って終わりではなく、ファンが「自分の居場所」として語りはじめる——Ownedの体験がShared（UGC・口コミ）を生む循環が、企業側の意図として運営されている。</p>
+          <p style="font-size:0.86rem; color:rgba(250,248,243,0.78); line-height:1.9;">大規模なファンイベント「超宴（ちょううたげ）」をはじめ、ファンと直接会い、ともに時間を過ごす場を継続的に設計してきた。その体験がファンの内側に「感動」として着火し、「このブランドが好きだ」という感情が自然発生的な語りへと変わる——それがShared（UGC・口コミ）として外環に流れる。さらに、他のファンがその語りに触れて自分の体験を再解釈することで、関係は螺旋的に深まっていく。買って終わりではなく、Ownedの体験設計が内環の三段階（体験→社会化→再解釈）を意図的に起動している。</p>
         </div>
         <div style="background:rgba(10,22,40,0.55); padding:1.75rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#4db899; letter-spacing:0.15em; margin-bottom:0.75rem;">関係性の非対称性をなくす運営</div>
-          <p style="font-size:0.86rem; color:rgba(15,40,90,0.7); line-height:1.9;">EC（楽天市場店）での丁寧な双方向コミュニケーション、社内のニックネーム文化やフラットな組織運営、社長「てんちょ」を含めた人の顔が見える発信。ブランドとファンが対等な語り手として並ぶ関係——本レポートの操作的定義における「自発的に語るファン」が、設計によって生まれている。</p>
+          <p style="font-size:0.86rem; color:rgba(250,248,243,0.78); line-height:1.9;">EC（楽天市場店）での丁寧な双方向コミュニケーション、社内のニックネーム文化やフラットな組織運営、社長「てんちょ」を含めた人の顔が見える発信。ブランドとファンが対等な語り手として並ぶ関係——本レポートの操作的定義における「自発的に語るファン」が、設計によって生まれている。</p>
         </div>
       </div>
 
-      <p style="font-family:'Shippori Mincho',serif; font-size:0.97rem; color:var(--navy); line-height:2; font-weight:600; border-top:1px solid rgba(26,107,90,0.2); padding-top:1.75rem;">理念型と実装型、入口は違う。だが両者が示す本質は同じだ——ファン資本は、広告の巧拙ではなく、ブランドとファンが対等に語り合う関係を「どれだけ継続的に設計したか」から立ち上がる。海外の象徴例と国内の運営例が、同じ一つの構造を別の角度から照らしている。</p>
+      <p style="font-family:'Shippori Mincho',serif; font-size:0.97rem; color:var(--navy); line-height:2; font-weight:600; border-top:1px solid rgba(26,107,90,0.2); padding-top:1.75rem;">理念型と実装型の入口は違うが両者が積み上げてきたものの構造は同じだ。外環（情報環境）に配置された体験や語りが、ファンの内側で感動・社会化・再解釈という三段階の内環を起動し、その螺旋が回り続けた時間の総量として、Fandomain Capitalは蓄積される。</p>
     </div>
   </div>
 
@@ -1362,8 +1362,8 @@ const htmlBefore = `
           <p style="font-size:0.83rem; color:rgba(15,40,90,0.72); line-height:1.9;">SNS接触者と非接触者のLTV差分、指名検索への影響など、データを繋いで仮説を定量化する。</p>
         </div>
         <div>
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--navy); margin-bottom:0.4rem;">Level 3 — 経営指標への接続</div>
-          <p style="font-size:0.83rem; color:rgba(15,40,90,0.72); line-height:1.9;">LTV・価格プレミアム・リスクプレミアムを通じた企業価値への影響仮説を経営層に提示できる水準。</p>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--navy); margin-bottom:0.4rem;">Level 3 — 経営・財務への接続</div>
+          <p style="font-size:0.83rem; color:rgba(15,40,90,0.72); line-height:1.9;">Growth（LTV向上）・Resilience（リスクプレミアム低減）・Discoverability（Share of Answers獲得）という三つの事業効果を、財務指標と紐づけてモニタリング。ブランド予算ではなく事業ポートフォリオの視座との統合。</p>
         </div>
       </div>
     </div>
@@ -1393,17 +1393,17 @@ const htmlBefore = `
       </div>
       <div>
         <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2rem; margin-bottom:1.5rem; text-align:center;">
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(201,168,76,0.5); letter-spacing:0.15em; margin-bottom:1rem;">ENTERPRISE VALUE</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(201,168,76,0.72); letter-spacing:0.15em; margin-bottom:1rem;">ENTERPRISE VALUE</div>
           <div style="font-family:'DM Serif Display',serif; font-size:1.1rem; color:var(--navy); line-height:2;">
-            EV = Σ <span style="color:var(--coral);">FCF<sub>t</sub></span> / (1 + <span style="color:var(--purple);">WACC</span>)<sup>t</sup>
+            EV = Σ <span style="color:var(--coral);">FCF<sub>t</sub></span> / (1 + <span style="color:#4db899;">WACC</span>)<sup>t</sup>
           </div>
           <div class="rg-2" style="gap:1rem; margin-top:1.5rem;">
             <div style="background:rgba(196,92,58,0.1); border:1px solid rgba(196,92,58,0.3); padding:0.75rem; border-radius:4px;">
               <div style="font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:var(--coral); margin-bottom:0.25rem;">分子 ↓</div>
               <div style="font-size:0.78rem; color:rgba(15,40,90,0.7); line-height:1.6;">ナラティブ毀損<br>→ CF期待が低下</div>
             </div>
-            <div style="background:rgba(60,52,137,0.1); border:1px solid rgba(60,52,137,0.3); padding:0.75rem; border-radius:4px;">
-              <div style="font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:#7f77dd; margin-bottom:0.25rem;">分母 ↑</div>
+            <div style="background:rgba(26,107,90,0.12); border:1px solid rgba(77,184,153,0.35); padding:0.75rem; border-radius:4px;">
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:#4db899; margin-bottom:0.25rem;">分母 ↑</div>
               <div style="font-size:0.78rem; color:rgba(15,40,90,0.7); line-height:1.6;">リスクプレミアム上昇<br>→ WACC上昇</div>
             </div>
           </div>
@@ -1518,9 +1518,9 @@ const htmlAfter = `
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-logo">NSI — New Strategy Institute by DCXforce</div>
-  <div class="footer-copy">© 2026 DCXforce Inc. All rights reserved. Report #001</div>
+<footer style="background:var(--navy-mid); border-top:1px solid rgba(201,168,76,0.12); padding:1.25rem 5vw 1.5rem;">
+  <div class="footer-logo" style="font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; color:rgba(250,248,243,0.46); margin-bottom:0.35rem;">NSI — New Strategy Institute by DCXforce</div>
+  <div class="footer-copy" style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; letter-spacing:0.06em; color:rgba(250,248,243,0.32);">© 2026 DCXforce Inc. All rights reserved. Report #001</div>
 </footer>
 `;
 
