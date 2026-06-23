@@ -75,7 +75,7 @@ const reportCss = `
   .chapter-header { display:grid; grid-template-columns:auto 1fr; gap:3rem; align-items:start; margin-bottom:5rem; max-width:1100px; }
   .chapter-num { font-family:'Shippori Mincho',serif; font-size:clamp(5rem,10vw,9rem); line-height:0.85; color:rgba(201,168,76,0.12); letter-spacing:-0.03em; }
   .chapter-title h2 { font-family:'Shippori Mincho',serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:700; line-height:1.4; margin-bottom:0.75rem; }
-  .chapter-dark .chapter-title h2, .chapter-mid .chapter-title h2 { color:var(--navy); }
+  .chapter-dark .chapter-title h2, .chapter-mid .chapter-title h2 { color:rgba(250,248,243,0.92); }
   .chapter-title .chapter-sub { font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--gold); letter-spacing:0.1em; }
   .chapter-body { max-width:1100px; display:grid; grid-template-columns:1fr 1fr; gap:4rem; }
   .chapter-body.wide { grid-template-columns:3fr 2fr; }
@@ -134,11 +134,11 @@ const reportCss = `
   .failure-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--coral); transform:scaleX(0); transform-origin:left; transition:transform 0.4s; }
   .failure-card:hover::before { transform:scaleX(1); }
   .failure-type { font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--coral); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem; }
-  .failure-card h3 { font-family:'Shippori Mincho',serif; font-size:1.1rem; font-weight:600; color:var(--navy); margin-bottom:1.5rem; line-height:1.6; }
-  .failure-card p { font-size:0.87rem; color:rgba(250,248,243,0.65); line-height:1.95; margin-bottom:1.5rem; }
+  .failure-card h3 { font-family:'Shippori Mincho',serif; font-size:1.1rem; font-weight:600; color:rgba(15,40,90,0.92); margin-bottom:1.5rem; line-height:1.6; }
+  .failure-card p { font-size:0.87rem; color:rgba(15,40,90,0.68); line-height:1.95; margin-bottom:1.5rem; }
   .failure-diagnosis { background:rgba(196,92,58,0.08); border-left:2px solid var(--coral); padding:1rem 1.25rem; }
   .failure-diagnosis .fd-label { font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:var(--coral); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.4rem; }
-  .failure-diagnosis p { font-size:0.82rem; color:rgba(250,248,243,0.55); line-height:1.7; margin:0; }
+  .failure-diagnosis p { font-size:0.82rem; color:rgba(15,40,90,0.66); line-height:1.7; margin:0; }
 
   /* FRAMEWORK */
   .framework-section { background:#ffffff; padding:12rem 5vw; }
@@ -155,8 +155,8 @@ const reportCss = `
   .layer-item { background:var(--navy); padding:2.5rem; }
   .layer-icon { width:40px; height:40px; border:1px solid rgba(201,168,76,0.3); display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; }
   .layer-icon span { font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--gold); }
-  .layer-item h4 { font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:0.75rem; }
-  .layer-item p { font-size:0.85rem; color:rgba(15,40,90,0.5); line-height:1.9; }
+  .layer-item h4 { font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:rgba(250,248,243,0.92); margin-bottom:0.75rem; }
+  .layer-item p { font-size:0.85rem; color:rgba(250,248,243,0.68); line-height:1.9; }
   .layer-arrow { text-align:center; padding:2.5rem 1rem; background:var(--navy); display:flex; align-items:center; justify-content:center; }
   .layer-arrow span { font-family:'IBM Plex Mono',monospace; font-size:1.5rem; color:rgba(201,168,76,0.3); }
 
@@ -371,12 +371,12 @@ const reportCss = `
   [style*="background:var(--off-white)"] p  { color: rgba(15,40,90,0.7) !important; }
   [style*="background:rgba(10,22,40"] h2, [style*="background:rgba(10,22,40"] h3,
   [style*="background:rgba(10,22,40"] h4, [style*="background:rgba(10,22,40"] p {
-    color: rgba(250,248,243,0.8) !important;
+    color: rgba(15,40,90,0.72) !important;
   }
-  /* failure-card: has inline dark bg */
-  .failure-card h3 { color: rgba(250,248,243,0.92) !important; }
-  .failure-card p  { color: rgba(250,248,243,0.65) !important; }
-  .failure-diagnosis p { color: rgba(250,248,243,0.55) !important; }
+  /* failure-card: light section cards */
+  .failure-card h3 { color: rgba(15,40,90,0.92) !important; }
+  .failure-card p  { color: rgba(15,40,90,0.68) !important; }
+  .failure-diagnosis p { color: rgba(15,40,90,0.66) !important; }
 
   /* ═══════════════════════════════════════════════
      TEXT COLOR — section-specific final overrides
@@ -404,8 +404,8 @@ const reportCss = `
   .framework-section .chapter-sub      { color: rgba(15,40,90,0.4)  !important; }
   .framework-section .chapter-num      { color: rgba(15,40,90,0.06) !important; }
   .framework-section p                 { color: rgba(15,40,90,0.72) !important; }
-  .framework-section .layer-item h4   { color: rgba(15,40,90,0.85) !important; }
-  .framework-section .layer-item p    { color: rgba(15,40,90,0.65) !important; }
+  .framework-section .layer-item h4   { color: rgba(250,248,243,0.92) !important; }
+  .framework-section .layer-item p    { color: rgba(250,248,243,0.68) !important; }
   .framework-section .three-layer h3  { color: rgba(15,40,90,0.85) !important; }
 
   /* ch4 inline off-white */
@@ -418,18 +418,24 @@ const reportCss = `
   [style*="background:var(--navy)"] h3 { color: rgba(250,248,243,0.88) !important; }
   [style*="background:var(--navy)"] h4 { color: rgba(250,248,243,0.88) !important; }
   [style*="background:var(--navy)"] p  { color: rgba(250,248,243,0.65) !important; }
+  [style*="background:var(--navy)"] strong { color: rgba(250,248,243,0.9) !important; }
+  [style*="background:var(--navy)"] [style*="color:var(--navy)"]:not([style*="background:var(--gold)"]) { color: rgba(250,248,243,0.88) !important; }
+  [style*="background:var(--navy)"] [style*="color:rgba(15,40,90"]:not([style*="background:var(--gold)"]) { color: rgba(250,248,243,0.68) !important; }
   [style*="background:var(--navy-mid)"] h2 { color: rgba(250,248,243,0.92) !important; }
   [style*="background:var(--navy-mid)"] h3 { color: rgba(250,248,243,0.88) !important; }
   [style*="background:var(--navy-mid)"] p  { color: rgba(250,248,243,0.65) !important; }
+  [style*="background:var(--navy-mid)"] strong { color: rgba(250,248,243,0.9) !important; }
+  [style*="background:var(--navy-mid)"] [style*="color:var(--navy)"]:not([style*="background:var(--gold)"]) { color: rgba(250,248,243,0.88) !important; }
+  [style*="background:var(--navy-mid)"] [style*="color:rgba(15,40,90"]:not([style*="background:var(--gold)"]) { color: rgba(250,248,243,0.68) !important; }
   [style*="background:rgba(10,22,40"] h2, [style*="background:rgba(10,22,40"] p
-    { color: rgba(250,248,243,0.8) !important; }
+    { color: rgba(15,40,90,0.72) !important; }
 
   /* failure section */
   .failure-intro h2  { color: rgba(15,40,90,0.88) !important; }
   .failure-intro p   { color: rgba(15,40,90,0.7)  !important; }
-  .failure-card h3   { color: rgba(250,248,243,0.92) !important; }
-  .failure-card p    { color: rgba(250,248,243,0.65) !important; }
-  .failure-diagnosis p { color: rgba(250,248,243,0.55) !important; }
+  .failure-card h3   { color: rgba(15,40,90,0.92) !important; }
+  .failure-card p    { color: rgba(15,40,90,0.68) !important; }
+  .failure-diagnosis p { color: rgba(15,40,90,0.66) !important; }
 
   /* column section (now white) — inline bg changed to #ffffff */
   [style*="background:#ffffff"] h2 { color: rgba(15,40,90,0.88) !important; }
@@ -444,6 +450,26 @@ const reportCss = `
   .chapter-dark .soa-col.new h4  { color: rgba(250,248,243,0.92) !important; }
   .chapter-dark .soa-col.old h4  { color: rgba(250,248,243,0.4)  !important; }
   .chapter-dark .soa-col.new .soa-items li { color: rgba(250,248,243,0.75) !important; }
+
+  /* Dark-section CTAs and SOA comparison cards */
+  .chapter-dark .reveal a p,
+  .chapter-dark .reveal a div p,
+  [style*="background:linear-gradient(135deg, var(--navy)"] p,
+  [style*="background:linear-gradient(135deg, var(--navy)"] div p {
+    color: rgba(250,248,243,0.82) !important;
+  }
+  .chapter-dark .reveal a span[style*="background:var(--gold)"],
+  [style*="background:linear-gradient(135deg, var(--navy)"] span[style*="background:var(--gold)"] {
+    color: var(--navy) !important;
+  }
+  .chapter-dark .soa-visual p,
+  .chapter-dark .soa-visual li,
+  .chapter-dark .soa-visual .rg-soa > div > div:first-child {
+    color: rgba(250,248,243,0.82) !important;
+  }
+  .chapter-dark .soa-visual strong {
+    color: rgba(250,248,243,0.95) !important;
+  }
 
 `;
 
@@ -638,7 +664,7 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">SNS投資の意味が変わった。その全体像を、Framework Kitで整理する。</div>
         <p style="font-size:0.95rem; color:rgba(15,40,90,0.85); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
       </div>
-      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
+      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">FrameworkをふくむレポートのPDF版を入手 →</span>
     </a>
   </div>
 
@@ -736,7 +762,7 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">AIに読まれるブランドの条件を、診断リストで確認する。</div>
         <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
       </div>
-      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:rgba(250,248,243,0.88); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
+      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">FrameworkをふくむレポートのPDF版を入手 →</span>
     </a>
   </div>
 
@@ -759,18 +785,18 @@ const htmlBefore = `
     <div class="rg-3" style="gap:1px; background:rgba(201,168,76,0.15);">
       <div style="background:var(--navy); padding:2.5rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:1rem;">問題 01</div>
-        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:0.75rem; line-height:1.5;">SNS施策が単発で終わり、資産化されない</h4>
-        <p style="font-size:0.85rem; color:rgba(15,40,90,0.55); line-height:1.9;">キャンペーンが終わると消える。バズっても翌月には忘れられる。蓄積思想のないSNS投資は、費用であって資産にならない。</p>
+        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:rgba(250,248,243,0.92); margin-bottom:0.75rem; line-height:1.5;">SNS施策が単発で終わり、資産化されない</h4>
+        <p style="font-size:0.85rem; color:rgba(250,248,243,0.68); line-height:1.9;">キャンペーンが終わると消える。バズっても翌月には忘れられる。蓄積思想のないSNS投資は、費用であって資産にならない。</p>
       </div>
       <div style="background:var(--navy); padding:2.5rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:1rem;">問題 02</div>
-        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:0.75rem; line-height:1.5;">AI時代に、ブランドが比較検討に載らなくなる</h4>
-        <p style="font-size:0.85rem; color:rgba(15,40,90,0.55); line-height:1.9;">AIの回答に入らないブランドは、生活者の選択肢に浮かばない。一貫したシグナルの蓄積なしに、Share of Answersは獲得できない。</p>
+        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:rgba(250,248,243,0.92); margin-bottom:0.75rem; line-height:1.5;">AI時代に、ブランドが比較検討に載らなくなる</h4>
+        <p style="font-size:0.85rem; color:rgba(250,248,243,0.68); line-height:1.9;">AIの回答に入らないブランドは、生活者の選択肢に浮かばない。一貫したシグナルの蓄積なしに、Share of Answersは獲得できない。</p>
       </div>
       <div style="background:var(--navy); padding:2.5rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:1rem;">問題 03</div>
-        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:var(--navy); margin-bottom:0.75rem; line-height:1.5;">経営層に、SNS投資の中長期価値を説明できない</h4>
-        <p style="font-size:0.85rem; color:rgba(15,40,90,0.55); line-height:1.9;">フォロワー数やエンゲージメント率では、投資対効果を語れない。Fandomain Capitalという資本概念が、経営言語への翻訳を可能にする。</p>
+        <h4 style="font-family:'Shippori Mincho',serif; font-size:1rem; font-weight:600; color:rgba(250,248,243,0.92); margin-bottom:0.75rem; line-height:1.5;">経営層に、SNS投資の中長期価値を説明できない</h4>
+        <p style="font-size:0.85rem; color:rgba(250,248,243,0.68); line-height:1.9;">フォロワー数やエンゲージメント率では、投資対効果を語れない。Fandomain Capitalという資本概念が、経営言語への翻訳を可能にする。</p>
       </div>
     </div>
   </div>
@@ -1079,7 +1105,7 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">Fandomain Capital Loopの高解像度図解をKitに同梱している。</div>
         <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.8; max-width:620px;">Fandomain Capital Loopの高解像度版を含むレポートPDFをダウンロード</p>
       </div>
-      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
+      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">FrameworkをふくむレポートのPDF版を入手 →</span>
     </a>
   </div>
 
@@ -1314,8 +1340,8 @@ const htmlBefore = `
       </div>
       <div style="background:var(--navy); padding:2.5rem; border-top:3px solid var(--gold);">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.5rem;">Day 91–180</div>
-        <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem;">Business Impact Review</h4>
-        <ul style="list-style:none; font-size:0.85rem; color:rgba(15,40,90,0.65); line-height:2.1;">
+        <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:rgba(250,248,243,0.92); margin-bottom:1rem;">Business Impact Review</h4>
+        <ul style="list-style:none; font-size:0.85rem; color:rgba(250,248,243,0.68); line-height:2.1;">
           <li>· 語り・AI回答・指名検索の変化を検証</li>
           <li>· LTV・リピート・推奨率への寄与を確認</li>
           <li>· ROIC-WACCスプレッドへの影響仮説を提示</li>
@@ -1350,7 +1376,7 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">5つの診断軸を自社にあてはめるチェックリストをKitで入手する。</div>
         <p style="font-size:0.95rem; color:rgba(15,40,90,0.85); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
       </div>
-      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
+      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">FrameworkをふくむレポートのPDF版を入手 →</span>
     </a>
   </div>
 
@@ -1398,7 +1424,7 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.6rem;">設計と計測の次のステップを、NSIと話す。</div>
         <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.8; max-width:620px;">レポートのPDF版、Framework Kitをダウンロード</p>
       </div>
-      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">Framework Kitを入手 →</span>
+      <span style="flex-shrink:0; font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; font-weight:500; color:var(--navy); background:var(--gold); padding:0.85rem 1.75rem; border-radius:999px;">FrameworkをふくむレポートのPDF版を入手 →</span>
     </a>
   </div>
 
