@@ -40,7 +40,7 @@ export default function ReportsPage() {
               </h2>
               <div className="w-10 h-0.5 bg-gold mb-6" />
               <p className="font-inter text-base text-navy/65 leading-relaxed">
-                SNSマーケティングの定石は、届けることに最適化されてきた。しかしAIが情報を中間処理する時代、蓄積されたシグナルの一貫性こそがブランドの評判を決める。本レポートは「Fandomin Capital」という独自概念を軸に、ファンとの関係性を経営資本として捉え直し、その設計・観測・実装の枠組みを提示する。
+                SNSマーケティングの定石は、届けることに最適化されてきた。しかしAIが情報を中間処理する時代、蓄積されたシグナルの一貫性こそがブランドの評判を決める。本レポートは「Fandomain Capital」という独自概念を軸に、ファンとの関係性を経営資本として捉え直し、その設計・観測・実装の枠組みを提示する。
               </p>
             </div>
 

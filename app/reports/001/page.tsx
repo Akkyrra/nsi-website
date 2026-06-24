@@ -915,21 +915,21 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem;">PESO × Fandomain Capital Loop で読む</div>
 
         <div class="rg-2" style="gap:1px; background:rgba(201,168,76,0.15);">
-          <div style="background:rgba(10,22,40,0.6); padding:2rem;">
+          <div style="background:var(--navy); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Paid — 最小化戦略</div>
-            <p style="font-size:0.87rem; color:rgba(250,248,243,0.78); line-height:1.9;">Patagoniaの広告費は売上比で業界最低水準だ。「Don't Buy This Jacket」のような広告を出すが、目的は購買促進ではなく哲学の表明。Paid を絞ることで、Earned と Shared の価値が相対的に高まる構造を意図的に設計している。</p>
+            <p style="font-size:0.87rem; color:rgba(255,255,255,0.92); line-height:1.9;">Patagoniaの広告費は売上比で業界最低水準だ。「Don't Buy This Jacket」のような広告を出すが、目的は購買促進ではなく哲学の表明。Paid を絞ることで、Earned と Shared の価値が相対的に高まる構造を意図的に設計している。</p>
           </div>
-          <div style="background:rgba(10,22,40,0.6); padding:2rem;">
+          <div style="background:var(--navy); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Owned — 体験設計の核</div>
-            <p style="font-size:0.87rem; color:rgba(250,248,243,0.78); line-height:1.9;">「Worn Wear」修理プログラムは、製品を売った後もブランドとの接点を継続させる仕組みだ。修理を体験した顧客は「長く使える」という評価をUGCに変える。Ownedの体験が、Sharedのシグナルを生み出す起点になっている。</p>
+            <p style="font-size:0.87rem; color:rgba(255,255,255,0.92); line-height:1.9;">「Worn Wear」修理プログラムは、製品を売った後もブランドとの接点を継続させる仕組みだ。修理を体験した顧客は「長く使える」という評価をUGCに変える。Ownedの体験が、Sharedのシグナルを生み出す起点になっている。</p>
           </div>
-          <div style="background:rgba(10,22,40,0.6); padding:2rem;">
+          <div style="background:var(--navy); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Shared — ファンの語りが資本になる</div>
-            <p style="font-size:0.87rem; color:rgba(250,248,243,0.78); line-height:1.9;">#MyPatagoniaキャンペーンでは、顧客が自分のアウトドア体験をシェアする場を設けた。UGCは「丈夫」「環境に配慮」「一生使える」という評価語に収束し、それがブランドの語りの核になっていく。ファンは購買者ではなく、共同の語り手になる。</p>
+            <p style="font-size:0.87rem; color:rgba(255,255,255,0.92); line-height:1.9;">#MyPatagoniaキャンペーンでは、顧客が自分のアウトドア体験をシェアする場を設けた。UGCは「丈夫」「環境に配慮」「一生使える」という評価語に収束し、それがブランドの語りの核になっていく。ファンは購買者ではなく、共同の語り手になる。</p>
           </div>
-          <div style="background:rgba(10,22,40,0.6); padding:2rem;">
+          <div style="background:var(--navy); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Earned — メディアが語りたくなる構造</div>
-            <p style="font-size:0.87rem; color:rgba(250,248,243,0.78); line-height:1.9;">「Don't Buy This Jacket」はメディアが自発的に報道した。効果のためにPRした結果ではなく、哲学を行動で示したことへの反応だ。EarnedはPaidで買うものではなく、PRODUCTとOwnedの一貫性が蓄積された結果として生まれることをPatagoniaは体現している。</p>
+            <p style="font-size:0.87rem; color:rgba(255,255,255,0.92); line-height:1.9;">「Don't Buy This Jacket」はメディアが自発的に報道した。効果のためにPRした結果ではなく、哲学を行動で示したことへの反応だ。EarnedはPaidで買うものではなく、PRODUCTとOwnedの一貫性が蓄積された結果として生まれることをPatagoniaは体現している。</p>
           </div>
         </div>
       </div>
@@ -964,13 +964,13 @@ const htmlBefore = `
       <p style="font-size:0.95rem; color:rgba(15,40,90,0.8); line-height:2.1; margin-bottom:2rem; border-left:2px solid #1a6b5a; padding-left:1.5rem;">Patagoniaが「理念の一貫性」からファン資本を立ち上げたとすれば、ヤッホーブルーイングは「ファンと過ごす場の設計」から内環を回し続けることで資本を積み上げる対照的なリファレンスだ。体験の場が用意されるたびに、ファンの内側では感動が生まれ、それが語りとして社会化され、他のファンの再解釈を経てさらに深化していく。その螺旋が一周するごとに、Fandomain Capitalの層が一枚厚くなる——日本の生活者市場でそのループが実際にどう駆動するかを示してくれる事例だ。</p>
 
       <div class="rg-2" style="gap:1px; background:rgba(26,107,90,0.15); margin-bottom:2rem;">
-        <div style="background:rgba(10,22,40,0.55); padding:1.75rem;">
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#4db899; letter-spacing:0.15em; margin-bottom:0.75rem;">Owned / Shared — ファンと過ごす「場」</div>
-          <p style="font-size:0.86rem; color:rgba(250,248,243,0.78); line-height:1.9;">大規模なファンイベント「超宴（ちょううたげ）」をはじめ、ファンと直接会い、ともに時間を過ごす場を継続的に設計してきた。その体験がファンの内側に「感動」として着火し、「このブランドが好きだ」という感情が自然発生的な語りへと変わる——それがShared（UGC・口コミ）として外環に流れる。さらに、他のファンがその語りに触れて自分の体験を再解釈することで、関係は螺旋的に深まっていく。買って終わりではなく、Ownedの体験設計が内環の三段階（体験→社会化→再解釈）を意図的に起動している。</p>
+        <div style="background:var(--navy); padding:1.75rem;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#6fd4b3; letter-spacing:0.15em; margin-bottom:0.75rem;">Owned / Shared — ファンと過ごす「場」</div>
+          <p style="font-size:0.86rem; color:rgba(255,255,255,0.92); line-height:1.9;">大規模なファンイベント「超宴（ちょううたげ）」をはじめ、ファンと直接会い、ともに時間を過ごす場を継続的に設計してきた。その体験がファンの内側に「感動」として着火し、「このブランドが好きだ」という感情が自然発生的な語りへと変わる——それがShared（UGC・口コミ）として外環に流れる。さらに、他のファンがその語りに触れて自分の体験を再解釈することで、関係は螺旋的に深まっていく。買って終わりではなく、Ownedの体験設計が内環の三段階（体験→社会化→再解釈）を意図的に起動している。</p>
         </div>
-        <div style="background:rgba(10,22,40,0.55); padding:1.75rem;">
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#4db899; letter-spacing:0.15em; margin-bottom:0.75rem;">関係性の非対称性をなくす運営</div>
-          <p style="font-size:0.86rem; color:rgba(250,248,243,0.78); line-height:1.9;">EC（楽天市場店）での丁寧な双方向コミュニケーション、社内のニックネーム文化やフラットな組織運営、社長「てんちょ」を含めた人の顔が見える発信。ブランドとファンが対等な語り手として並ぶ関係——本レポートの操作的定義における「自発的に語るファン」が、設計によって生まれている。</p>
+        <div style="background:var(--navy); padding:1.75rem;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#6fd4b3; letter-spacing:0.15em; margin-bottom:0.75rem;">関係性の非対称性をなくす運営</div>
+          <p style="font-size:0.86rem; color:rgba(255,255,255,0.92); line-height:1.9;">EC（楽天市場店）での丁寧な双方向コミュニケーション、社内のニックネーム文化やフラットな組織運営、社長「てんちょ」を含めた人の顔が見える発信。ブランドとファンが対等な語り手として並ぶ関係——本レポートの操作的定義における「自発的に語るファン」が、設計によって生まれている。</p>
         </div>
       </div>
 
