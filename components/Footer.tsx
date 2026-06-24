@@ -1,11 +1,12 @@
 import Logo from "./Logo";
 
 const footerLinks = [
-  { label: "About NSI", href: "#about" },
-  { label: "Reports", href: "#reports" },
+  { label: "About NSI", href: "/about" },
+  { label: "Reports", href: "/reports" },
+  { label: "News", href: "/news" },
   { label: "Podcast", href: "/podcast" },
-  { label: "Profile", href: "#profile" },
-  { label: "Contact", href: "#contact" },
+  { label: "Profile", href: "/profile" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -40,10 +41,18 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex items-center justify-center">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
           <p className="font-inter text-xs text-white/35">
             © New Strategy Institute by DCXforce Inc.
           </p>
+          <a
+            href="https://dcxforce.co.jp/privacy-policy/#link1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-inter text-xs text-white/30 hover:text-white/60 transition-colors"
+          >
+            プライバシーポリシー
+          </a>
         </div>
       </div>
     </footer>

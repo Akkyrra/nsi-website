@@ -15,10 +15,11 @@ export default function HeroSection() {
               我々はその全体を構想します。
             </h1>
             <p className="font-inter text-sm text-navy/65 leading-relaxed mb-7 max-w-lg">
-              New Strategy Instituteは、企業の競争優位を持続させるための戦略的知見を提供します。資本市場の論理から企業文化の再構築まで、一貫した視点で事業変革を支援します。
+              New Strategy Institute by DCXforceは、企業・事業のグロース戦略を研究し、その知見を提供するシンクタンクです。ソーシャル、ファイナンス、AI、ナラティブ…の交差点から、新しい局面を切り開くための包括的な変革プランを描き出します。
             </p>
             <a
               href="/about"
+              id="gtm-about-nsi"
               className="font-inter text-sm font-semibold text-white bg-navy px-5 py-2.5 rounded hover:bg-navy/85 transition-colors inline-flex items-center gap-2 group"
             >
               About NSI
@@ -32,12 +33,15 @@ export default function HeroSection() {
               Featured Report
             </p>
             <div>
+              <p className="font-inter text-xs text-gold/60 tracking-widest uppercase mb-2">
+                SNS Marketing · #001
+              </p>
               <h2 className="font-playfair text-xl lg:text-2xl font-bold text-white leading-snug mb-3">
-                資本効率と物語の統合——
-                新時代の企業価値創造論
+                ファン資本の再設計――
+                AI時代のSNSマーケティングを、運用から資本形成へ
               </h2>
               <p className="font-inter text-xs text-white/60 leading-relaxed">
-                財務指標を超えたナラティブ戦略が、いかに長期的な企業価値の蓄積に寄与するかを考察する、NSI独自の分析レポート。
+                SNSの「運用」は手段に過ぎない。ファンを資本として捉え直し、AI時代における持続的なブランド価値の形成を論じる。
               </p>
             </div>
             <div className="border-t border-white/20 pt-5">
