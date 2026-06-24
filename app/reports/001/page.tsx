@@ -905,12 +905,6 @@ const htmlBefore = `
           <text x="115" y="366" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="12" fill="#0a1628" font-weight="500">Earned</text>
           <text x="115" y="382" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9" fill="rgba(10,22,40,0.45)">PR・メディア露出</text>
 
-          <!-- 外環矢印 -->
-          <path d="M395 134 Q490 220 492 344" fill="none" stroke="rgba(10,22,40,0.2)" stroke-width="0.8" marker-end="url(#arrowG2)"/>
-          <path d="M492 392 Q490 490 395 566" fill="none" stroke="rgba(10,22,40,0.2)" stroke-width="0.8" marker-end="url(#arrowG2)"/>
-          <path d="M265 590 Q185 510 188 392" fill="none" stroke="rgba(10,22,40,0.2)" stroke-width="0.8" marker-end="url(#arrowG2)"/>
-          <path d="M188 344 Q185 230 265 150" fill="none" stroke="rgba(10,22,40,0.2)" stroke-width="0.8" marker-end="url(#arrowG2)"/>
-
           <!-- 内環：三角形（アニメーション） -->
           <polygon id="inner-loop" points="340,230 452,424 228,424" fill="none" stroke="#1a6b5a" stroke-width="1.4" stroke-dasharray="3 3">
             <animate id="anim-loop" attributeName="stroke-opacity" values="0.4;1;0.4" dur="3s" begin="indefinite" repeatCount="indefinite"/>
@@ -940,23 +934,6 @@ const htmlBefore = `
             <animate id="anim-a3" attributeName="stroke-opacity" values="0.3;1;0.3" dur="3s" begin="indefinite" repeatCount="indefinite"/>
           </path>
 
-          <!-- AI Signal（外環4辺すべてに一対一対応） -->
-          <!-- Paid→Owned（右上辺） -->
-          <rect x="484" y="224" width="72" height="16" rx="3" fill="rgba(60,52,137,0.1)"/>
-          <text x="520" y="236" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#3c3489" font-style="italic">AI Signal</text>
-
-          <!-- Owned→Shared（右下辺） -->
-          <rect x="484" y="490" width="72" height="16" rx="3" fill="rgba(60,52,137,0.1)"/>
-          <text x="520" y="502" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#3c3489" font-style="italic">AI Signal</text>
-
-          <!-- Shared→Earned（下辺） -->
-          <rect x="194" y="600" width="72" height="16" rx="3" fill="rgba(60,52,137,0.1)"/>
-          <text x="230" y="612" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#3c3489" font-style="italic">AI Signal</text>
-
-          <!-- Earned→Paid（左辺） -->
-          <rect x="124" y="224" width="72" height="16" rx="3" fill="rgba(60,52,137,0.1)"/>
-          <text x="160" y="236" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#3c3489" font-style="italic">AI Signal</text>
-
           <!-- 中央：Fandomain Capital（積層アニメーション） -->
           <rect id="layer3" x="298" y="348" width="84" height="10" rx="3" fill="#c9a84c" opacity="0">
             <animate id="anim-l3" attributeName="opacity" values="0;0.35;0.5" dur="2s" begin="indefinite" fill="freeze"/>
@@ -981,7 +958,7 @@ const htmlBefore = `
       <div style="display:flex; gap:2rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem;">
         <div style="display:flex; align-items:center; gap:0.5rem;">
           <div style="width:20px; height:1px; background:rgba(10,22,40,0.2); border-top:1px dashed rgba(10,22,40,0.2);"></div>
-          <span style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(10,22,40,0.5); letter-spacing:0.1em;">情報環境（PESO）</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(10,22,40,0.5); letter-spacing:0.1em;">PESOメディア（外環）</span>
         </div>
         <div style="display:flex; align-items:center; gap:0.5rem;">
           <div style="width:20px; height:1px; background:#1a6b5a;"></div>
@@ -1009,7 +986,7 @@ const htmlBefore = `
       </div>
       <div style="background:rgba(60,52,137,0.08); border:1px solid rgba(60,52,137,0.3); padding:2rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:#7f77dd; letter-spacing:0.15em; margin-bottom:0.75rem;">中央 — Fandomain Capital</div>
-        <p style="font-size:0.88rem; color:rgba(15,40,90,0.75); line-height:1.9;">外環（情報環境）と内環（生活者心理）が噛み合って回るとき、その中心に積み上がっていくのがFandomain Capitalだ。ループが一周するごとに層が一枚増える——それが中央の積層が厚みを増していく意味である。広告費で一気に買えるものではなく、ループが回り続けた時間の総量としてしか蓄積されない。</p>
+        <p style="font-size:0.88rem; color:rgba(15,40,90,0.75); line-height:1.9;">外環（情報環境）と内環（生活者心理）が噛み合って回るとき、その中心に積み上がっていくのがFandomain Capitalだ。ループが回るのに比例して中央の資本の積層が厚みを増していくイメージで捉えられる。これにより、【Growth】顧客生涯価値（LTV）の向上・【Resilience】企業価値毀損への耐性・【Discoverability】AIによる推奨・参照獲得という三つの事業効果に転換される。</p>
     </div>
   </div>
 
