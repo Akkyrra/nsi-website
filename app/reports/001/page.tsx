@@ -867,37 +867,27 @@ const htmlBefore = `
   <!-- Loop diagram — 白背景・アニメーション付き -->
   <div class="reveal" style="background:var(--white); margin:0 -5vw; padding:5rem 5vw; margin-bottom:0;">
     <div style="max-width:1100px; margin:0 auto;">
-      <div class="section-label" style="justify-content:center; margin-bottom:2rem; color:var(--navy);">Fandomain Capital Loop</div>
+      <div style="text-align:center; margin-bottom:2.5rem;"><div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.3em; text-transform:uppercase; margin-bottom:0.75rem;">NSI Original Concept</div><div style="font-family:'Shippori Mincho',serif; font-size:clamp(1.4rem,2.5vw,2rem); font-weight:700; color:var(--navy); letter-spacing:0.05em;">Fandomain Capital Loop</div><div style="width:40px; height:2px; background:var(--gold); margin:0.75rem auto 0;"></div></div>
 
       <div style="text-align:center;">
-        <svg id="fandomin-loop" class="loop-diagram" viewBox="0 0 680 720" xmlns="http://www.w3.org/2000/svg" style="max-width:660px;">
+        <svg id="fandomin-loop" class="loop-diagram" viewBox="0 0 720 780" xmlns="http://www.w3.org/2000/svg" style="max-width:720px; width:100%;">
           <defs>
-            <!-- Arrow: gold (unused after redesign, kept for compat) -->
-            <marker id="arrowG2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-              <path d="M2 1L8 5L2 9" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </marker>
-            <!-- Arrow: teal (inner loop) -->
             <marker id="arrowT2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
               <path d="M2 1L8 5L2 9" fill="none" stroke="#1a6b5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </marker>
-            <!-- Glow -->
             <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="2.5" result="blur"/>
               <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
             </filter>
-            <!-- Capital glow -->
             <filter id="capGlow" x="-30%" y="-30%" width="160%" height="160%">
               <feGaussianBlur stdDeviation="4" result="blur"/>
               <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
             </filter>
-            <!-- CSS animations (activated by .loop-active class added via JS) -->
             <style>
-              /* Outer rhombus: flowing dashes clockwise */
               @keyframes outerFlow {
                 from { stroke-dashoffset: 0; }
-                to   { stroke-dashoffset: -1360; }
+                to   { stroke-dashoffset: -1480; }
               }
-              /* Inner arrows: flow along path direction */
               @keyframes innerFlow {
                 from { stroke-dashoffset: 220; }
                 to   { stroke-dashoffset: 0; }
@@ -906,24 +896,20 @@ const htmlBefore = `
                 from { stroke-dashoffset: 100; }
                 to   { stroke-dashoffset: 0; }
               }
-              /* AI Signal pulse */
               @keyframes aiPulse {
-                0%,100% { opacity:0.45; }
-                50%      { opacity:0.95; }
-              }
-              /* Capital layers: subtle pulse after build */
-              @keyframes capPulse {
-                0%,100% { opacity:0.65; }
+                0%,100% { opacity:0.5; }
                 50%      { opacity:1; }
               }
-              /* Triangle outline pulse */
+              @keyframes capPulse {
+                0%,100% { opacity:0.7; }
+                50%      { opacity:1; }
+              }
               @keyframes triPulse {
                 0%,100% { stroke-opacity:0.35; }
                 50%      { stroke-opacity:1; }
               }
-
               #fandomin-loop.loop-active .outer-ring {
-                animation: outerFlow 11s linear infinite;
+                animation: outerFlow 12s linear infinite;
               }
               #fandomin-loop.loop-active #arrow1 {
                 stroke-dasharray: 16 180;
@@ -940,147 +926,121 @@ const htmlBefore = `
               #fandomin-loop.loop-active #inner-loop {
                 animation: triPulse 2.4s ease-in-out infinite;
               }
-              #fandomin-loop.loop-active .ai-signal-group {
-                animation: aiPulse 3s ease-in-out infinite;
-              }
+              #fandomin-loop.loop-active .ai-signal-group { animation: aiPulse 3s ease-in-out infinite; }
               #fandomin-loop.loop-active .ai-signal-group:nth-of-type(2) { animation-delay:0.75s; }
               #fandomin-loop.loop-active .ai-signal-group:nth-of-type(3) { animation-delay:1.5s; }
               #fandomin-loop.loop-active .ai-signal-group:nth-of-type(4) { animation-delay:2.25s; }
-              #fandomin-loop.loop-active .cap-layer {
-                animation: capPulse 3s ease-in-out 1.8s infinite;
-              }
+              #fandomin-loop.loop-active .cap-layer { animation: capPulse 3s ease-in-out 1.8s infinite; }
             </style>
           </defs>
 
-          <!-- ═══ 外環：菱形（flowing dashes） ═══ -->
+          <!-- ═══ 外環：菱形 ═══ -->
+          <!-- 中心 (360,400), Paid top=120, Owned right=400, Shared bottom=660, Earned left=400 -->
           <path class="outer-ring"
-            d="M340,120 L570,370 L340,600 L110,370 Z"
-            fill="none" stroke="rgba(10,22,40,0.18)" stroke-width="1.3"
+            d="M360,110 L620,390 L360,670 L100,390 Z"
+            fill="none" stroke="rgba(10,22,40,0.18)" stroke-width="1.4"
             stroke-dasharray="8 5"/>
 
-          <!-- ═══ AI Signal ラベル（菱形4辺の中点） ═══ -->
-          <!-- Paid→Owned midpoint (455,245) -->
-          <g class="ai-signal-group" opacity="0.55">
-            <rect x="424" y="232" width="62" height="17" rx="8.5"
-              fill="rgba(90,75,200,0.08)" stroke="rgba(90,75,200,0.3)" stroke-width="0.8"/>
-            <text x="455" y="244" text-anchor="middle"
-              font-family="IBM Plex Mono,monospace" font-size="8" fill="#5a4bc8" font-style="italic">AI Signal</text>
+          <!-- ═══ AI Signal（菱形4辺の中点） ═══ -->
+          <!-- Paid(360,110)→Owned(620,390) mid=(490,250) -->
+          <g class="ai-signal-group" opacity="0.6">
+            <rect x="459" y="238" width="62" height="17" rx="8.5" fill="rgba(90,75,200,0.09)" stroke="rgba(90,75,200,0.32)" stroke-width="0.8"/>
+            <text x="490" y="250" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#5a4bc8" font-style="italic">AI Signal</text>
           </g>
-          <!-- Owned→Shared midpoint (455,485) -->
-          <g class="ai-signal-group" opacity="0.55">
-            <rect x="424" y="475" width="62" height="17" rx="8.5"
-              fill="rgba(90,75,200,0.08)" stroke="rgba(90,75,200,0.3)" stroke-width="0.8"/>
-            <text x="455" y="487" text-anchor="middle"
-              font-family="IBM Plex Mono,monospace" font-size="8" fill="#5a4bc8" font-style="italic">AI Signal</text>
+          <!-- Owned(620,390)→Shared(360,670) mid=(490,530) -->
+          <g class="ai-signal-group" opacity="0.6">
+            <rect x="459" y="518" width="62" height="17" rx="8.5" fill="rgba(90,75,200,0.09)" stroke="rgba(90,75,200,0.32)" stroke-width="0.8"/>
+            <text x="490" y="530" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#5a4bc8" font-style="italic">AI Signal</text>
           </g>
-          <!-- Shared→Earned midpoint (225,485) -->
-          <g class="ai-signal-group" opacity="0.55">
-            <rect x="194" y="475" width="62" height="17" rx="8.5"
-              fill="rgba(90,75,200,0.08)" stroke="rgba(90,75,200,0.3)" stroke-width="0.8"/>
-            <text x="225" y="487" text-anchor="middle"
-              font-family="IBM Plex Mono,monospace" font-size="8" fill="#5a4bc8" font-style="italic">AI Signal</text>
+          <!-- Shared(360,670)→Earned(100,390) mid=(230,530) -->
+          <g class="ai-signal-group" opacity="0.6">
+            <rect x="199" y="518" width="62" height="17" rx="8.5" fill="rgba(90,75,200,0.09)" stroke="rgba(90,75,200,0.32)" stroke-width="0.8"/>
+            <text x="230" y="530" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#5a4bc8" font-style="italic">AI Signal</text>
           </g>
-          <!-- Earned→Paid midpoint (225,245) -->
-          <g class="ai-signal-group" opacity="0.55">
-            <rect x="194" y="232" width="62" height="17" rx="8.5"
-              fill="rgba(90,75,200,0.08)" stroke="rgba(90,75,200,0.3)" stroke-width="0.8"/>
-            <text x="225" y="244" text-anchor="middle"
-              font-family="IBM Plex Mono,monospace" font-size="8" fill="#5a4bc8" font-style="italic">AI Signal</text>
+          <!-- Earned(100,390)→Paid(360,110) mid=(230,250) -->
+          <g class="ai-signal-group" opacity="0.6">
+            <rect x="199" y="238" width="62" height="17" rx="8.5" fill="rgba(90,75,200,0.09)" stroke="rgba(90,75,200,0.32)" stroke-width="0.8"/>
+            <text x="230" y="250" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="8.5" fill="#5a4bc8" font-style="italic">AI Signal</text>
           </g>
 
-          <!-- ═══ PESO ノード ═══ -->
-          <rect x="265" y="86" width="150" height="50" rx="6"
-            fill="rgba(10,22,40,0.04)" stroke="rgba(10,22,40,0.22)" stroke-width="0.9"/>
-          <text x="340" y="108" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" fill="#0a1628" font-weight="600">Paid</text>
-          <text x="340" y="125" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9" fill="rgba(10,22,40,0.45)">広告・プロモーション</text>
+          <!-- ═══ PESO ノード（不透明） ═══ -->
+          <rect x="280" y="74" width="160" height="54" rx="8" fill="#f8f7f4" stroke="rgba(10,22,40,0.3)" stroke-width="1.2"/>
+          <text x="360" y="98" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="14" fill="#0a1628" font-weight="700">Paid</text>
+          <text x="360" y="116" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9.5" fill="rgba(10,22,40,0.5)">広告・プロモーション</text>
 
-          <rect x="490" y="344" width="150" height="50" rx="6"
-            fill="rgba(10,22,40,0.04)" stroke="rgba(10,22,40,0.22)" stroke-width="0.9"/>
-          <text x="565" y="366" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" fill="#0a1628" font-weight="600">Owned</text>
-          <text x="565" y="383" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9" fill="rgba(10,22,40,0.45)">製品・体験・CRM</text>
+          <rect x="540" y="362" width="160" height="54" rx="8" fill="#f8f7f4" stroke="rgba(10,22,40,0.3)" stroke-width="1.2"/>
+          <text x="620" y="386" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="14" fill="#0a1628" font-weight="700">Owned</text>
+          <text x="620" y="404" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9.5" fill="rgba(10,22,40,0.5)">製品・体験・CRM</text>
 
-          <rect x="265" y="566" width="150" height="50" rx="6"
-            fill="rgba(10,22,40,0.04)" stroke="rgba(10,22,40,0.22)" stroke-width="0.9"/>
-          <text x="340" y="588" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" fill="#0a1628" font-weight="600">Shared</text>
-          <text x="340" y="605" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9" fill="rgba(10,22,40,0.45)">UGC・ナラティブ</text>
+          <rect x="280" y="642" width="160" height="54" rx="8" fill="#f8f7f4" stroke="rgba(10,22,40,0.3)" stroke-width="1.2"/>
+          <text x="360" y="666" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="14" fill="#0a1628" font-weight="700">Shared</text>
+          <text x="360" y="684" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9.5" fill="rgba(10,22,40,0.5)">UGC・ナラティブ</text>
 
-          <rect x="40" y="344" width="150" height="50" rx="6"
-            fill="rgba(10,22,40,0.04)" stroke="rgba(10,22,40,0.22)" stroke-width="0.9"/>
-          <text x="115" y="366" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" fill="#0a1628" font-weight="600">Earned</text>
-          <text x="115" y="383" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9" fill="rgba(10,22,40,0.45)">PR・メディア露出</text>
+          <rect x="20" y="362" width="160" height="54" rx="8" fill="#f8f7f4" stroke="rgba(10,22,40,0.3)" stroke-width="1.2"/>
+          <text x="100" y="386" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="14" fill="#0a1628" font-weight="700">Earned</text>
+          <text x="100" y="404" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9.5" fill="rgba(10,22,40,0.5)">PR・メディア露出</text>
 
-          <!-- ═══ 内環：三角形 ═══ -->
-          <polygon id="inner-loop" points="340,232 452,426 228,426"
-            fill="none" stroke="#1a6b5a" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.4">
+          <!-- ═══ 内環：三角形 ═══
+               頂点: 体験(360,240) 社会化(490,460) 再解釈(230,460)
+               重心: (360, 387)  ← Capitalボックス中心 -->
+          <polygon id="inner-loop" points="360,240 490,464 230,464"
+            fill="none" stroke="#1a6b5a" stroke-width="1.6" stroke-dasharray="4 4" stroke-opacity="0.4">
             <animate id="anim-loop" attributeName="stroke-opacity"
               values="0.3;1;0.3" dur="2.4s" begin="indefinite" repeatCount="indefinite"/>
           </polygon>
 
-          <!-- ═══ 内環ノード ═══ -->
-          <rect x="262" y="200" width="156" height="54" rx="7"
-            fill="rgba(26,107,90,0.11)" stroke="#1a6b5a" stroke-width="0.9"/>
-          <text x="340" y="222" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="12" fill="#0a1628" font-weight="600">体験・感動</text>
-          <text x="340" y="239" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9" fill="rgba(10,22,40,0.5)">CXの質・ベネフィット</text>
+          <!-- ═══ 内環ノード（不透明） ═══ -->
+          <rect x="278" y="210" width="164" height="58" rx="8" fill="#e8f4f1" stroke="#1a6b5a" stroke-width="1.2"/>
+          <text x="360" y="235" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="13" fill="#0a1628" font-weight="700">体験・感動</text>
+          <text x="360" y="253" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9.5" fill="rgba(10,22,40,0.55)">CXの質・ベネフィット</text>
 
-          <rect x="364" y="400" width="156" height="54" rx="7"
-            fill="rgba(26,107,90,0.11)" stroke="#1a6b5a" stroke-width="0.9"/>
-          <text x="442" y="422" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="12" fill="#0a1628" font-weight="600">社会化・共鳴</text>
-          <text x="442" y="439" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9" fill="rgba(10,22,40,0.5)">語り・分かち合い</text>
+          <rect x="400" y="436" width="164" height="58" rx="8" fill="#e8f4f1" stroke="#1a6b5a" stroke-width="1.2"/>
+          <text x="482" y="461" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="13" fill="#0a1628" font-weight="700">社会化・共鳴</text>
+          <text x="482" y="479" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9.5" fill="rgba(10,22,40,0.55)">語り・分かち合い</text>
 
-          <rect x="162" y="400" width="156" height="54" rx="7"
-            fill="rgba(26,107,90,0.11)" stroke="#1a6b5a" stroke-width="0.9"/>
-          <text x="240" y="422" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="12" fill="#0a1628" font-weight="600">再解釈・深化</text>
-          <text x="240" y="439" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9" fill="rgba(10,22,40,0.5)">語られるたびに豊かになる</text>
+          <rect x="156" y="436" width="164" height="58" rx="8" fill="#e8f4f1" stroke="#1a6b5a" stroke-width="1.2"/>
+          <text x="238" y="461" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="13" fill="#0a1628" font-weight="700">再解釈・深化</text>
+          <text x="238" y="479" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="9.5" fill="rgba(10,22,40,0.55)">語られるたびに豊かになる</text>
 
-          <!-- ═══ 内環矢印（flowing animation） ═══ -->
-          <!-- 体験→社会化 -->
-          <path id="arrow1" d="M402 254 Q450 328 416 400"
-            fill="none" stroke="#1a6b5a" stroke-width="1.6" marker-end="url(#arrowT2)"
+          <!-- ═══ 内環矢印（flowing） ═══ -->
+          <path id="arrow1" d="M424 268 Q468 352 452 436"
+            fill="none" stroke="#1a6b5a" stroke-width="1.8" marker-end="url(#arrowT2)"
             stroke-dasharray="200" stroke-dashoffset="200">
-            <animate id="anim-a1" attributeName="stroke-opacity"
-              values="0.3;1;0.3" dur="2.4s" begin="indefinite" repeatCount="indefinite"/>
+            <animate id="anim-a1" attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.4s" begin="indefinite" repeatCount="indefinite"/>
           </path>
-          <!-- 社会化→再解釈 -->
-          <path id="arrow2" d="M364 427 Q340 472 320 427"
-            fill="none" stroke="#1a6b5a" stroke-width="1.6" marker-end="url(#arrowT2)"
+          <path id="arrow2" d="M400 465 Q360 510 320 465"
+            fill="none" stroke="#1a6b5a" stroke-width="1.8" marker-end="url(#arrowT2)"
             stroke-dasharray="90" stroke-dashoffset="90">
-            <animate id="anim-a2" attributeName="stroke-opacity"
-              values="0.3;1;0.3" dur="2.4s" begin="indefinite" repeatCount="indefinite"/>
+            <animate id="anim-a2" attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.4s" begin="indefinite" repeatCount="indefinite"/>
           </path>
-          <!-- 再解釈→体験 -->
-          <path id="arrow3" d="M278 400 Q232 328 280 254"
-            fill="none" stroke="#1a6b5a" stroke-width="1.6" marker-end="url(#arrowT2)"
+          <path id="arrow3" d="M296 436 Q252 352 296 268"
+            fill="none" stroke="#1a6b5a" stroke-width="1.8" marker-end="url(#arrowT2)"
             stroke-dasharray="200" stroke-dashoffset="200">
-            <animate id="anim-a3" attributeName="stroke-opacity"
-              values="0.3;1;0.3" dur="2.4s" begin="indefinite" repeatCount="indefinite"/>
+            <animate id="anim-a3" attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.4s" begin="indefinite" repeatCount="indefinite"/>
           </path>
 
-          <!-- ═══ 中央：Fandomain Capital（積層アニメーション） ═══ -->
-          <!-- 底層から順に積み上がる（SMIL: begin="indefinite"、JSから起動） -->
-          <rect id="layer5" class="cap-layer" x="286" y="330" width="108" height="9" rx="3" fill="#c9a84c" opacity="0">
+          <!-- ═══ 中央：Fandomain Capital（重心=360,387, ボックス中心に配置） ═══ -->
+          <!-- 積層（下から上へ）: y=340〜370 の範囲 -->
+          <rect id="layer5" class="cap-layer" x="318" y="344" width="84" height="8" rx="3" fill="#c9a84c" opacity="0">
             <animate id="anim-l5" attributeName="opacity" values="0;0.2;0.3" dur="1.6s" begin="indefinite" fill="freeze"/>
           </rect>
-          <rect id="layer4" class="cap-layer" x="293" y="340" width="94" height="9" rx="3" fill="#c9a84c" opacity="0">
+          <rect id="layer4" class="cap-layer" x="326" y="353" width="68" height="8" rx="3" fill="#c9a84c" opacity="0">
             <animate id="anim-l4" attributeName="opacity" values="0;0.3;0.42" dur="1.6s" begin="indefinite" fill="freeze"/>
           </rect>
-          <rect id="layer3" class="cap-layer" x="300" y="350" width="80" height="9" rx="3" fill="#c9a84c" opacity="0">
+          <rect id="layer3" class="cap-layer" x="333" y="362" width="54" height="8" rx="3" fill="#c9a84c" opacity="0">
             <animate id="anim-l3" attributeName="opacity" values="0;0.42;0.55" dur="1.6s" begin="indefinite" fill="freeze"/>
           </rect>
-          <rect id="layer2" class="cap-layer" x="307" y="360" width="66" height="9" rx="3" fill="#c9a84c" opacity="0">
-            <animate id="anim-l2" attributeName="opacity" values="0;0.55;0.68" dur="1.6s" begin="indefinite" fill="freeze"/>
+          <rect id="layer2" class="cap-layer" x="340" y="371" width="40" height="8" rx="3" fill="#c9a84c" opacity="0">
+            <animate id="anim-l2" attributeName="opacity" values="0;0.55;0.7" dur="1.6s" begin="indefinite" fill="freeze"/>
           </rect>
-          <rect id="layer1" class="cap-layer" x="314" y="370" width="52" height="9" rx="3" fill="#c9a84c" opacity="0" filter="url(#capGlow)">
+          <rect id="layer1" class="cap-layer" x="347" y="380" width="26" height="8" rx="3" fill="#c9a84c" opacity="0" filter="url(#capGlow)">
             <animate id="anim-l1" attributeName="opacity" values="0;0.75;0.9" dur="1.6s" begin="indefinite" fill="freeze"/>
           </rect>
-          <!-- キャプションボックス -->
-          <rect x="296" y="383" width="88" height="42" rx="5"
-            fill="rgba(201,168,76,0.08)" stroke="rgba(201,168,76,0.38)" stroke-width="0.9"/>
-          <text x="340" y="400" text-anchor="middle" font-family="Shippori Mincho,serif" font-size="12" fill="#0a1628" font-weight="700">Fandomain</text>
-          <text x="340" y="416" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#c9a84c" font-weight="500">Capital</text>
-
-          <!-- タグライン -->
-          <text x="340" y="668" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="10" fill="rgba(10,22,40,0.3)">ファンの語りが、ブランドの領地になる</text>
-          <text x="340" y="685" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="8" fill="rgba(201,168,76,0.4)">NSI Original Concept / DCXforce</text>
+          <!-- Capitalボックス（重心の少し下に配置、層と重ならない位置） -->
+          <rect x="306" y="392" width="108" height="46" rx="6"
+            fill="#fff9ec" stroke="rgba(201,168,76,0.5)" stroke-width="1.2"/>
+          <text x="360" y="410" text-anchor="middle" font-family="Shippori Mincho,serif" font-size="13" fill="#0a1628" font-weight="700">Fandomain</text>
+          <text x="360" y="428" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10" fill="#c9a84c" font-weight="600">Capital</text>
         </svg>
       </div>
 
