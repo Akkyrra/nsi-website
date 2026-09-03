@@ -32,15 +32,15 @@ export default function ReportsPage() {
             {/* Report info */}
             <div>
               <p className="font-inter text-xs font-semibold text-navy/40 tracking-widest uppercase mb-4">
-                SNS Marketing · #001
+                Influencer Marketing · #002
               </p>
               <h2 className="font-playfair text-3xl lg:text-4xl font-bold text-navy leading-snug mb-6">
-                ファン資本の再設計――<br />
-                AI時代のSNSマーケティングを、<br className="hidden sm:block" />運用から資本形成へ
+                インフルエンサー施策が終わったあと、<br />
+                ブランドに何が残るか
               </h2>
               <div className="w-10 h-0.5 bg-gold mb-6" />
               <p className="font-inter text-base text-navy/65 leading-relaxed">
-                SNSマーケティングの定石は、届けることに最適化されてきた。しかしAIが情報を中間処理する時代、蓄積されたシグナルの一貫性こそがブランドの評判を決める。本レポートは「Fandomain Capital」という独自概念を軸に、ファンとの関係性を経営資本として捉え直し、その設計・観測・実装の枠組みを提示する。
+                再生数・保存数の報告だけで施策を終えず、ブランド想起、再利用できる表現、クリエイターとの関係、次回に生かせる学びまで、企画段階で「何を残すか」を決めておく。実証研究とケーススタディから、次の起用・企画・評価へつなぐための実務設計を提示する。
               </p>
             </div>
 
@@ -67,12 +67,36 @@ export default function ReportsPage() {
             {/* CTA */}
             <div>
               <a
-                href="/reports/001"
+                href="/reports/002"
                 className="inline-block font-inter text-sm font-semibold bg-navy text-gold px-8 py-4 rounded tracking-widest uppercase hover:bg-navy/85 transition-colors"
               >
                 レポートを読む →
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Past Reports ── */}
+      <section className="bg-white py-16 lg:py-20 border-t border-navy/10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <p className="font-inter text-xs font-semibold tracking-[0.2em] text-gold uppercase mb-10">
+            Past Reports
+          </p>
+
+          <div className="max-w-3xl flex flex-col gap-6">
+            <p className="font-inter text-xs font-semibold text-navy/40 tracking-widest uppercase mb-1">
+              SNS Marketing · #001
+            </p>
+            <h3 className="font-playfair text-xl lg:text-2xl font-bold text-navy leading-snug">
+              ファン資本の再設計――AI時代のSNSマーケティングを、運用から資本形成へ
+            </h3>
+            <a
+              href="/reports/001"
+              className="font-inter text-sm font-semibold text-navy hover:text-gold transition-colors"
+            >
+              レポートを読む →
+            </a>
           </div>
         </div>
       </section>

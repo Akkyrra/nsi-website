@@ -4,8 +4,14 @@ import { useState } from "react";
 
 const reports = [
   {
+    category: "INFLUENCER MARKETING",
+    title: "#002 インフルエンサー施策が終わったあと、\nブランドに何が残るか",
+    href: "/reports/002",
+  },
+  {
     category: "SNS MARKETING",
     title: "#001 ファン資本の再設計――\nAI時代のSNSマーケティングを、運用から資本形成へ",
+    href: "/reports/001",
   },
 ];
 
@@ -46,18 +52,20 @@ export default function ThreeColumnSection() {
           </h3>
           <ul className="flex flex-col gap-6">
             {reports.map((report) => (
-              <li key={report.title} className="group cursor-pointer">
-                <span className="inline-block font-inter text-[10px] font-semibold tracking-wider uppercase text-gold bg-gold/10 px-2 py-0.5 rounded mb-2">
-                  {report.category}
-                </span>
-                <p className="font-playfair text-base font-semibold text-navy leading-snug group-hover:text-gold transition-colors">
-                  {report.title.split("\n").map((line, i) => (
-                    <span key={i}>
-                      {i > 0 && <br />}
-                      {line}
-                    </span>
-                  ))}
-                </p>
+              <li key={report.title} className="group">
+                <a href={report.href}>
+                  <span className="inline-block font-inter text-[10px] font-semibold tracking-wider uppercase text-gold bg-gold/10 px-2 py-0.5 rounded mb-2">
+                    {report.category}
+                  </span>
+                  <p className="font-playfair text-base font-semibold text-navy leading-snug group-hover:text-gold transition-colors">
+                    {report.title.split("\n").map((line, i) => (
+                      <span key={i}>
+                        {i > 0 && <br />}
+                        {line}
+                      </span>
+                    ))}
+                  </p>
+                </a>
               </li>
             ))}
           </ul>

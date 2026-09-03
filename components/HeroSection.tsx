@@ -34,19 +34,19 @@ export default function HeroSection() {
             </p>
             <div>
               <p className="font-inter text-xs text-gold/60 tracking-widest uppercase mb-2">
-                SNS Marketing · #001
+                Influencer Marketing · #002
               </p>
               <h2 className="font-playfair text-xl lg:text-2xl font-bold text-white leading-snug mb-3">
-                ファン資本の再設計――
-                AI時代のSNSマーケティングを、運用から資本形成へ
+                インフルエンサー施策が終わったあと、
+                ブランドに何が残るか
               </h2>
               <p className="font-inter text-xs text-white/60 leading-relaxed">
-                SNSの「運用」は手段に過ぎない。ファンを資本として捉え直し、AI時代における持続的なブランド価値の形成を論じる。
+                再生数・保存数で終わらせず、ブランド想起、再利用できる表現、クリエイターとの関係を、次の起用・企画・評価へつなぐための実務設計を論じる。
               </p>
             </div>
             <div className="border-t border-white/20 pt-5">
               <a
-                href="/reports"
+                href="/reports/002"
                 className="font-inter text-xs font-semibold text-gold tracking-widest uppercase hover:text-white transition-colors inline-flex items-center gap-2 group"
               >
                 READ REPORT

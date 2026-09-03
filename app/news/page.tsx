@@ -18,6 +18,13 @@ interface NewsItem {
 // 追加するときは先頭に追記（新しい順）
 const newsItems: NewsItem[] = [
   {
+    date: "2026.08.31",
+    category: "REPORT",
+    title: "#002 インフルエンサー施策が終わったあと、ブランドに何が残るか 公開",
+    href: "/reports/002",
+    external: false,
+  },
+  {
     date: "2025.06.24",
     category: "MEDIA",
     title: "NSIの開設、そして第一弾レポートの発表についてプレスリリースを配信しました",
