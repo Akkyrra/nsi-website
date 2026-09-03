@@ -1101,21 +1101,28 @@ export default function Report002Page() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Report",
-            "@id": "https://nsi.dcxforce.co.jp/reports/002",
             headline: "インフルエンサー施策が終わったあと、ブランドに何が残るか",
-            description: "再生数・保存数で終わらせず、次の起用・企画・評価へつなぐための実務設計。NSI Report #002。",
+            alternativeHeadline: "NSI Report #002",
+            description: "再生数・保存数で終わらせず、次の起用・企画・評価へつなぐための実務設計。",
+            url: "https://nsi.dcxforce.co.jp/reports/002",
+            image: "https://nsi.dcxforce.co.jp/NSI.png",
             datePublished: "2026-08-31",
-            inLanguage: "ja-JP",
+            inLanguage: "ja",
             author: {
               "@type": "Person",
               name: "天野彬",
+              alternateName: "Akira Amano",
               jobTitle: "Chief Strategy Officer",
-              affiliation: { "@type": "Organization", name: "DCXforce" },
+              worksFor: { "@type": "Organization", name: "DCXforce" },
             },
             publisher: {
               "@type": "Organization",
-              name: "New Strategy Institute by DCXforce",
+              name: "New Strategy Institute (NSI)",
               url: "https://nsi.dcxforce.co.jp",
+            },
+            isPartOf: {
+              "@type": "CreativeWorkSeries",
+              name: "NSI Report",
             },
           }),
         }}
