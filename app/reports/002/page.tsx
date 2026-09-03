@@ -123,8 +123,8 @@ const reportCss = `
   .case-field .cf-val { font-size:0.9rem; color:var(--text); line-height:1.6; }
   .chapter-dark .case-field .cf-val, .chapter-mid .case-field .cf-val, .framework-section .case-field .cf-val { color:rgba(250,248,243,0.85); }
 
-  .kiori-tag { display:flex; align-items:center; gap:0.65rem; font-family:'IBM Plex Mono',monospace; font-size:0.62rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--coral-text); margin-bottom:1.1rem; }
-  .kiori-tag img { width:28px; height:28px; flex-shrink:0; }
+  .kiori-tag { display:flex; align-items:center; gap:0.85rem; font-family:'IBM Plex Mono',monospace; font-size:0.82rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--coral-text); margin-bottom:1.1rem; }
+  .kiori-tag img { width:40px; height:40px; flex-shrink:0; }
   .chapter-dark .kiori-tag, .chapter-mid .kiori-tag, .framework-section .kiori-tag { color:var(--coral-light); }
   .kiori-thumb { width:44px; height:auto; flex-shrink:0; border-radius:4px; }
   .case-setup-flex { display:flex; gap:2.5rem; align-items:center; max-width:1100px; margin-top:3rem; }
@@ -266,7 +266,7 @@ const reportCss = `
   .refs-list a { color:var(--navy); }
   .refs-list .unconfirmed { font-size:0.76rem; color:var(--gray); }
 
-  footer { background:#060e1a; padding:2.5rem 5vw; display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(196,92,58,0.15); flex-wrap:wrap; gap:1rem; }
+  footer { background:var(--navy-mid); padding:2.5rem 5vw; display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(196,92,58,0.15); flex-wrap:wrap; gap:1rem; }
   .footer-logo { font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:rgba(250,248,243,0.45); letter-spacing:0.1em; }
   .footer-copy { font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(250,248,243,0.55); }
 
@@ -392,7 +392,7 @@ const htmlBefore = `
   <div class="case-setup-flex reveal" style="margin-top:4rem;">
     <div class="kiori-package"><img src="/kiori-product-black.png" alt="KIORI（季織）だし醤油 パッケージ"></div>
     <div class="case-setup">
-      <div class="kiori-tag"><img src="/kiori-logo-black.png" alt="KIORI">KIORI CASE｜この施策で、ブランドに何が残ったか</div>
+      <div class="kiori-tag"><img src="/kiori-logo-white.png" alt="KIORI">KIORI CASE｜この施策で、ブランドに何が残ったか</div>
       <h4>本レポートの内容を理解しやすくするためのケーススタディ</h4>
       <p class="small-note" style="margin-bottom:1.4rem;">※KIORI（季織）は、意思決定の違いを示すために設定した架空ブランドです。数値・金額は説明用の試算です。</p>
       <div class="case-fields">
@@ -1164,7 +1164,6 @@ export default function Report002Page() {
         {formState !== "success" && (
           <>
             <div className="section-label on-dark" style={{ justifyContent: "center" }}>DOWNLOAD</div>
-            <img src="/kiori-logo-black.png" alt="KIORI" style={{ width: "40px", height: "40px", margin: "0 auto 1.5rem", display: "block" }} />
             <h2>インフルエンサー施策を<br />残るものへ。</h2>
             <p>PDF版レポートのダウンロード、レポート著者とのコンタクトは下記から。</p>
           </>

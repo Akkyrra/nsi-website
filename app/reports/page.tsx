@@ -91,6 +91,9 @@ export default function ReportsPage() {
             <h3 className="font-playfair text-xl lg:text-2xl font-bold text-navy leading-snug">
               ファン資本の再設計――AI時代のSNSマーケティングを、運用から資本形成へ
             </h3>
+            <p className="font-inter text-base text-navy/65 leading-relaxed">
+              SNSマーケティングの定石は、届けることに最適化されてきた。しかしAIが情報を中間処理する時代、蓄積されたシグナルの一貫性こそがブランドの評判を決める。本レポートは「Fandomain Capital」という独自概念を軸に、ファンとの関係性を経営資本として捉え直し、その設計・観測・実装の枠組みを提示する。
+            </p>
             <a
               href="/reports/001"
               className="font-inter text-sm font-semibold text-navy hover:text-gold transition-colors"
