@@ -449,19 +449,38 @@ const htmlBefore = `
       <tr><td class="label">広告表示（PR表記）</td><td><span class="lvl lvl-mixed">結果が分かれる</span></td><td><span class="lvl lvl-mixed">結果が分かれる</span></td><td><span class="lvl lvl-mixed">結果が分かれる</span></td><td><span class="lvl lvl-low">研究が少ない</span></td><td>知見が混在<a class="cite" href="#ref4">[4]</a></td></tr>
     </table>
   </div>
-  <p class="small-note reveal" style="max-width:1100px;">国内外の実証研究を、成果指標ごとに整理した見取り図。効果の大きさや方向は、商材、プラットフォーム、表現形式、調査設計によって変わる。「想起」と「態度」は同一の指標ではなく、便宜上ひとつの列にまとめている。</p>
+  <p class="small-note reveal" style="max-width:1100px;">国内外の実証研究を、成果指標ごとに整理した見取り図。効果の大きさや方向は、商材、プラットフォーム、表現形式、調査設計によって変わる。「想起」と「態度」は同一の指標ではなく、便宜上ひとつの列にまとめている。本表の「エンゲージメント」は、主としていいね・コメント・保存・シェアなど、各研究で観測された投稿への反応を指す。視聴時間や完了率などの暗黙的な注意指標とは区別して読む必要がある。</p>
+
+  <div class="chapter-body single reveal" style="margin-top:3rem;">
+    <div class="body-text">
+      <h4>「いいね」後の世界でも、ブランドは自動では残らない</h4>
+      <p>いいねやコメントの減少は、生活者がコンテンツを見なくなったことを意味しない。視聴時間、完了率、再視聴、滞在時間、スキップ、シェアなど、明示的な反応を伴わない行動からも、プラットフォームは生活者の関心を推定している。</p>
+      <p>実際、Socialinsiderの2026年ベンチマークでは、7000万件超の投稿を対象に、TikTokの平均コメント数が24％減少、Instagramの平均コメント数が16％減少する一方、TikTokのシェア数は45％増加、Instagramのシェア数は12％増加し、両プラットフォームで動画視聴数も増加したと報告されている<a class="cite" href="#ref10">[10]</a>。LinkedIn Engineeringも、滞在時間のような受動的な消費行動を、コメントや再共有などの能動的な行動とあわせて複数目的で最適化していると説明しており、滞在時間だけを見ているわけではない<a class="cite" href="#ref11">[11]</a>。</p>
+      <p>エンゲージメントが消えたというより、公開された反応から、暗黙的な視聴や私的な共有へ重心が移っていると見る方が正確である。しかし、これらはコンテンツが注意を止めたことを示す指標であり、ブランドの想起・理解・信頼・選好が変わったことを直接示すものではない。いいねを視聴時間に置き換えるだけでは、測定の問題は解決しない。</p>
+    </div>
+  </div>
+  <div class="table-wrap reveal">
+    <table class="term-table">
+      <tr><th>層</th><th>指標例</th><th>分かること</th><th>それだけでは分からないこと</th></tr>
+      <tr><td class="label">暗黙的な注意</td><td>滞在時間、視聴完了率、再視聴、スキップ率</td><td>注意がどこで止まり、どこで離脱したか</td><td>ブランドが記憶されたか</td></tr>
+      <tr><td class="label">明示的な反応</td><td>いいね、コメント、保存、シェア</td><td>意図的な反応、保存、共有が起きたか</td><td>態度や選好がどこまで変わったか</td></tr>
+      <tr><td class="label">ブランド成果</td><td>想起、理解、信頼、選好、購買</td><td>生活者の記憶や評価に何が残ったか</td><td>どの表現や接点が変化を生んだか</td></tr>
+    </table>
+  </div>
+  <div class="pull-quote reveal" style="max-width:1100px; margin-top:2rem;">アルゴリズムが学習したことと、ブランドに残ったことは同じではない。</div>
+  <p class="small-note reveal" style="max-width:1100px;">フックや視聴維持だけに最適化すれば、動画は覚えられても、ブランドは忘れられかねない。診断指標を追うことと、ブランド成果を追うことは、別の作業である。</p>
 
   <div class="kiori-tag reveal" style="margin-top:3rem;"><img src="/kiori-logo-white.png" alt="KIORI">KIORI CASE｜この施策で、ブランドに何が残ったか</div>
   <div class="case-band reveal">
     <div class="cb-col before">
       <div class="cb-label">KIORI・シナリオA</div>
       <h5>「届いた」を「認知された」と読んだ会議</h5>
-      <p><strong>届いたことは測れても、覚えられたことまで測れているとは限らない。</strong>新商品の認知向上を掲げたKIORI。実施後の報告では、ターゲットリーチ、動画再生数、保存数が目標を上回り、「認知は獲得できた」と評価された。しかし、確認できたのはコンテンツが届き、反応されたことまでだった。商品名や特徴が記憶されたかを確かめるブランドリフト調査や事前・事後調査は、施策に組み込まれていなかった。</p>
+      <p><strong>届いたことは測れても、覚えられたことまで測れているとは限らない。</strong>新商品の認知向上を掲げたKIORI。実施後の報告では、ターゲットリーチ、動画再生数、視聴完了率、保存数がいずれも目標を上回り、「認知は獲得できた」と評価された。動画の視聴完了率も高く、レシピ動画としてはよく見られていた。しかし、最後まで見られたのが料理手順の有用性によるものか、KIORIの商品理解が進んだからなのかは分からなかった。視聴が続いたことと、ブランドが残ったことは別である。商品名や特徴が記憶されたかを確かめるブランドリフト調査や事前・事後調査は、施策に組み込まれていなかった。</p>
     </div>
     <div class="cb-col after">
       <div class="cb-label">分岐点</div>
       <h5>「届いた」と「覚えられた」を分けて測る</h5>
-      <p>KIORIが施策前に決めるべきだったのは、認知を「ターゲットに届いたこと」ではなく、「商品名や特徴が記憶されたこと」として、どう確かめるかだった。主指標には、接触者と非接触者を比べるブランドリフト調査、またはターゲット層への事前・事後調査による助成認知・商品理解の変化を置く。リーチ、再生数、保存数は、その変化が起きた理由を読み解く補助指標として扱う。</p>
+      <p>KIORIが施策前に決めるべきだったのは、認知を「ターゲットに届いたこと」ではなく、「商品名や特徴が記憶されたこと」として、どう確かめるかだった。主指標には、接触者と非接触者を比べるブランドリフト調査、またはターゲット層への事前・事後調査による助成認知・商品理解の変化を置く。リーチ、再生数、視聴完了率、保存数は、その変化が起きた理由を読み解く補助指標として扱う。</p>
     </div>
   </div>
 </section>
@@ -560,6 +579,8 @@ const htmlBefore = `
     </table>
   </div>
   <p class="small-note reveal" style="max-width:1100px;">LINE登録者が1万人いることが、そのままFandomain Capitalの大きさを意味するわけではない。登録者が継続的に反応し、体験を語り、他者に推奨し、その語りがブランドの意味を厚くしているかまで見て、初めてFandomain Capitalに近づく。Owned接点は、関係を継続する場である。CRMは、そこで得た許諾済みの顧客IDと行動履歴をつなぎ、次の接触に生かす企業側の基盤である。Fandomain Capitalは、Owned接点を含む複数の体験から育つ、関係と語りの資本を指す。</p>
+  <p class="small-note reveal" style="max-width:1100px; margin-top:0.75rem;">コメント数は、コミュニティの規模ではない。同じ生活者が繰り返し現れるか。生活者どうしの応答が生まれているか。ブランドが投稿し続けなくても、体験や語りが共有・再解釈されているか。単発の反応ではなく、この継続性まで確認して初めて、Fandomain Capitalの蓄積に近づく。公開反応が減ったことをもって関係がなくなったと判定せず、逆に、コメントが少し付いたことをもってコミュニティができたとも判定しない。</p>
+  <p class="small-note reveal" style="max-width:1100px; margin-top:0.75rem;">アルゴリズムは、関心のありそうな生活者との接続をつくる。しかし、その一度の接続を、記憶・継続的な関係・再接触へ変えるのは、ブランド側の設計である。</p>
 
   <div class="reveal" style="max-width:1100px; margin:0 auto 1rem; margin-top:3rem;">
     <svg class="flow-diagram" viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg">
@@ -727,7 +748,7 @@ const htmlBefore = `
     <table class="term-table">
       <tr><th>残す価値</th><th>残る場所</th><th>具体的に残るもの</th><th>確認指標の例</th><th>次に変わる判断</th></tr>
       <tr><td class="label">ブランド資産</td><td style="color:var(--teal); font-weight:500;">一般生活者・市場</td><td>想起・理解・信頼・選好</td><td>ブランドリフト調査、指名検索、CRM登録</td><td>次の訴求・対象</td></tr>
-      <tr><td class="label">Fandomain Capital</td><td style="color:var(--coral-text); font-weight:500;">ファンダムの文化的領域</td><td>継続する関係、共有される語り、共鳴、参加、推奨</td><td>複数回反応者比率、継続UGC、推奨行動、語りの一貫性</td><td>どの体験・語り・参加を育てるか</td></tr>
+      <tr><td class="label">Fandomain Capital</td><td style="color:var(--coral-text); font-weight:500;">ファンダムの文化的領域</td><td>継続する関係、共有される語り、共鳴、参加、推奨</td><td>複数回反応者比率、継続的なUGC、生活者どうしの相互作用、推奨行動、ナラティブの再解釈</td><td>どの体験・語り・参加を育てるか</td></tr>
       <tr><td class="label">Owned接点・顧客データ</td><td style="color:var(--navy); font-weight:500;">企業が管理する接点</td><td>許諾を得て再接触できる顧客IDと行動履歴</td><td>新規登録数、配信到達率、再訪率、再反応率、購買転換率</td><td>誰に、何を、いつ届けるか</td></tr>
       <tr><td class="label">共創基盤</td><td style="color:var(--coral-text); font-weight:500;">ブランドとクリエイターのあいだ</td><td>クリエイターとの関係と共創履歴</td><td>再起用率、企画速度</td><td>次の起用</td></tr>
       <tr><td class="label">コンテンツ・データ資産</td><td style="color:var(--navy); font-weight:500;">企業・組織</td><td>表現、利用権、反応データ、生活者の言葉</td><td>再利用可能素材数、利用許諾期間</td><td>次の制作</td></tr>
@@ -928,6 +949,18 @@ const htmlBefore = `
   </div>
   <p class="small-note reveal" style="max-width:1100px;">担当者に「目的に合った指標を考えてください」と要求するのではなく、目的を選べば候補が出るようにする。必要な予算は、残したいブランド資産と蓄積基盤から逆算する。</p>
 
+  <div class="section-label reveal" style="margin-top:3rem;">施策ごとに選ぶのは、二つだけでよい</div>
+  <div class="chapter-body single reveal" style="margin-bottom:1.5rem;">
+    <div class="body-text"><p><strong>目的に合う成果指標を一つ。その結果が生まれた理由を読み解く投稿指標を一つ。</strong>視聴時間、完了率、再視聴、保存数、シェア数は、投稿のどこで注意や反応が生まれたかを読むための診断指標である。ブランドリフト、商品理解、信頼、選好、購買は、目的が達成されたかを判断する成果指標である。この二つを分けることで、プラットフォーム上の数字を無視せず、同時にそれだけで施策を評価することも避けられる。</p></div>
+  </div>
+  <div class="table-wrap reveal">
+    <table class="term-table">
+      <tr><th>役割</th><th>選ぶ指標（KIORIの例）</th></tr>
+      <tr><td class="label">成果指標</td><td>商品理解</td></tr>
+      <tr><td class="label">診断指標</td><td>視聴完了率または保存数</td></tr>
+    </table>
+  </div>
+
   <div class="chapter-body single reveal" style="margin-top:3rem;">
     <div class="body-text">
       <p>保存数が使われ続けるのは、完璧な指標だからではない。自動で取得でき、誰にでも説明できるからだ。ブランド資産を残す設計も、同じくらい簡単でなければ定着しない。目的を一つ選び、残すものを一つ決め、次回変えることを一つ記録する。そこから始めればよい。</p>
@@ -935,7 +968,8 @@ const htmlBefore = `
     </div>
   </div>
 
-  <div class="pull-quote reveal" style="max-width:1100px; margin-top:2.5rem; font-size:clamp(1.1rem,1.8vw,1.4rem);">成果が次の判断を変えるところまでが、施策の設計である。</div>
+  <div class="pull-quote reveal" style="max-width:1100px; margin-top:2.5rem; font-size:clamp(1.1rem,1.8vw,1.4rem);">いいねの次に視聴時間を見るのではない。注意の先に、ブランドの何が残ったかを見る。</div>
+  <div class="pull-quote reveal" style="max-width:1100px; margin-top:1rem; font-size:clamp(1.1rem,1.8vw,1.4rem);">成果が次の判断を変えるところまでが、施策の設計である。</div>
 </section>
 
 <!-- REFERENCES -->
@@ -951,6 +985,8 @@ const htmlBefore = `
     <li id="ref7">Libai, B. et al. (2024). Influencer marketing unlocked: Understanding the value chains driving the creator economy. <em>Journal of the Academy of Marketing Science</em>. <a href="https://link.springer.com/article/10.1007/s11747-024-01073-2" target="_blank" rel="noopener noreferrer">doi.org/10.1007/s11747-024-01073-2</a></li>
     <li id="ref8">消費者庁 (2023). 「ステルスマーケティングに関する運用基準」. <a href="https://www.caa.go.jp/policies/policy/representation/fair_labeling/stealth_marketing" target="_blank" rel="noopener noreferrer">caa.go.jp — ステルスマーケティング</a>（2023年10月1日運用開始）</li>
     <li id="ref9">World Intellectual Property Organization and Luiss Business School. (2026). <em>World Intangible Investment Highlights 2026: Better Data for Better Business and Policy</em>. <a href="https://www.wipo.int/edocs/pubdocs/en/wipo-pub-1097-en-world-intangible-investment-highlights.pdf" target="_blank" rel="noopener noreferrer">wipo.int — 報告書PDF</a> ／ <a href="https://www.wipo.int/web-publications/world-intangible-investment-highlights-2026/en/key-trends-and-insights.html" target="_blank" rel="noopener noreferrer">Key Trends and Insights</a></li>
+    <li id="ref10">Socialinsider. (2026). <em>Social Media Industry Benchmarks</em>. <a href="https://www.socialinsider.io/social-media-benchmarks" target="_blank" rel="noopener noreferrer">socialinsider.io — Social Media Benchmarks</a>（業界データ。査読を経た学術研究ではない）</li>
+    <li id="ref11">LinkedIn Engineering. <em>Leveraging Dwell Time to Improve Member Experiences on the LinkedIn Feed</em>. <a href="https://www.linkedin.com/blog/engineering/feed/leveraging-dwell-time-to-improve-member-experiences-on-the-linkedin-feed" target="_blank" rel="noopener noreferrer">linkedin.com — Engineering Blog</a>（企業の公式技術解説記事）</li>
   </ol>
 </section>
 `;
