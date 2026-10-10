@@ -4,6 +4,11 @@ import { useState } from "react";
 
 const reports = [
   {
+    category: "INTANGIBLE ASSETS",
+    title: "#003 Intangible Integration",
+    href: "/reports/003",
+  },
+  {
     category: "INFLUENCER MARKETING",
     title: "#002 インフルエンサー施策が終わったあと、\nブランドに何が残るか",
     href: "/reports/002",
