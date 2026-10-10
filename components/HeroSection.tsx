@@ -34,19 +34,18 @@ export default function HeroSection() {
             </p>
             <div>
               <p className="font-inter text-xs text-gold/60 tracking-widest uppercase mb-2">
-                Influencer Marketing · #002
+                Intangible Assets · #003
               </p>
               <h2 className="font-playfair text-xl lg:text-2xl font-bold text-white leading-snug mb-3">
-                インフルエンサー施策が終わったあと、
-                ブランドに何が残るか
+                Intangible Integration
               </h2>
               <p className="font-inter text-xs text-white/60 leading-relaxed">
-                再生数・保存数で終わらせず、ブランド想起、再利用できる表現、クリエイターとの関係を、次の起用・企画・評価へつなぐための実務設計を論じる。
+                広告産業のインテグレーション史から、Intangible IntegrationとMultiplier Deploymentという新しい経営実践を構想する。NSI第一期三部作の完結編。
               </p>
             </div>
             <div className="border-t border-white/20 pt-5">
               <a
-                href="/reports/002"
+                href="/reports/003"
                 className="font-inter text-xs font-semibold text-gold tracking-widest uppercase hover:text-white transition-colors inline-flex items-center gap-2 group"
               >
                 READ REPORT

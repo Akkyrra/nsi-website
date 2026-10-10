@@ -1544,8 +1544,8 @@ export default function Report001Page() {
             "@context": "https://schema.org",
             "@type": "Report",
             "@id": "https://nsi.dcxforce.co.jp/reports/001",
-            headline: "ファン資本（Fandomin Capital）の再設計：AI時代のSNSマーケティング戦略",
-            description: "AI時代のSNSマーケティングをファン資本（Fandomin Capital）という経営概念で再定義。5つの診断軸と実装フレームワークを提示。",
+            headline: "ファン資本（Fandomain Capital）の再設計：AI時代のSNSマーケティング戦略",
+            description: "AI時代のSNSマーケティングをファン資本（Fandomain Capital）という経営概念で再定義。5つの診断軸と実装フレームワークを提示。",
             datePublished: "2026-06-23",
             inLanguage: "ja-JP",
             author: {
@@ -1629,7 +1629,7 @@ export default function Report001Page() {
         <div className="cta-bg"></div>
         {formState !== "success" && (
           <>
-            <h2>ファン資本（Fandomin Capital）の<br />再設計へ。</h2>
+            <h2>ファン資本（Fandomain Capital）の<br />再設計へ。</h2>
             <p>PDF版レポートとFramework Kitのダウンロード、レポート著者とのコンタクトは下記から。</p>
             <div className="cta-buttons">
               <a href="#download-form" className="btn-primary">↓ PDF版レポートとFramework Kitをダウンロード</a>

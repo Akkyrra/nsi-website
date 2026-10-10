@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ファン資本の再設計 | NSI Report #001 | New Strategy Institute",
   description:
-    "AI時代のSNSマーケティングをファン資本（Fandomin Capital）で再定義。運用から資本形成へ、ナラティブ設計の5つの診断軸と実装フレームワークを解説。著：天野彬（DCXforce CSO）。",
+    "AI時代のSNSマーケティングをファン資本（Fandomain Capital）で再定義。運用から資本形成へ、ナラティブ設計の5つの診断軸と実装フレームワークを解説。著：天野彬（DCXforce CSO）。",
   alternates: {
     canonical: "https://nsi.dcxforce.co.jp/reports/001",
   },
   openGraph: {
     type: "article",
-    title: "ファン資本（Fandomin Capital）の再設計 | NSI Report #001",
+    title: "ファン資本（Fandomain Capital）の再設計 | NSI Report #001",
     description:
       "AI時代のSNSマーケティングをファン資本で再定義する。5つの診断軸と実装フレームワーク。著：天野彬 / DCXforce CSO。",
     url: "https://nsi.dcxforce.co.jp/reports/001",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
       "@type": "Report",
       "@id": "https://nsi.dcxforce.co.jp/reports/001",
       headline:
-        "ファン資本（Fandomin Capital）の再設計：AI時代のSNSマーケティング戦略",
+        "ファン資本（Fandomain Capital）の再設計：AI時代のSNSマーケティング戦略",
       description:
-        "AI時代のSNSマーケティングをファン資本（Fandomin Capital）という経営概念で再定義。5つの診断軸と180日検証プログラムを提示。",
+        "AI時代のSNSマーケティングをファン資本（Fandomain Capital）という経営概念で再定義。5つの診断軸と180日検証プログラムを提示。",
       datePublished: "2026-06-23",
       dateModified: "2026-06-23",
       inLanguage: "ja-JP",
