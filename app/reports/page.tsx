@@ -39,7 +39,7 @@ export default function ReportsPage() {
               </h2>
               <div className="w-10 h-0.5 bg-gold mb-6" />
               <p className="font-inter text-base text-navy/65 leading-relaxed">
-                広告産業のインテグレーション史から、Intangible IntegrationとMultiplier Deploymentという新しい経営実践を構想する。NSI第一期三部作の完結編。
+                広告産業のインテグレーション史から、Intangible IntegrationとMultiplier Deploymentという新しい経営実践を構想する。広告は、企業に何を残せるか——その問いに挑む、NSI第一期三部作の完結編。
               </p>
             </div>
 
