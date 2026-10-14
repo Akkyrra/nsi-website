@@ -18,7 +18,7 @@ interface NewsItem {
 // 追加するときは先頭に追記（新しい順）
 const newsItems: NewsItem[] = [
   {
-    date: "2026.10.10",
+    date: "2026.10.02",
     category: "REPORT",
     title: "#003 Intangible Integration 公開",
     href: "/reports/003",

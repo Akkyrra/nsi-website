@@ -5,7 +5,7 @@ const OG_IMAGE = "https://nsi.dcxforce.co.jp/reports/003-og.png";
 const TITLE = "Intangible Integration | NSI Report #003 | New Strategy Institute";
 const OG_TITLE = "Intangible Integration | NSI Report #003";
 const DESCRIPTION =
-  "広告産業のインテグレーション史から、Intangible IntegrationとMultiplier Deploymentという新しい経営実践を構想する。NSI第一期三部作の完結編。";
+  "広告産業のインテグレーション史から、Intangible IntegrationとMultiplier Deploymentという新しい経営実践を構想する。広告は、企業に何を残せるか——その問いに挑む、NSI第一期三部作の完結編。";
 const PUBLISHED = "2026-10-10";
 
 export const metadata: Metadata = {

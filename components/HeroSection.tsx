@@ -40,7 +40,7 @@ export default function HeroSection() {
                 Intangible Integration
               </h2>
               <p className="font-inter text-xs text-white/60 leading-relaxed">
-                広告産業のインテグレーション史から、Intangible IntegrationとMultiplier Deploymentという新しい経営実践を構想する。NSI第一期三部作の完結編。
+                広告産業のインテグレーション史から、Intangible IntegrationとMultiplier Deploymentという新しい経営実践を構想する。広告は、企業に何を残せるか——その問いに挑む、NSI第一期三部作の完結編。
               </p>
             </div>
             <div className="border-t border-white/20 pt-5">
