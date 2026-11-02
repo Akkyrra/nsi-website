@@ -478,10 +478,10 @@ const htmlBefore = `
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-meta" style="font-size:0.8rem; letter-spacing:0.2em; color:var(--navy); font-family:'IBM Plex Mono',monospace; margin-bottom:1.5rem; background:var(--gold); display:inline-block; padding:0.5rem 1.25rem; border-radius:2px; font-weight:700;">NSI Report #001 — June 2026</div>
+  <div class="hero-meta" style="font-size:0.8rem; letter-spacing:0.2em; color:var(--navy); font-family:'IBM Plex Mono',monospace; margin-bottom:1.5rem; background:var(--gold); display:inline-block; padding:0.5rem 1.25rem; border-radius:2px; font-weight:700;">NSI Report #001 — June 2026 / Rev. Nov 2026</div>
   <h1 class="hero-title">ファン資本の<em>再設計</em><br><span style="font-size:0.6em;font-family:'DM Serif Display',serif;font-style:italic;color:rgba(250,248,243,0.4);">Redesigning Fandomain Capital</span></h1>
   <div class="hero-subtitle" style="font-size:clamp(1rem,2vw,1.3rem); color:rgba(250,248,243,0.7); font-family:'Shippori Mincho',serif; margin-top:0.75rem; letter-spacing:0.03em;">AI時代のSNSマーケティングを、運用から資本形成へ</div>
-  <p class="hero-tagline">SNSマーケティングの定石は、届けることに最適化されてきた。しかしAIが情報を中間処理する時代、蓄積されたシグナルの一貫性こそがブランドの評判を決める。本レポートは「Fandomain Capital」という独自概念を軸に、ファンとの関係性を経営資本として捉え直し、その設計・観測・実装の枠組みを提示する。</p>
+  <p class="hero-tagline">SNSマーケティングの定石は、届けることに最適化されてきた。しかしAIが情報を中間処理する時代、蓄積されたシグナルの一貫性が評判を左右する比重は増している。本レポートは「Fandomain Capital」という独自概念を軸に、ファンとの関係性を経営資本として捉え直し、その設計・観測・実装の枠組みを提示する。</p>
   <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
@@ -510,12 +510,12 @@ const htmlBefore = `
     <div class="summary-item" style="padding:3.5rem;">
       <div class="summary-num">02</div>
       <h3>AIが「誰が言うか」より「何が一貫して言われているか」を重視する時代へ</h3>
-      <p>生成AIを利用するユーザーの64%がリンクを開かずに検索を終える。AIの回答に入らないブランドは比較検討のテーブルに載らない。LLMOとShare of Answersの台頭により、記名性が薄れ、シグナルの量と純度が評判を決める構造への転換が起きている。専門家・インフルエンサーの権威より、一貫したファンの語りが強くなる。</p>
+      <p>生成AIを利用するユーザーの64%がリンクを開かずに検索を終える。AIの回答に現れないブランドは、比較検討のテーブルに載りにくくなる。LLMOとShare of Answersの台頭により、誰が言ったかという記名性の前景化が相対的に弱まり、シグナルの一貫性が効く領域が広がっている。権威ある情報源の重要性は失われないが、一貫したファンの語りが持つ比重は上がる。</p>
     </div>
     <div class="summary-item" style="padding:3.5rem;">
       <div class="summary-num">03</div>
       <h3>Fandomain Capitalという新しい経営資本の概念</h3>
-      <p>ブランドがファンダムの文化的領域において築く無形資産。ソーシャルキャピタルの系譜に連なり、【Growth】顧客生涯価値（LTV）の向上・【Resilience】企業価値毀損への耐性・【Discoverability】AIによる推奨・参照獲得という三つの事業効果に転換される。広告費で買えず、バズで膨らませることもできない。設計と蓄積によってのみ拡張される領地だ。</p>
+      <p>ブランドがファンダムの文化的領域において築く無形資産。ソーシャルキャピタルの系譜に連なり、【Growth】顧客生涯価値（LTV）の向上・【Resilience】企業価値毀損への耐性・【Discoverability】AIによる推奨・参照獲得という三つの事業効果が期待される——本レポートはこれを検証すべき効果仮説として提示する。広告費で買えず、バズで膨らませることもできない。設計と蓄積によってのみ拡張される領地だ。</p>
     </div>
     <div class="summary-item" style="padding:3.5rem;">
       <div class="summary-num">04</div>
@@ -686,12 +686,12 @@ const htmlBefore = `
       <p>「検索窓にキーワードを入れ、結果ページを読み比べる」という情報行動が変わり始めている。チャット型AIに問いかけると、要約された「答え」が返ってくる——ユーザーが本当に求めているのは選択肢の羅列ではなく、「結局、私にとってベストは何か」という回答だからだ。</p>
       <div class="gold-divider"></div>
       <p>Googleは2026年5月、この変化を正面から認めた。「<a href="https://blog.google/intl/ja-jp/products/explore-get-answers/search-io-2026/" target="_blank" style="color:var(--gold-light); text-decoration:underline;">検索エンジンの強みとAIの強みを融合させる</a>」という表現が示す通り、SEOとLLMOは対立ではなく、連続線上にある進化だ。検索行動は二分されるのではなく、グラデーションとして移行していく。</p>
-      <p style="margin-top:1.5rem;">ただし方向性は明確だ。生成AIを利用するユーザーの64%がリンクを開かずに検索を終える。AIの回答に入らないブランドは、比較検討のテーブルに載りにくくなる。「発見される場所」は確実に移動しており、指標は「インプレッション」から<strong style="color:var(--gold-light);">「リファレンス（参照・引用）」</strong>へと重心を移していく。</p>
+      <p style="margin-top:1.5rem;">ただし方向性は明確だ。生成AIを利用するユーザーの64%がリンクを開かずに検索を終える。AIの回答に入らないブランドは、比較検討のテーブルに載りにくくなる。「発見される場所」は確実に移動しており、指標は「インプレッション」から<strong style="color:var(--gold-light);">「リファレンス（参照・引用）」</strong>へと重心を移していく。ただしAI上での見え方は固定的ではない。後述するShare of Answersは、どんな問いを立てたか、どのモデルを使ったか、いつ測ったかに左右される観測指標であり、順位表のような確定値ではない。</p>
     </div>
     <div>
       <div class="pull-quote">
         AIは、蓄積された一貫性のあるシグナルに反応しやすい。<strong style="color:var(--gold);">複数の情報源にまたがって繰り返し確認できるオーソリティ・信頼・支持の文脈は、AIの回答生成において参照されやすい。</strong>何が、どれだけ一貫して語られているか——それが問われる時代になった。
-        <span style="display:block; margin-top:1.25rem; font-family:'Noto Sans JP',sans-serif; font-size:0.8rem; font-weight:400; color:rgba(250,248,243,0.55); line-height:1.9;">——これは大規模言語モデルが複数ソースで一貫して言及されるエンティティを参照・推奨しやすいという観測的な傾向にもとづく。NSIはこれを厳密に証明された因果則としてではなく、設計と検証の出発点となる<strong style="color:rgba(201,168,76,0.8); font-weight:600;">作業仮説</strong>として置く。</span>
+        <span style="display:block; margin-top:1.25rem; font-family:'Noto Sans JP',sans-serif; font-size:0.8rem; font-weight:400; color:rgba(250,248,243,0.55); line-height:1.9;">——これは大規模言語モデルが複数ソースで一貫して言及されるエンティティを参照・推奨しやすいという観測的な傾向にもとづく。ただし参照されやすさを決めるのは一貫性だけではない。問いとの関連性、情報の信頼性、情報源の権威性もあわせて働く。また、同じ内容が多数のソースで反復されていることは、その内容が正確である保証にはならない。NSIはこれを厳密に証明された因果則としてではなく、設計と検証の出発点となる<strong style="color:rgba(201,168,76,0.8); font-weight:600;">作業仮説</strong>として置く。</span>
       </div>
     </div>
   </div>
@@ -741,18 +741,18 @@ const htmlBefore = `
     </div>
     <div class="insight-card">
       <div class="ic-label">Key Shift 02</div>
-      <h4>インフルエンサーの記名性が薄れる</h4>
-      <p>AIが情報を中間処理する文脈では、「誰が言ったか」という記名性は前面に出にくくなる。AIが拾うのは個々の発信者の存在感ではなく、複数の情報源にまたがって繰り返し確認できる評価や文脈だ。インフルエンスの重心は「誰が大きな声で言ったか」から「何がどれだけ一貫して語られているか」へと移し始めている。</p>
+      <h4>記名性より、一貫性の比重が上がる</h4>
+      <p>AIが情報を中間処理する文脈では、個々の発信者の存在感は、回答のおもてに出にくくなる。AIが拾うのは、複数の情報源にまたがって繰り返し確認できる評価や文脈だ。ただし記名性や情報源の権威性が失われるわけではない——信頼できる発信元として扱われる情報は、引用元としても示されやすい。変わるのは比重であり、「誰が大きな声で言ったか」だけでは届かなくなる、ということだ。</p>
     </div>
     <div class="insight-card">
       <div class="ic-label">Key Shift 03</div>
-      <h4>UGCが、AIの学習文脈になる</h4>
-      <p>AIショッピングエージェントを使う消費者の約3人に2人が「SNSコンテンツはAIにとって有用な学習データだ」と回答している（Horizon Media, 2026）。これは単なるSNS活用論の延長ではない。SNSの役割が、人間への直接的な説得から、AIへの間接的な文脈形成へと構造的に変わりつつあることを意味する。ファンが語り続けるブランドは、人間の共感と同時に、AIの「理解」の素地をも形成していく。</p>
+      <h4>UGCが、AIに参照される文脈になりうる</h4>
+      <p>AIショッピングエージェントを使う消費者の約3人に2人が「SNSコンテンツはAIにとって有用な学習データだ」と回答している（Horizon Media, 2026）。これは消費者側の認識を示す調査であり、AIが実際にどのUGCを学習・参照しているかを測ったものではない。両者は区別して扱う必要がある——生成AIの事前学習データと、検索やRAGによって回答時に参照される外部情報は別物であり、UGCが存在することと、そのUGCが特定のAIに学習・参照されることも同義ではない。それでも、SNSの役割が人間への直接的な説得だけに閉じなくなりつつあることは示唆的だ。ファンが語り続けるブランドは、人間の共感と同時に、AIに参照されうる文脈の候補を外部に置いていくことになる。</p>
     </div>
   </div>
 
   <div class="reveal" style="max-width:1100px; margin-top:3rem; padding:2rem 3rem; background:rgba(201,168,76,0.06); border-left:3px solid var(--gold);">
-    <p style="font-family:'Shippori Mincho',serif; font-size:1.05rem; color:rgba(250,248,243,0.88); line-height:1.9;">AIは「誰が言ったか」を圧縮する。人間は「どのブランドを信じるか」をより重視する——だからこそ、語られ続けることが資本になる。</p>
+    <p style="font-family:'Shippori Mincho',serif; font-size:1.05rem; color:rgba(250,248,243,0.88); line-height:1.9;">AIは「誰が言ったか」を圧縮しがちだ。人間は「どのブランドを信じるか」をより重視する——だからこそ、語られ続けることが資本になりうる。</p>
   </div>
 
   <!-- ch2 CTA -->
@@ -804,7 +804,8 @@ const htmlBefore = `
   <div class="framework-definition reveal">
     <div style="font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.25rem;">NSI Original Concept</div>
     <p style="font-size:0.88rem; color:rgba(15,40,90,0.55); line-height:1.9; margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid rgba(201,168,76,0.15);"><strong style="color:rgba(15,40,90,0.8);">Fandomain Capital</strong>は、<strong style="color:rgba(15,40,90,0.8);">Fandom（ファンダム）</strong>と<strong style="color:rgba(15,40,90,0.8);">Domain（領域・領地）</strong>を一語に溶け合わせたNSIの造語だ。Fandom の末尾に Domain が重なり、綴りの中に「領地」がそのまま残る。ブランドがファンの語りの中に築く「文化的な領地」を、経営資本として捉え直す——その概念的意図を一語に込めている。</p>
-    <p><strong>Fandomain Capital</strong>とは、ブランドがファンダムの文化的領域において築く、持続的に影響力を発揮する無形資産である。ソーシャルキャピタルと同様に、信頼・共鳴・誠実さの積み重ねによってのみ蓄積され、<strong>【Growth】顧客生涯価値（LTV）の向上・【Resilience】企業価値毀損への耐性・【Discoverability】AIによる推奨・参照獲得</strong>という三つの事業効果に転換される。<strong>広告費で買えず、バズで一時的に膨らませることもできない。積み上げるしかない。</strong></p>
+    <p><strong>Fandomain Capital</strong>とは、ブランドがファンダムの文化的領域において築く、持続的に影響力を発揮する無形資産である。ソーシャルキャピタルと同様に、信頼・共鳴・誠実さの積み重ねによってのみ蓄積され、<strong>【Growth】顧客生涯価値（LTV）の向上・【Resilience】企業価値毀損への耐性・【Discoverability】AIによる推奨・参照獲得</strong>という三つの事業効果が期待される。<strong>広告費で買えず、バズで一時的に膨らませることもできない。積み上げるしかない。</strong></p>
+    <p style="font-size:0.8rem; color:rgba(15,40,90,0.5); line-height:1.9; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid rgba(201,168,76,0.15);">※ 本レポートで用いる「資本」「無形資産」は、経営管理上の概念である。会計基準上の資産計上や、貸借対照表への反映を意味するものではない。また、ここに挙げた三つの事業効果は、現時点で実証済みの因果関係ではなく、観測と検証の対象となる効果仮説として位置づけている。</p>
   </div>
 
   <div class="chapter-body wide reveal" style="max-width:1100px; margin-bottom:5rem;">
@@ -812,8 +813,9 @@ const htmlBefore = `
       <p>「ファンを大切に」という言説は業界に広まった。しかしその結果、「ファン」という言葉が軽くなりすぎている。フォロワーもファン、エンゲージした人もファン、一度買った人もファン——すべてが「ファン」と呼ばれる現状がある。概念のインフレは、実務的な意味を失わせる。</p>
       <div class="gold-divider"></div>
       <p>「資本」という言葉に違和感を持った読者こそ、正しい感覚を持っている。しかしここで言う「資本」はロバート・パットナムのソーシャルキャピタル（社会関係資本）と同じ系譜にある概念だ。信頼・規範・ネットワークの蓄積が社会全体の生産性を上げるように、Fandomain Capitalはブランドとファンの双方が豊かになる関係性の蓄積から生まれる。広告費で買えず、一方が他方を搾取することでは積み上がらない。</p>
-      <p style="margin-top:1.5rem;">この蓄積は、三つの事業効果に転換される。<strong style="color:var(--gold-light);">【Growth】</strong>ファンとの関係性が深まるほど顧客生涯価値（LTV）は上がり、リピート・推奨・単価向上という形で売上に現れる。<strong style="color:var(--gold-light);">【Resilience】</strong>炎上や競合参入の危機において、蓄積されたファンの語りがブランドを守るナラティブの防衛線になる。<strong style="color:var(--gold-light);">【Discoverability】</strong>一貫したシグナルが蓄積されたブランドは、AIの回答に参照されやすくなり、比較検討のテーブルに載り続ける。</p>
+      <p style="margin-top:1.5rem;">この蓄積から期待される事業効果は、三つに整理できる。いずれも自動的に発生するものではなく、企業ごとに検証すべき<strong style="color:var(--gold-light);">効果仮説</strong>として置く。<strong style="color:var(--gold-light);">【Growth】</strong>ファンとの関係性の深さと顧客生涯価値（LTV）のあいだには関連が考えられ、リピート・推奨・単価向上という形で売上に現れうる。ただし関係性がLTVを押し上げたのか、もともとLTVの高い顧客が関係を深めやすいのかは、別途検証を要する。<strong style="color:var(--gold-light);">【Resilience】</strong>炎上や競合参入の局面で、蓄積されたファンの語りがブランドを守るナラティブの防衛線として働く可能性がある。ただし、それが事業成果や資本市場での評価にどう効くかは未実証の領域だ。<strong style="color:var(--gold-light);">【Discoverability】</strong>一貫したシグナルが蓄積されたブランドは、AIの回答に参照されやすくなると考えられる。ただし参照のされ方はモデルや検索・参照の方式によって異なり、一様ではない。</p>
       <p style="margin-top:1.5rem;">本レポートで「ファン」と呼ぶのは、一度の購買者や数値上のフォロワーではない。<strong style="color:var(--gold-light);">ブランドについて自発的に語り、その語りが他者やAIに参照されうる状態にある人々</strong>——これが本レポートの操作的定義だ。観測の単位は個人の熱量ではなく、語りの継続性と一貫性に置く。後述するAxis 01「関係性の深さ」は、この定義を測定可能な形に翻訳したものである。</p>
+      <p style="margin-top:1.5rem;">ただしこれは、ファンという存在そのものの定義ではない。SNSで発信しない熱心な顧客も、静かに買い続ける支持者も、ブランドにとって重要なファンであることに変わりはない。本レポートがあえて「自発的な語り」に絞るのは、それが<strong style="color:var(--gold-light);">外部から観測可能な社会的な語り</strong>であり、ナラティブの蓄積を扱う本研究の射程に合うからだ。語らないファンを軽んじる定義ではなく、観測対象を限定するための操作的な定義である。</p>
       <p style="margin-top:1.5rem;">ファンとの関係を経営の主題に据える議論は、すでに豊かな蓄積がある。先行する論考の多くは、生活者の<strong style="color:var(--gold-light);">態度や愛着</strong>——いかにファンの心をつかみ、関係を育てるか——に光を当ててきた。本レポートはその知見の上に立ちながら、視点をもう一段ずらす。ファンとの関係を<strong style="color:var(--gold-light);">事業ファイナンスの領域にまで架橋し</strong>、LTV・リスクプレミアム・企業価値という経営言語で観測・設計しようとする点に、Fandomain Capitalの固有性がある。態度の議論を、資本の会計に接続する試みだ。</p>
       <p style="margin-top:1.5rem;">Fandomain Capitalが従来のファン概念と決定的に異なるのは、<strong style="color:var(--gold-light);">「ファンをつくる」という発想を超えている</strong>点だ。資本は設計によって積み上がる。その設計の全体像を示したのが、Fandomain Capital Loopだ。</p>
       <p style="margin-top:1.5rem;">このループはPESOという既存の情報環境の枠組みを外環として取り込み、生活者の心理プロセスを内環として組み合わせた二重構造になっている。なぜ線形モデルではなくループ構造なのか。AISASのような線形モデルは購買という「終点」を想定する。しかしFandomain Capitalに終点はない。ファンとの関係は購買後も続き、語りが再解釈され、さらに深い体験への期待が生まれる。ループが一周するたびに資本は螺旋状に深まっていく。</p>
@@ -823,15 +825,15 @@ const htmlBefore = `
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem;">3つの事業効果</div>
         <div style="margin-bottom:1.5rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:0.6rem;">【Growth】LTV向上</div>
-          <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.9;">リピート率・推奨率・単価の上昇。ファンは繰り返し買い、他者に語る。</p>
+          <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.9;">リピート率・推奨率・単価の上昇として現れうる。ファンは繰り返し買い、他者に語る。</p>
         </div>
         <div style="border-top:1px solid rgba(201,168,76,0.15); padding-top:1.5rem; margin-bottom:1.5rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:0.6rem;">【Resilience】企業価値毀損への耐性</div>
-          <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.9;">炎上や競合参入の局面において、蓄積されたファンの語りがナラティブ毀損を緩和し、将来キャッシュフロー期待の低下とリスクプレミアム上昇を抑える。これは単なるブランド危機対応ではなく、企業価値毀損への耐性である。</p>
+          <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.9;">炎上や競合参入の局面において、蓄積されたファンの語りがナラティブ毀損を緩和しうる。それが将来キャッシュフロー期待の低下や、資本市場から見たリスク評価の悪化をどこまで抑えるかは検証対象だが、単なるブランド危機対応ではなく企業価値の防衛として捉える——それが本レポートの立場だ。</p>
         </div>
         <div style="border-top:1px solid rgba(201,168,76,0.15); padding-top:1.5rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:0.6rem;">【Discoverability】AI推奨・参照獲得</div>
-          <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.9;">一貫したシグナルがAIの回答に参照されやすくなる。Share of Answersを獲得し、比較検討のテーブルに載り続ける。</p>
+          <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:1.9;">一貫したシグナルはAIの回答に参照されやすいと考えられる。Share of Answersを獲得し、比較検討のテーブルに載り続けること——それが狙いだ。</p>
         </div>
       </div>
     </div>
@@ -853,7 +855,7 @@ const htmlBefore = `
 
       <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">これがFandomain Capital Loopを線形モデルではなくループ構造にした理由の核心だ。体験→語りという二段階で完結するモデル——AISASのような購買ファネルの延長線上にある発想——では、この「意味の更新」が捉えられない。<strong style="color:var(--navy);">再解釈・深化という第三の段階を置かなければ、ファンとブランドの関係が時間とともに深まっていくメカニズムを記述できない。</strong></p>
 
-      <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">そしてこれは、ブランド自身にも同様に起きる。Patagoniaは創業以来、「アウトドアウェアのメーカー」から「環境活動家の集団」へ、そして「反消費主義の思想体」へと、自己の意味を語り直し続けてきた。製品は変わっていない。変わったのは、その製品をめぐる語りの文脈だ。そしてその語り直しのたびに、ファンとの関係は一段深い層に移行してきた。</p>
+      <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:1.5rem;">そしてこれは、ブランド自身にも同様に起きる。Patagoniaは創業以来、「アウトドアウェアのメーカー」から「環境活動家の集団」へ、そして「反消費主義の思想体」へと、自己の意味を語り直してきたブランドとして語られる。製品そのものが入れ替わったわけではなく、変わったのは、その製品をめぐる語りの文脈だ。そしてその語り直しのたびに、ファンとの関係は一段深い層へ移っていったと解釈できる。</p>
 
       <p style="font-size:0.97rem; color:rgba(15,40,90,0.8); line-height:2.2; margin-bottom:2.5rem;">マーケティングの効果測定がこの現象を捉えられないのは、時間軸が短すぎるからだ。キャンペーン終了後3ヶ月でROIを測定するとき、「再解釈・深化」はまだ起きていない。あるいはすでに起きているのに、スナップショットの指標には映らない。</p>
 
@@ -881,7 +883,7 @@ const htmlBefore = `
     <div class="rg-2" style="gap:1.5rem;">
       <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">外環 — PESO</div>
-        <p style="font-size:0.88rem; color:rgba(15,40,90,0.75); line-height:1.9;">Paid（広告）・Earned（PR・メディア）・Shared（UGC・SNS）・Owned（製品・CRM）という4つの情報環境の軸。企業が情報をどこに配置するかという「場の設計」を示す。Fandomain Capital Loopでは、この外環がブランドと生活者の接触を設計する役割を担う。<br><br>そしてこの外環全体には、もう一つの観測レイヤーが偏在する——<strong style="color:#9b94e8;">AI Signal</strong>だ。SharedがEarnedを生み、EarnedがAIに参照され、次の生活者の体験の前段階に影響する。AIは情報環境の外側からループ全体を観測し、一貫したシグナルを持つブランドを回答生成の中で参照しやすくなる。図中の各辺に置かれた「AI Signal」は、この偏在を示している。Share of Answersへの接続点でもある。</p>
+        <p style="font-size:0.88rem; color:rgba(15,40,90,0.75); line-height:1.9;">Paid（広告）・Earned（PR・メディア）・Shared（UGC・SNS）・Owned（製品・CRM）という4つの情報環境の軸。企業が情報をどこに配置するかという「場の設計」を示す。Fandomain Capital Loopでは、この外環がブランドと生活者の接触を設計する役割を担う。<br><br>そしてこの外環全体には、もう一つの観測レイヤーが偏在する——<strong style="color:#9b94e8;">AI Signal</strong>だ。SharedがEarnedを生み、EarnedがAIに参照され、次の生活者の体験の前段階に影響する。AIは情報環境の外側からループ全体を観測し、一貫したシグナルを持つブランドを回答生成の中で参照しやすくなると考えられる。図中の各辺に置かれた「AI Signal」は、この偏在を示している。Share of Answersへの接続点でもある。<br><br>なお「AIに参照される」経路は一つではない。モデルの事前学習に含まれることと、検索やRAGによって回答時に外部情報として引かれることは別の仕組みであり、UGCが外部に存在することと、それが特定のAIに実際に学習・参照されることも同義ではない。この図の「AI Signal」は、その両方を含む<strong style="color:#9b94e8;">観測レイヤー</strong>として置いている。</p>
       </div>
       <div style="background:rgba(26,107,90,0.08); border:1px solid rgba(26,107,90,0.3); padding:2rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:#4db899; letter-spacing:0.15em; margin-bottom:0.75rem;">内環 — 生活者の心理ループ</div>
@@ -889,7 +891,7 @@ const htmlBefore = `
       </div>
       <div style="background:rgba(60,52,137,0.08); border:1px solid rgba(60,52,137,0.3); padding:2rem;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:#7f77dd; letter-spacing:0.15em; margin-bottom:0.75rem;">中央 — Fandomain Capital</div>
-        <p style="font-size:0.88rem; color:rgba(15,40,90,0.75); line-height:1.9;">外環（情報環境）と内環（生活者心理）が噛み合って回るとき、その中心に積み上がっていくのがFandomain Capitalだ。ループが回るのに比例して中央の資本の積層が厚みを増していくイメージで捉えられる。これにより、【Growth】顧客生涯価値（LTV）の向上・【Resilience】企業価値毀損への耐性・【Discoverability】AIによる推奨・参照獲得という三つの事業効果に転換される。</p>
+        <p style="font-size:0.88rem; color:rgba(15,40,90,0.75); line-height:1.9;">外環（情報環境）と内環（生活者心理）が噛み合って回るとき、その中心に積み上がっていくのがFandomain Capitalだ。ループが回るのに比例して中央の資本の積層が厚みを増していくイメージで捉えられる。そしてこの蓄積から、【Growth】顧客生涯価値（LTV）の向上・【Resilience】企業価値毀損への耐性・【Discoverability】AIによる推奨・参照獲得という三つの事業効果が期待される。いずれも自動的に生じるものではなく、観測と検証の対象となる効果仮説である。</p>
     </div>
   </div>
 
@@ -900,8 +902,10 @@ const htmlBefore = `
       <!-- ヘッダー -->
       <div style="display:flex; align-items:baseline; gap:1.5rem; margin-bottom:2.5rem; flex-wrap:wrap;">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase;">Case Study</div>
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(201,168,76,0.5); letter-spacing:0.1em;">Fandomain Capital Loopの実装例</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(201,168,76,0.5); letter-spacing:0.1em;">Fandomain Capital Loopで読み解く事例</div>
       </div>
+
+      <p style="font-size:0.8rem; color:rgba(15,40,90,0.5); line-height:1.9; margin-bottom:2.5rem; padding:1rem 1.25rem; background:rgba(201,168,76,0.06); border-left:2px solid rgba(201,168,76,0.4);">以下の事例は、本レポートの理論枠組みから解釈した読み解きである。Fandomain Capitalの存在や、その事業効果の因果関係を実証するものではない。仮説を考えるうえで示唆的なケースとして参照されたい。</p>
 
       <h3 style="font-family:'DM Serif Display',serif; font-size:clamp(1.6rem,2.5vw,2.2rem); color:var(--navy); font-weight:400; font-style:italic; margin-bottom:0.5rem;">Patagonia</h3>
       <p style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(15,40,90,0.4); letter-spacing:0.1em; margin-bottom:2.5rem;">アウトドアアパレル / 1973年創業 / 米国・非上場 / 推定年商10億ドル超</p>
@@ -917,7 +921,7 @@ const htmlBefore = `
         <div class="rg-2" style="gap:1px; background:rgba(201,168,76,0.15);">
           <div style="background:var(--navy); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Paid — 最小化戦略</div>
-            <p style="font-size:0.87rem; color:rgba(255,255,255,0.92); line-height:1.9;">Patagoniaの広告費は売上比で業界最低水準だ。「Don't Buy This Jacket」のような広告を出すが、目的は購買促進ではなく哲学の表明。Paid を絞ることで、Earned と Shared の価値が相対的に高まる構造を意図的に設計している。</p>
+            <p style="font-size:0.87rem; color:rgba(255,255,255,0.92); line-height:1.9;">Patagoniaは、大規模な広告出稿に依存しないブランドとして語られてきた。「Don't Buy This Jacket」のような広告を出すが、目的は購買促進ではなく哲学の表明だ。Paid を絞ることで、Earned と Shared の価値が相対的に高まる構造——そう読み解くことができる。</p>
           </div>
           <div style="background:var(--navy); padding:2rem;">
             <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Owned — 体験設計の核</div>
@@ -938,13 +942,13 @@ const htmlBefore = `
       <div style="margin-bottom:2.5rem;">
         <div style="background:rgba(60,52,137,0.08); border:1px solid rgba(60,52,137,0.25); padding:1.75rem;">
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:#7f77dd; letter-spacing:0.15em; margin-bottom:0.75rem;">AI Signal の収束</div>
-          <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">「サステナブルなアウトドアブランドは？」とAIに問うと、Patagoniaは必ず登場する。異なる媒体・異なる文脈で「環境への誠実さ」「修理文化」「反消費主義」という評価語が一貫して収束しているため、AIが参照しやすい信頼のシグナルとして機能している。</p>
+          <p style="font-size:0.87rem; color:rgba(15,40,90,0.7); line-height:1.9;">「サステナブルなアウトドアブランドは？」といった問いに対して、PatagoniaはAIの回答に現れやすいブランドの一つだ。異なる媒体・異なる文脈で「環境への誠実さ」「修理文化」「反消費主義」という評価語が収束していることが、参照されやすさに寄与していると解釈できる。ただし何が回答に現れるかは、問いの立て方・モデル・測定時点によって変わる。</p>
         </div>
       </div>
 
       <!-- 結論 -->
       <div style="border-top:1px solid rgba(201,168,76,0.2); padding-top:2rem;">
-        <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--navy); line-height:2; font-weight:600;">Patagoniaが証明しているのは、Fandomain Capitalとは「コミュニケーションを工夫した結果」ではないということだ。プロダクトの哲学が体験に一貫し、体験がファンの語りに変わり、語りがAIシグナルとして収束する。その積み上がりの結果として、広告費を売上比で業界最低水準に抑えながら、AIにも生活者にも一貫して参照されるブランドであり続けている。これは、ファン資本が「理念の一貫性」から立ち上がることを示す象徴的なケースだ。</p>
+        <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--navy); line-height:2; font-weight:600;">このケースが示唆するのは、Fandomain Capitalとは「コミュニケーションを工夫した結果」ではないということだ。プロダクトの哲学が体験に一貫し、体験がファンの語りに変わり、語りがAIシグナルとして収束していく。その積み上がりの上に、大規模な広告出稿に頼らずとも、AIにも生活者にも参照されるブランドが立っている——本レポートの枠組みからはそう読める。ファン資本が「理念の一貫性」から立ち上がりうることを考えるうえで、示唆的なケースだ。</p>
       </div>
 
     </div>
@@ -974,7 +978,7 @@ const htmlBefore = `
         </div>
       </div>
 
-      <p style="font-family:'Shippori Mincho',serif; font-size:0.97rem; color:var(--navy); line-height:2; font-weight:600; border-top:1px solid rgba(26,107,90,0.2); padding-top:1.75rem;">理念型と実装型の入口は違うが両者が積み上げてきたものの構造は同じだ。外環（情報環境）に配置された体験や語りが、ファンの内側で感動・社会化・再解釈という三段階の内環を起動し、その螺旋が回り続けた時間の総量として、Fandomain Capitalは蓄積される。</p>
+      <p style="font-family:'Shippori Mincho',serif; font-size:0.97rem; color:var(--navy); line-height:2; font-weight:600; border-top:1px solid rgba(26,107,90,0.2); padding-top:1.75rem;">理念型と実装型で入口は違うが、両者が積み上げてきたものを本レポートの枠組みで読むと、同じ構造が見えてくる。外環（情報環境）に配置された体験や語りが、ファンの内側で感動・社会化・再解釈という三段階の内環を起動し、その螺旋が回り続けた時間の総量として、Fandomain Capitalは蓄積される——二つの事例は、その仮説を考えるための入口である。</p>
     </div>
   </div>
 
@@ -1048,6 +1052,7 @@ const htmlBefore = `
       <div class="gold-divider" style="background:var(--navy);"></div>
       <p>測れないものは管理できない、という言葉は半分だけ正しい。より重要なのは、<strong>何を、どの時間軸で、どの単位で測るか</strong>である。Fandomain Capitalの測定は、短期の反応を追うSNS運用指標と、中長期の資本形成を捉える経営指標を接続する試みだ。</p>
       <p style="margin-top:1.5rem;">また、測定フレームを語るとき、厳密な因果証明を約束することは誠実ではない。商品力・価格・CRM・広告・流通など複数の変数が絡む中で、SNSの寄与を単独で測ることには限界がある。ここで示すのは、<strong>まず観測し、仮説を置き、検証する</strong>というプロセスだ。この誠実さが、逆に信頼になる。</p>
+      <p style="margin-top:1.5rem;">この前提から、以下の三点をあらかじめ申し添えておく。第一に、<strong>SNS接触者と非接触者のLTV差分は、SNS施策の因果効果ではない</strong>。もともと関与度の高い顧客がSNSに接触しやすいという自己選択バイアスや、「好きだから接触した」という逆方向の因果が十分に考えられる。継続的なファンの語りと購買成果の相関についても同様だ。第二に、以下に挙げる指標は、調査対象・分母・測定期間・データ取得範囲が企業ごとに異なる。確立した標準KPIではなく、各社が自社の条件に合わせて定義すべき<strong>指標候補</strong>として示す。第三に、実務で因果を確かめようとするなら、比較群の設定や段階的な投入といった実験的な設計が必要になる場合がある。本章のフレームは、その前段にある<strong>観測の枠組み</strong>である。</p>
     </div>
     <div>
       <div class="pull-quote">
@@ -1058,7 +1063,8 @@ const htmlBefore = `
 
   <!-- 5つの診断軸 -->
   <div class="reveal" style="max-width:1100px; margin-bottom:5rem;">
-    <div class="section-label" style="margin-bottom:2rem;">5つの診断軸 — Fandomain Capital Measurement Framework</div>
+    <div class="section-label" style="margin-bottom:1.25rem;">5つの診断軸 — Fandomain Capital Measurement Framework</div>
+    <p class="reveal" style="max-width:1100px; font-size:0.87rem; color:rgba(15,40,90,0.62); line-height:2; margin-bottom:2.5rem;">以下の5軸は、Fandomain Capitalを構成する要素を分解したものではない。<strong style="color:rgba(15,40,90,0.8);">資本形成の「条件」「状態」「成果」を多面的に観測するための5つの診断観点</strong>である。観測対象の階層はそれぞれ異なり——Axis 05は組織の実装条件、Axis 01・02・04は関係性・語り・外部情報環境の状態、Axis 03は事業成果——同じ次元に並ぶ構成要素ではない。したがって、5軸を合成してFandomain Capitalの総合点や金銭価値を算出することは想定していない。実務診断においては、どの観点が欠けているかを見るための枠組みとして用いる。</p>
 
     <!-- フロー図 -->
     <div style="margin-bottom:3rem;">
@@ -1097,7 +1103,7 @@ const htmlBefore = `
         <text x="251" y="126" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8.5" fill="rgba(60,52,137,0.6)">関係性の深さ</text>
         <line x1="220" y1="136" x2="282" y2="136" stroke="rgba(83,74,183,0.12)" stroke-width="0.5"/>
         <text x="251" y="152" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8" fill="rgba(60,52,137,0.45)">継続接触・UGC</text>
-        <text x="251" y="166" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8" fill="rgba(60,52,137,0.45)">LTV差分</text>
+        <text x="251" y="166" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8" fill="rgba(60,52,137,0.45)">推奨・紹介行動</text>
 
         <!-- Axis 02 -->
         <rect x="300" y="54" width="78" height="144" rx="4" fill="rgba(83,74,183,0.08)" stroke="rgba(83,74,183,0.2)" stroke-width="0.5"/>
@@ -1107,7 +1113,7 @@ const htmlBefore = `
         <text x="339" y="126" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8.5" fill="rgba(60,52,137,0.6)">語りの一貫性</text>
         <line x1="308" y1="136" x2="370" y2="136" stroke="rgba(83,74,183,0.12)" stroke-width="0.5"/>
         <text x="339" y="152" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8" fill="rgba(60,52,137,0.45)">UGC・レビュー</text>
-        <text x="339" y="166" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8" fill="rgba(60,52,137,0.45)">AI回答の文脈</text>
+        <text x="339" y="166" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8" fill="rgba(60,52,137,0.45)">評価語の一致</text>
 
         <!-- Axis 04 -->
         <rect x="388" y="54" width="78" height="144" rx="4" fill="rgba(83,74,183,0.08)" stroke="rgba(83,74,183,0.2)" stroke-width="0.5"/>
@@ -1116,8 +1122,8 @@ const htmlBefore = `
         <text x="427" y="107" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9.5" fill="#3C3489">Quality</text>
         <text x="427" y="126" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8.5" fill="rgba(60,52,137,0.6)">シグナルの質</text>
         <line x1="396" y1="136" x2="458" y2="136" stroke="rgba(83,74,183,0.12)" stroke-width="0.5"/>
-        <text x="427" y="152" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8" fill="rgba(60,52,137,0.45)">情報源の多様性</text>
-        <text x="427" y="166" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8" fill="rgba(60,52,137,0.45)">発見可能性・鮮度</text>
+        <text x="427" y="152" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8" fill="rgba(60,52,137,0.45)">情報源の独立性</text>
+        <text x="427" y="166" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="8" fill="rgba(60,52,137,0.45)">参照可能性・鮮度</text>
 
         <!-- 矢印 02 -->
         <line x1="477" y1="116" x2="506" y2="116" stroke="rgba(10,22,40,0.3)" stroke-width="1.2" marker-end="url(#arr-flow)"/>
@@ -1143,27 +1149,27 @@ const htmlBefore = `
       <div style="background:var(--white); padding:2.5rem; border-left:3px solid var(--navy);">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Axis 01</div>
         <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem;">Relationship Depth<br><span style="font-size:0.85rem; font-weight:400; color:var(--gray);">関係性の深さ</span></h4>
-        <p style="font-size:0.87rem; color:var(--gray); line-height:1.9; margin-bottom:1rem;">「どれだけ熱量のある人がいるか」ではなく、どれだけ継続的に関わってくれているかを観測する。フォロワー数ではなく、継続して関わる人の厚みを見る。</p>
+        <p style="font-size:0.87rem; color:var(--gray); line-height:1.9; margin-bottom:1rem;">「どれだけ熱量のある人がいるか」ではなく、どれだけ継続的に関わってくれているかを観測する。フォロワー数ではなく、継続して関わる人の厚みを見る。事業成果への接続はAxis 03で扱い、この軸では関係性の状態そのものに観測対象を絞る。</p>
         <div style="font-size:0.8rem; color:var(--gray); line-height:1.8; padding:1rem; background:rgba(10,22,40,0.04); border-radius:4px;">
-          継続エンゲージメント率 / 複数回反応ユーザー比率 / UGC投稿数 / 推奨行動（引用・保存・紹介）/ SNS接触者のLTV差分
+          継続エンゲージメント率 / 複数回反応ユーザー比率 / UGC投稿数 / 推奨行動（引用・保存・紹介）
         </div>
       </div>
 
       <div style="background:var(--white); padding:2.5rem; border-left:3px solid var(--navy);">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Axis 02</div>
         <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem;">Narrative Consistency<br><span style="font-size:0.85rem; font-weight:400; color:var(--gray);">語りの一貫性</span></h4>
-        <p style="font-size:0.87rem; color:var(--gray); line-height:1.9; margin-bottom:1rem;">ブランドが発信していることと、ファンが語っていることがズレていないかを観測する。単なるポジネガではなく、何が繰り返し語られているかを見る。</p>
+        <p style="font-size:0.87rem; color:var(--gray); line-height:1.9; margin-bottom:1rem;">ブランドが発信していることと、ファンが語っていることがズレていないかを観測する。この軸が見るのは<strong style="color:rgba(15,40,90,0.75);">語りの内容と意味</strong>だ。単なるポジネガではなく、どの評価語が繰り返し使われ、ブランド側の意図とどこまで重なっているかを見る。情報源の側の条件はAxis 04で扱う。</p>
         <div style="font-size:0.8rem; color:var(--gray); line-height:1.8; padding:1rem; background:rgba(10,22,40,0.04); border-radius:4px;">
-          ブランド側の語り（公式SNS・Web） / ファン側の語り（UGC・レビュー）/ メディア側の語り / AI側の語り（ChatGPT・Gemini等での回答）
+          ブランド側の語り（公式SNS・Web） / ファン側の語り（UGC・レビュー）/ メディア側の語り / 評価語の収束と乖離
         </div>
       </div>
 
       <div style="background:var(--white); padding:2.5rem; border-left:3px solid var(--navy);">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Axis 03</div>
         <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem;">Business Conversion<br><span style="font-size:0.85rem; font-weight:400; color:var(--gray);">事業価値への転換</span></h4>
-        <p style="font-size:0.87rem; color:var(--gray); line-height:1.9; margin-bottom:1rem;">Fandomain Capitalの3つの事業効果（Growth・Resilience・Discoverability）を観測する。因果ではなく、まず相関と仮説を確認する。</p>
+        <p style="font-size:0.87rem; color:var(--gray); line-height:1.9; margin-bottom:1rem;">Fandomain Capitalに期待される3つの事業効果（Growth・Resilience・Discoverability）を観測する。因果ではなく、まず相関と仮説を確認する。下記のLTV差分は施策の因果効果ではなく、またAI回答でのブランド言及率は資本そのものではない——いずれも<strong style="color:rgba(15,40,90,0.75);">外部に表れる市場反応の指標</strong>として扱う。</p>
         <div style="font-size:0.8rem; color:var(--gray); line-height:1.8; padding:1rem; background:rgba(10,22,40,0.04); border-radius:4px;">
-          SNS接触者と非接触者のLTV差分 / 危機時の擁護発言比率と回復速度 / 主要AI回答でのブランド言及率・推奨文脈
+          SNS接触者と非接触者のLTV差分（※因果ではなく相関）/ 危機時の擁護発言比率と回復速度 / 主要AI回答でのブランド言及率・推奨文脈（※問い・モデル・測定時点に依存）
         </div>
       </div>
 
@@ -1171,9 +1177,9 @@ const htmlBefore = `
       <div style="background:var(--white); padding:2.5rem; border-left:3px solid var(--navy);">
         <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:0.75rem;">Axis 04</div>
         <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem;">Signal Quality<br><span style="font-size:0.85rem; font-weight:400; color:var(--gray);">シグナルの質</span></h4>
-        <p style="font-size:0.87rem; color:var(--gray); line-height:1.9; margin-bottom:1rem;">AIや検索が拾いやすい形で、信頼できるシグナルが外部に蓄積されているかを観測する。情報源の多様性・一貫性・検索可能性・信頼性・鮮度を確認する。</p>
+        <p style="font-size:0.87rem; color:var(--gray); line-height:1.9; margin-bottom:1rem;">AIや検索が拾いやすい形で、シグナルが外部に蓄積されているかを観測する。Axis 02が語りの<strong style="color:rgba(15,40,90,0.75);">内容</strong>を見るのに対し、この軸は<strong style="color:rgba(15,40,90,0.75);">情報源の独立性・信頼性・参照可能性</strong>を見る。誰の手を離れた場所に、どれだけ信頼できる形で情報が置かれているか、という条件の観測だ。</p>
         <div style="font-size:0.8rem; color:var(--gray); line-height:1.8; padding:1rem; background:rgba(10,22,40,0.04); border-radius:4px;">
-          公式・UGC・レビュー・メディア・専門家等の情報源多様性 / 複数ソースでの価値反復 / Web上での発見可能性 / 情報の鮮度
+          公式・UGC・レビュー・メディア・専門家等の情報源の独立性 / 複数ソースでの価値反復（※反復は正確さの保証ではない）/ Web上での参照可能性 / 情報の鮮度
         </div>
       </div>
 
@@ -1182,7 +1188,7 @@ const htmlBefore = `
         <div class="rg-2" style="gap:2rem;">
           <div>
             <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:var(--navy); margin-bottom:1rem;">Organizational Readiness<br><span style="font-size:0.85rem; font-weight:400; color:var(--gray);">組織の実装準備度</span></h4>
-            <p style="font-size:0.87rem; color:rgba(15,40,90,0.72); line-height:1.9;">Fandomain CapitalはSNSチーム以外も含めた横断的な取り組みで捕捉する。組織の準備度を診断することが不可欠だ。</p>
+            <p style="font-size:0.87rem; color:rgba(15,40,90,0.72); line-height:1.9;">Fandomain CapitalはSNSチーム以外も含めた横断的な取り組みで捕捉する。他の4軸が観測可能になるための<strong>前提条件</strong>にあたる軸であり、組織の準備度を診断することが不可欠だ。</p>
           </div>
           <div style="font-size:0.8rem; color:var(--gray); line-height:2; padding:1rem; background:rgba(10,22,40,0.04); border-radius:4px;">
             SNS・CRM・EC・購買データの統合状況 / 短期指標と中長期指標の分離設計 / ブランド・CRM・PR・経営が同じ指標を共有しているか / UGC・レビュー・AI回答の定点観測体制 / 月次・四半期の仮説検証サイクル
@@ -1223,12 +1229,14 @@ const htmlBefore = `
         <h4 style="font-family:'Shippori Mincho',serif; font-size:1.05rem; font-weight:600; color:rgba(250,248,243,0.92); margin-bottom:1rem;">Business Impact Review</h4>
         <ul style="list-style:none; font-size:0.85rem; color:rgba(250,248,243,0.68); line-height:2.1;">
           <li>· 語り・AI回答・指名検索の変化を検証</li>
-          <li>· LTV・リピート・推奨率への寄与を確認</li>
+          <li>· LTV・リピート・推奨率との関連を初期検証</li>
           <li>· ROIC-WACCスプレッドへの影響仮説を提示</li>
           <li>· 半期ごとの投資判断に接続</li>
         </ul>
       </div>
     </div>
+
+    <p class="reveal" style="max-width:1100px; font-size:0.83rem; color:rgba(15,40,90,0.6); line-height:2; margin-bottom:3rem;">※ 180日という区切りは、観測体制を立ち上げ、仮説を検証可能な状態まで持っていくための期間である。長期LTVやファン資本の金銭的価値を180日で確定できるという意味ではない。この期間で得られるのは、ベースライン、評価語の分布、初期的な相関と、次の半期に検証すべき仮説である。</p>
 
     <div style="background:rgba(10,22,40,0.04); border:1px solid rgba(10,22,40,0.1); padding:2rem 2.5rem;">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:rgba(10,22,40,0.45); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.25rem;">自社の成熟度に合わせて始める — Measurement Level</div>
@@ -1243,7 +1251,7 @@ const htmlBefore = `
         </div>
         <div>
           <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--navy); margin-bottom:0.4rem;">Level 3 — 経営・財務への接続</div>
-          <p style="font-size:0.83rem; color:rgba(15,40,90,0.72); line-height:1.9;">Growth（LTV向上）・Resilience（リスクプレミアム低減）・Discoverability（Share of Answers獲得）という三つの事業効果を、財務指標と紐づけてモニタリング。ブランド予算ではなく事業ポートフォリオの視座との統合。</p>
+          <p style="font-size:0.83rem; color:rgba(15,40,90,0.72); line-height:1.9;">Growth（LTV向上）・Resilience（危機時の耐性）・Discoverability（Share of Answers獲得）という三つの事業効果の仮説を、財務指標と並べてモニタリングする。資本コストへの影響まで読み切れる企業は多くないが、ブランド予算ではなく事業ポートフォリオの視座に置き直すこと自体に意味がある。</p>
         </div>
       </div>
     </div>
@@ -1263,13 +1271,13 @@ const htmlBefore = `
   <div class="reveal" style="max-width:1100px; margin-top:5rem; background:var(--navy); padding:3rem; border-left:3px solid var(--gold);">
     <div style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.5rem;">Column — ファイナンス論との接続</div>
     <h4 style="font-family:'Shippori Mincho',serif; font-size:1.2rem; font-weight:600; color:var(--navy); margin-bottom:0.5rem;">炎上はなぜ企業価値を毀損するのか</h4>
-    <p style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(201,168,76,0.6); letter-spacing:0.05em; margin-bottom:2rem;">ナラティブ毀損がもたらす将来キャッシュフロー低下、そして割引率上昇への悪影響</p>
+    <p style="font-family:'IBM Plex Mono',monospace; font-size:0.65rem; color:rgba(201,168,76,0.6); letter-spacing:0.05em; margin-bottom:2rem;">ナラティブ毀損が将来キャッシュフローに及ぼす影響と、割引率に波及しうる経路</p>
 
     <div class="rg-2" style="gap:3rem;">
       <div>
-        <p style="font-size:0.9rem; color:rgba(15,40,90,0.75); line-height:2.1; margin-bottom:1.5rem;">炎上が怖いのは、単に評判が悪くなるからではない。より本質的には、企業のナラティブが傷むことで、将来キャッシュフローへの信頼が揺らぎ、資本市場から見たリスクが上がるからだ。</p>
-        <p style="font-size:0.9rem; color:rgba(15,40,90,0.75); line-height:2.1; margin-bottom:1.5rem;">ブランド毀損はまず事業面に表れる。顧客離反、購入意向の低下、採用力の低下、従業員エンゲージメントの悪化——これらは将来キャッシュフローの前提を押し下げる。しかしそれだけではない。企業の語られ方が不安定になると、投資家・金融機関はその企業をより高いリスクとして見る。レピュテーションリスク・規制リスク・ガバナンスリスクが織り込まれ、株主資本コスト（ke）が上がり、WACCが上昇する。</p>
-        <p style="font-size:0.9rem; color:rgba(15,40,90,0.75); line-height:2.1;">企業価値は、将来キャッシュフローを割引率で現在価値に戻したものだ。ナラティブの毀損は、<strong style="color:var(--navy);">分子（キャッシュフロー期待）を下げると同時に、分母（割引率）を上げる。二重に企業価値を毀損する。</strong></p>
+        <p style="font-size:0.9rem; color:rgba(15,40,90,0.75); line-height:2.1; margin-bottom:1.5rem;">炎上が怖いのは、単に評判が悪くなるからではない。より本質的には、企業のナラティブが傷むことで、将来キャッシュフローの前提が揺らぎ、場合によっては資本市場から見たリスク評価にまで波及しうるからだ。この波及には段階がある。</p>
+        <p style="font-size:0.9rem; color:rgba(15,40,90,0.75); line-height:2.1; margin-bottom:1.5rem;"><strong style="color:var(--navy);">第一段階は事業面だ。</strong>顧客離反、購入意向の低下、価格受容の変化、採用力の低下、従業員エンゲージメントの悪化——これらは将来キャッシュフローの前提を押し下げる。ブランドやナラティブの毀損が企業価値に効く経路として、まず確からしいのはここである。<br><br><strong style="color:var(--navy);">第二段階は資本コストだ。</strong>企業の語られ方が不安定になり、投資家・金融機関がその企業の事業リスクや財務リスクの評価を改めるなら、株主資本コスト（ke）を通じてWACCに影響する可能性がある。ただしここは慎重に扱うべき領域だ。<strong style="color:var(--navy);">個別企業のレピュテーションリスクが、必ずWACCの上昇につながるとは限らない。</strong>企業固有のリスクと、資本市場で価格づけされる（分散によって消えない）リスクは別のものであり、両者を混同すべきではない。事業への影響が十分に大きく、持続的で、市場がそれを織り込むと判断した場合にかぎって、資本コストへの波及が観測される——その程度の留保が必要になる。</p>
+        <p style="font-size:0.9rem; color:rgba(15,40,90,0.75); line-height:2.1;">企業価値は、将来キャッシュフローを割引率で現在価値に戻したものだ。この式に照らせば、ナラティブの毀損は<strong style="color:var(--navy);">まず分子（キャッシュフロー期待）を押し下げ、条件が重なれば分母（割引率）にも及びうる。</strong>分子への影響と分母への影響を同じ確度で語らないこと——それが、この接続を経営の議論として成り立たせる前提だ。</p>
       </div>
       <div>
         <div style="background:rgba(201,168,76,0.06); border:1px solid rgba(201,168,76,0.2); padding:2rem; margin-bottom:1.5rem; text-align:center;">
@@ -1284,16 +1292,16 @@ const htmlBefore = `
             </div>
             <div style="background:rgba(26,107,90,0.12); border:1px solid rgba(77,184,153,0.35); padding:0.75rem; border-radius:4px;">
               <div style="font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:#4db899; margin-bottom:0.25rem;">分母 ↑</div>
-              <div style="font-size:0.78rem; color:rgba(15,40,90,0.7); line-height:1.6;">リスクプレミアム上昇<br>→ WACC上昇</div>
+              <div style="font-size:0.78rem; color:rgba(15,40,90,0.7); line-height:1.6;">リスク評価の変化<br>→ WACC上昇の可能性</div>
             </div>
           </div>
         </div>
-        <p style="font-size:0.88rem; color:rgba(15,40,90,0.6); line-height:2;">ROICがWACCを上回ることで企業価値は創造される。ならばSNS上のナラティブを整えることは、単なるブランドコミュニケーションではない。将来キャッシュフローへの信頼を高め、リスクプレミアムを抑え、WACCの上昇を防ぐための<strong style="color:var(--navy);">経営活動</strong>だ。</p>
+        <p style="font-size:0.88rem; color:rgba(15,40,90,0.6); line-height:2;">ROICがWACCを上回ることで企業価値は創造される。このスプレッドは、マーケティング投資を資本効率の観点から考えるうえでも有効な判断軸だ。ならばSNS上のナラティブを整えることは、単なるブランドコミュニケーションではなく、将来キャッシュフローの前提を支えるための<strong style="color:var(--navy);">経営活動</strong>として位置づけられる。<br><br>ただし、<strong style="color:var(--navy);">Fandomain CapitalがWACCを直接引き下げるという因果効果は、現時点では実証されていない。</strong>本レポートが提起したいのは結論ではなく問いの立て方だ——SNS上の語りを、将来FCF・ROIC・WACC・企業価値との関係から捉え直し、<strong style="color:var(--navy);">検証可能な経営仮説</strong>として扱うこと。その問いを立てられる企業だけが、ブランド投資を資本効率の議論に乗せられる。</p>
       </div>
     </div>
 
     <div style="margin-top:2rem; padding:1.5rem 2rem; background:rgba(201,168,76,0.08); border-left:2px solid var(--gold);">
-      <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--navy); line-height:1.9; font-weight:600;">ファン資本とは、好意的な投稿の集合ではない。それは危機時にも企業価値を支える、社会的な信用のバッファである。</p>
+      <p style="font-family:'Shippori Mincho',serif; font-size:1rem; color:var(--navy); line-height:1.9; font-weight:600;">ファン資本とは、好意的な投稿の集合ではない。それは危機時に企業価値を支えうる、社会的な信用のバッファである。</p>
     </div>
   </div>
 
@@ -1328,7 +1336,7 @@ const htmlBefore = `
     <!-- 非財務情報の潮流 -->
     <div class="reveal" style="max-width:1100px; margin-bottom:4rem; padding:2rem 2.5rem; background:rgba(201,168,76,0.06); border-left:3px solid rgba(201,168,76,0.4);">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; color:var(--gold); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.75rem;">Context — 無形資産への説明責任が高まる時代</div>
-      <p style="font-size:0.95rem; color:rgba(15,40,90,0.8); line-height:2;">SNS上の語りは、これまでマーケティング部門の周辺的なデータと見なされてきた。しかし企業価値の多くが無形資産によって説明される時代、その語りも企業の説明責任の射程に入りつつある。非財務情報の開示が段階的に拡充され、無形資産やブランド価値をどう語るかが経営の課題として前景化してきた——これはその大きな潮流の一例だ。ブランドへの信頼・ファンとの関係性・語りの蓄積は、まさに財務諸表に映らない企業の無形資産であり、Fandomain Capitalを設計・計測する取り組みは、この流れと自然に合流する。SNSマーケティングの問いは、もはやマーケティング部門だけの問いではない。</p>
+      <p style="font-size:0.95rem; color:rgba(15,40,90,0.8); line-height:2;">SNS上の語りは、これまでマーケティング部門の周辺的なデータと見なされてきた。しかし企業価値の多くが無形資産によって説明される時代、その語りも企業の説明責任の射程に入りつつある。非財務情報の開示が段階的に拡充され、無形資産やブランド価値をどう語るかが経営の課題として前景化してきた——これはその大きな潮流の一例だ。ブランドへの信頼・ファンとの関係性・語りの蓄積は、まさに財務諸表に映らない企業の無形資産であり、Fandomain Capitalを設計・計測する取り組みは、この流れと自然に合流する。ここでいう無形資産は経営管理上の概念であり、会計基準上の資産計上を意味するものではない。SNSマーケティングの問いは、もはやマーケティング部門だけの問いではない。</p>
     </div>
 
     <div class="rg-2" style="gap:4rem;" class="reveal">
@@ -1366,7 +1374,7 @@ const htmlBefore = `
           <div class="dc-num" style="color:rgba(201,168,76,0.15);">03</div>
           <div class="dc-tag">自己診断チェック</div>
           <h3 style="color:var(--navy);">AIにブランドは参照されているか</h3>
-          <p style="color:rgba(15,40,90,0.65);">主要なカテゴリワードでAIに問いかけたとき、自社ブランドは回答に現れるか。現れるとしても、どんな文脈で語られているか。AIに参照されないブランドは、次の世代の比較検討のテーブルに載らない。</p>
+          <p style="color:rgba(15,40,90,0.65);">主要なカテゴリワードでAIに問いかけたとき、自社ブランドは回答に現れるか。現れるとしても、どんな文脈で語られているか。結果は問いの立て方・モデル・測定時点によって変わるため、一度の確認ではなく定点で観測する。AIに参照されないブランドは、次の世代の比較検討のテーブルに載りにくくなる。</p>
         </div>
       </div>
     </div>
@@ -1375,6 +1383,13 @@ const htmlBefore = `
       <div style="font-family:'IBM Plex Mono',monospace; font-size:0.6rem; color:var(--gold); letter-spacing:0.3em; text-transform:uppercase; margin-bottom:2rem;">Afterword</div>
       <p style="font-family:'Shippori Mincho',serif; font-size:clamp(1.2rem,2.5vw,1.8rem); color:var(--navy); line-height:1.8; font-weight:600; margin-bottom:1.5rem;">ファンとの関係を「資本」として設計する発想を、<br>これからのマーケティング論にインストールする。</p>
       <p style="font-size:0.95rem; color:rgba(15,40,90,0.75); line-height:2.1; max-width:640px; margin:0 auto 1.5rem;">AIが情報環境を再編し、無形資産への問いが経営の中心に移る時代に、ブランドが積み上げてきた信頼・語り・関係性は、企業価値の構成要素としてますます重視されるようになるでしょう。Fandomain Capitalはその問いへの、最初の答えです。NSIはその上位概念にあたるBrand Capital Strategyを基軸に、ブランドの無形資産を設計・計測・実装するチャレンジを続けてまいります。</p>
+    </div>
+
+    <!-- REVISION HISTORY -->
+    <div class="reveal" style="max-width:640px; margin:3rem auto 0; text-align:left; border-top:1px solid rgba(10,22,40,0.12); padding-top:1.5rem;">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:0.58rem; color:rgba(15,40,90,0.4); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.9rem;">Revision History</div>
+      <p style="font-size:0.72rem; color:rgba(15,40,90,0.5); line-height:1.9; margin-bottom:0.6rem;">初版公開：2026年6月24日<br>第二版更新：2026年11月2日</p>
+      <p style="font-size:0.72rem; color:rgba(15,40,90,0.5); line-height:1.9;">改訂注記：測定フレームワークの位置づけ、事業効果に関する因果推論上の留保、および財務評価との接続について、表現の明確化と一部補訂を行いました。あわせて、ファンの操作的定義の範囲、AIが情報を参照する仕組みに関する記述、ならびに事例の位置づけを明確化しています。レポートの基本的な主張およびフレームワークに変更はありません。</p>
     </div>
   </div>
 </section>
@@ -1400,7 +1415,7 @@ const htmlAfter = `
 <!-- FOOTER -->
 <footer style="background:var(--navy-mid); border-top:1px solid rgba(201,168,76,0.12); padding:1.25rem 5vw 1.5rem;">
   <div class="footer-logo" style="font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; color:rgba(250,248,243,0.46); margin-bottom:0.35rem;">NSI — New Strategy Institute by DCXforce</div>
-  <div class="footer-copy" style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; letter-spacing:0.06em; color:rgba(250,248,243,0.32);">© 2026 DCXforce Inc. All rights reserved. Report #001</div>
+  <div class="footer-copy" style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; letter-spacing:0.06em; color:rgba(250,248,243,0.32);">© 2026 DCXforce Inc. All rights reserved. Report #001 — Rev. 2026.11.02</div>
 </footer>
 `;
 
@@ -1546,7 +1561,8 @@ export default function Report001Page() {
             "@id": "https://nsi.dcxforce.co.jp/reports/001",
             headline: "ファン資本（Fandomain Capital）の再設計：AI時代のSNSマーケティング戦略",
             description: "AI時代のSNSマーケティングをファン資本（Fandomain Capital）という経営概念で再定義。5つの診断軸と実装フレームワークを提示。",
-            datePublished: "2026-06-23",
+            datePublished: "2026-06-24",
+            dateModified: "2026-11-02",
             inLanguage: "ja-JP",
             author: {
               "@type": "Person",
