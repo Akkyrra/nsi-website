@@ -23,7 +23,8 @@ export const metadata: Metadata = {
         alt: "NSI Report #001 ファン資本の再設計",
       },
     ],
-    publishedTime: "2026-06-23",
+    publishedTime: "2026-06-24",
+    modifiedTime: "2026-11-02",
     authors: ["天野彬"],
   },
   twitter: {
@@ -43,8 +44,8 @@ export const metadata: Metadata = {
         "ファン資本（Fandomain Capital）の再設計：AI時代のSNSマーケティング戦略",
       description:
         "AI時代のSNSマーケティングをファン資本（Fandomain Capital）という経営概念で再定義。5つの診断軸と180日検証プログラムを提示。",
-      datePublished: "2026-06-23",
-      dateModified: "2026-06-23",
+      datePublished: "2026-06-24",
+      dateModified: "2026-11-02",
       inLanguage: "ja-JP",
       author: {
         "@type": "Person",
